@@ -1,0 +1,393 @@
+CanAbilityBeUpgraded            	= <unknown> CanAbilityBeUpgraded()
+ (userdata)
+
+CastAbility                     	= bool CastAbility()
+ (userdata)
+
+ContinueCasting                 	= bool ContinueCasting()
+ (userdata)
+
+CreateVisibilityNode            	= void CreateVisibilityNode(Vector vLocation, float fRadius, float fDuration)
+ (userdata)
+
+DecrementModifierRefCount       	= void DecrementModifierRefCount()
+ (userdata)
+
+EndChannel                      	= void EndChannel(bool bInterrupted)
+ (userdata)
+
+EndCooldown                     	= void EndCooldown()
+Clear the cooldown remaining on this ability. (userdata)
+
+GetAOERadius                    	= int GetAOERadius()
+ (userdata)
+
+GetAbilityDamage                	= int GetAbilityDamage()
+ (userdata)
+
+GetAbilityDamageType            	= int GetAbilityDamageType()
+ (userdata)
+
+GetAbilityIndex                 	= int GetAbilityIndex()
+ (userdata)
+
+GetAbilityKeyValues             	= table GetAbilityKeyValues()
+Gets the key values definition for this ability. (userdata)
+
+GetAbilityName                  	= string GetAbilityName()
+Returns the name of this ability. (userdata)
+
+GetAbilityTargetFlags           	= int GetAbilityTargetFlags()
+ (userdata)
+
+GetAbilityTargetTeam            	= int GetAbilityTargetTeam()
+ (userdata)
+
+GetAbilityTargetType            	= int GetAbilityTargetType()
+ (userdata)
+
+GetAbilityType                  	= int GetAbilityType()
+ (userdata)
+
+GetAnimationIgnoresModelScale   	= bool GetAnimationIgnoresModelScale()
+ (userdata)
+
+GetAssociatedPrimaryAbilities   	= string GetAssociatedPrimaryAbilities()
+ (userdata)
+
+GetAssociatedSecondaryAbilities 	= string GetAssociatedSecondaryAbilities()
+ (userdata)
+
+GetAutoCastState                	= bool GetAutoCastState()
+ (userdata)
+
+GetBackswingTime                	= float GetBackswingTime()
+ (userdata)
+
+GetBehavior                     	= int GetBehavior()
+ (userdata)
+
+GetBehaviorInt                  	= int GetBehaviorInt()
+Get ability behavior flags as an int for compatability. (userdata)
+
+GetCastPoint                    	= float GetCastPoint()
+ (userdata)
+
+GetCastPointModifier            	= float GetCastPointModifier()
+ (userdata)
+
+GetCastRange                    	= int GetCastRange(Vector vLocation, handle hTarget)
+Gets the cast range of the ability. (userdata)
+
+GetCaster                       	= handle GetCaster()
+ (userdata)
+
+GetChannelStartTime             	= float GetChannelStartTime()
+ (userdata)
+
+GetChannelTime                  	= float GetChannelTime()
+ (userdata)
+
+GetChannelledManaCostPerSecond  	= int GetChannelledManaCostPerSecond(int iLevel)
+ (userdata)
+
+GetCloneSource                  	= handle GetCloneSource()
+ (userdata)
+
+GetConceptRecipientType         	= int GetConceptRecipientType()
+ (userdata)
+
+GetCooldown                     	= float GetCooldown(int iLevel)
+Get the cooldown duration for this ability at a given level, not the amount of cooldown actually left. (userdata)
+
+GetCooldownTime                 	= float GetCooldownTime()
+ (userdata)
+
+GetCooldownTimeRemaining        	= float GetCooldownTimeRemaining()
+ (userdata)
+
+GetCurrentAbilityCharges        	= int GetCurrentAbilityCharges()
+ (userdata)
+
+GetCursorPosition               	= Vector GetCursorPosition()
+ (userdata)
+
+GetCursorTarget                 	= handle GetCursorTarget()
+ (userdata)
+
+GetCursorTargetingNothing       	= bool GetCursorTargetingNothing()
+ (userdata)
+
+GetDuration                     	= float GetDuration()
+ (userdata)
+
+GetEffectiveCastRange           	= int GetEffectiveCastRange(Vector vLocation, handle hTarget)
+Gets the cast range of the ability, taking modifiers into account. (userdata)
+
+GetEffectiveCooldown            	= float GetEffectiveCooldown(int iLevel)
+ (userdata)
+
+GetGoldCost                     	= int GetGoldCost(int iLevel)
+ (userdata)
+
+GetGoldCostForUpgrade           	= int GetGoldCostForUpgrade(int iLevel)
+ (userdata)
+
+GetHeroLevelRequiredToUpgrade   	= int GetHeroLevelRequiredToUpgrade()
+ (userdata)
+
+GetInitialAbilityCharges        	= int GetInitialAbilityCharges(int iLevel)
+ (userdata)
+
+GetIntrinsicModifierName        	= string GetIntrinsicModifierName()
+ (userdata)
+
+GetLevel                        	= int GetLevel()
+Get the current level of the ability. (userdata)
+
+GetLevelSpecialValueFor         	= table GetLevelSpecialValueFor(string szName, int nLevel)
+ (userdata)
+
+GetLevelSpecialValueNoOverride  	= table GetLevelSpecialValueNoOverride(string szName, int nLevel)
+ (userdata)
+
+GetManaCost                     	= int GetManaCost(int iLevel)
+ (userdata)
+
+GetMaxAbilityCharges            	= int GetMaxAbilityCharges(int iLevel)
+ (userdata)
+
+GetMaxLevel                     	= int GetMaxLevel()
+ (userdata)
+
+GetModifierValue                	= float GetModifierValue()
+ (userdata)
+
+GetModifierValueBonus           	= float GetModifierValueBonus()
+ (userdata)
+
+GetPlaybackRateOverride         	= float GetPlaybackRateOverride()
+ (userdata)
+
+GetSharedCooldownName           	= string GetSharedCooldownName()
+ (userdata)
+
+GetSpecialValueFor              	= table GetSpecialValueFor(string szName)
+Gets a value from this ability's special value block for its current level. (userdata)
+
+GetStolenActivityModifier       	= string GetStolenActivityModifier()
+ (userdata)
+
+GetToggleState                  	= bool GetToggleState()
+ (userdata)
+
+GetUpgradeRecommended           	= bool GetUpgradeRecommended()
+ (userdata)
+
+HeroXPChange                    	= bool HeroXPChange(float flXP)
+ (userdata)
+
+IncrementModifierRefCount       	= void IncrementModifierRefCount()
+ (userdata)
+
+IsActivated                     	= bool IsActivated()
+ (userdata)
+
+IsAttributeBonus                	= bool IsAttributeBonus()
+ (userdata)
+
+IsChanneling                    	= bool IsChanneling()
+Returns whether the ability is currently channeling. (userdata)
+
+IsCooldownReady                 	= bool IsCooldownReady()
+ (userdata)
+
+IsCosmetic                      	= bool IsCosmetic(handle hEntity)
+ (userdata)
+
+IsFullyCastable                 	= bool IsFullyCastable()
+Returns whether the ability can be cast. (userdata)
+
+IsHidden                        	= bool IsHidden()
+ (userdata)
+
+IsHiddenWhenStolen              	= bool IsHiddenWhenStolen()
+ (userdata)
+
+IsInAbilityPhase                	= bool IsInAbilityPhase()
+Returns whether the ability is currently casting. (userdata)
+
+IsItem                          	= bool IsItem()
+ (userdata)
+
+IsOwnersGoldEnough              	= bool IsOwnersGoldEnough(int nIssuerPlayerID)
+ (userdata)
+
+IsOwnersGoldEnoughForUpgrade    	= bool IsOwnersGoldEnoughForUpgrade()
+ (userdata)
+
+IsOwnersManaEnough              	= bool IsOwnersManaEnough()
+ (userdata)
+
+IsPassive                       	= bool IsPassive()
+ (userdata)
+
+IsRefreshable                   	= bool IsRefreshable()
+ (userdata)
+
+IsSharedWithTeammates           	= bool IsSharedWithTeammates()
+ (userdata)
+
+IsStealable                     	= bool IsStealable()
+ (userdata)
+
+IsStolen                        	= bool IsStolen()
+ (userdata)
+
+IsToggle                        	= bool IsToggle()
+ (userdata)
+
+IsTrained                       	= bool IsTrained()
+ (userdata)
+
+MarkAbilityButtonDirty          	= void MarkAbilityButtonDirty()
+Mark the ability button for this ability as needing a refresh. (userdata)
+
+NumModifiersUsingAbility        	= int NumModifiersUsingAbility()
+ (userdata)
+
+OnAbilityPhaseInterrupted       	= void OnAbilityPhaseInterrupted()
+ (userdata)
+
+OnAbilityPhaseStart             	= bool OnAbilityPhaseStart()
+ (userdata)
+
+OnAbilityPinged                 	= void OnAbilityPinged(int nPlayerID, bool bCtrlHeld)
+ (userdata)
+
+OnChannelFinish                 	= void OnChannelFinish(bool bInterrupted)
+ (userdata)
+
+OnChannelThink                  	= void OnChannelThink(float flInterval)
+ (userdata)
+
+OnHeroCalculateStatBonus        	= void OnHeroCalculateStatBonus()
+ (userdata)
+
+OnHeroLevelUp                   	= void OnHeroLevelUp()
+ (userdata)
+
+OnOwnerDied                     	= void OnOwnerDied()
+ (userdata)
+
+OnOwnerSpawned                  	= void OnOwnerSpawned()
+ (userdata)
+
+OnSpellStart                    	= void OnSpellStart()
+ (userdata)
+
+OnToggle                        	= void OnToggle()
+ (userdata)
+
+OnUpgrade                       	= void OnUpgrade()
+ (userdata)
+
+PayGoldCost                     	= void PayGoldCost()
+ (userdata)
+
+PayGoldCostForUpgrade           	= void PayGoldCostForUpgrade()
+ (userdata)
+
+PayManaCost                     	= void PayManaCost()
+ (userdata)
+
+PlaysDefaultAnimWhenStolen      	= bool PlaysDefaultAnimWhenStolen()
+ (userdata)
+
+ProcsMagicStick                 	= bool ProcsMagicStick()
+ (userdata)
+
+RefCountsModifiers              	= bool RefCountsModifiers()
+ (userdata)
+
+RefreshCharges                  	= void RefreshCharges()
+ (userdata)
+
+RefreshIntrinsicModifier        	= void RefreshIntrinsicModifier()
+ (userdata)
+
+RefundManaCost                  	= void RefundManaCost()
+ (userdata)
+
+RequiresFacing                  	= bool RequiresFacing()
+ (userdata)
+
+ResetToggleOnRespawn            	= bool ResetToggleOnRespawn()
+ (userdata)
+
+SetAbilityIndex                 	= void SetAbilityIndex(int iIndex)
+ (userdata)
+
+SetActivated                    	= void SetActivated(bool bActivated)
+ (userdata)
+
+SetChanneling                   	= void SetChanneling(bool bChanneling)
+ (userdata)
+
+SetCurrentAbilityCharges        	= void SetCurrentAbilityCharges(int nCharges)
+ (userdata)
+
+SetFrozenCooldown               	= void SetFrozenCooldown(bool bFrozenCooldown)
+ (userdata)
+
+SetHidden                       	= void SetHidden(bool bHidden)
+ (userdata)
+
+SetInAbilityPhase               	= void SetInAbilityPhase(bool bInAbilityPhase)
+ (userdata)
+
+SetLevel                        	= void SetLevel(int iLevel)
+Sets the level of this ability. (userdata)
+
+SetOverrideCastPoint            	= void SetOverrideCastPoint(float flCastPoint)
+ (userdata)
+
+SetRefCountsModifiers           	= void SetRefCountsModifiers(bool bRefCounts)
+ (userdata)
+
+SetStealable                    	= void SetStealable(bool bStealable)
+ (userdata)
+
+SetStolen                       	= void SetStolen(bool bStolen)
+ (userdata)
+
+SetUpgradeRecommended           	= void SetUpgradeRecommended(bool bUpgradeRecommended)
+ (userdata)
+
+ShouldUseResources              	= bool ShouldUseResources()
+ (userdata)
+
+SpeakAbilityConcept             	= void SpeakAbilityConcept(int iConcept)
+ (userdata)
+
+SpeakTrigger                    	= <unknown> SpeakTrigger()
+ (userdata)
+
+StartCooldown                   	= void StartCooldown(float flCooldown)
+ (userdata)
+
+ToggleAbility                   	= void ToggleAbility()
+ (userdata)
+
+ToggleAutoCast                  	= void ToggleAutoCast()
+ (userdata)
+
+UpgradeAbility                  	= void UpgradeAbility(bool bSupressSpeech)
+ (userdata)
+
+UseResources                    	= void UseResources(bool bMana, bool bGold, bool bCooldown)
+ (userdata)
+
+IsHiddenAsSecondaryAbility      	= bool IsHiddenAsSecondaryAbility()
+ (userdata)
+

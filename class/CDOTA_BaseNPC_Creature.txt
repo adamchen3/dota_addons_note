@@ -1,0 +1,72 @@
+AddItemDrop                     	= void AddItemDrop(handle hDropData)
+Add the specified item drop to this creature. (userdata)
+
+CreatureLevelUp                 	= void CreatureLevelUp(int iLevels)
+Level the creature up by the specified number of levels (userdata)
+
+GetDisableResistance            	= float GetDisableResistance()
+Set creature's current disable resistance (userdata)
+
+GetUltimateDisableResistance    	= float GetUltimateDisableResistance()
+Set creature's current disable resistance from ultimates (userdata)
+
+IsChampion                      	= bool IsChampion()
+Is this unit a champion? (userdata)
+
+IsReincarnating                 	= bool IsReincarnating()
+Is this creature respawning? (userdata)
+
+RemoveAllItemDrops              	= void RemoveAllItemDrops()
+Remove all item drops from this creature. (userdata)
+
+SetAggroOnOwnerOnDamage         	= void SetAggroOnOwnerOnDamage(bool bAggro)
+Does this creature aggro on the owner of the attacking unit when taking damage? (userdata)
+
+SetArmorGain                    	= void SetArmorGain(float flArmorGain)
+Set the armor gained per level on this creature. (userdata)
+
+SetAttackTimeGain               	= void SetAttackTimeGain(float flAttackTimeGain)
+Set the attack time gained per level on this creature. (userdata)
+
+SetBountyGain                   	= void SetBountyGain(int nBountyGain)
+Set the bounty gold gained per level on this creature. (userdata)
+
+SetChampion                     	= void SetChampion(bool bIsChampion)
+Flag this unit as a champion creature. (userdata)
+
+SetDamageGain                   	= void SetDamageGain(int nDamageGain)
+Set the damage gained per level on this creature. (userdata)
+
+SetDisableResistance            	= void SetDisableResistance(float flDisableResistance)
+Set creature's current disable resistance (userdata)
+
+SetDisableResistanceGain        	= void SetDisableResistanceGain(float flDisableResistanceGain)
+Set the disable resistance gained per level on this creature. (userdata)
+
+SetHPGain                       	= void SetHPGain(int nHPGain)
+Set the hit points gained per level on this creature. (userdata)
+
+SetHPRegenGain                  	= void SetHPRegenGain(float flHPRegenGain)
+Set the hit points regen gained per level on this creature. (userdata)
+
+SetMagicResistanceGain          	= void SetMagicResistanceGain(float flMagicResistanceGain)
+Set the magic resistance gained per level on this creature. (userdata)
+
+SetManaGain                     	= void SetManaGain(int nManaGain)
+Set the mana points gained per level on this creature. (userdata)
+
+SetManaRegenGain                	= void SetManaRegenGain(float flManaRegenGain)
+Set the mana points regen gained per level on this creature. (userdata)
+
+SetMoveSpeedGain                	= void SetMoveSpeedGain(int nMoveSpeedGain)
+Set the move speed gained per level on this creature. (userdata)
+
+SetRequiresReachingEndPath      	= void SetRequiresReachingEndPath(bool bRequiresReachingEndPath)
+Set whether creatures require reaching their end path before becoming idle (userdata)
+
+SetUltimateDisableResistance    	= void SetUltimateDisableResistance(float flUltDisableResistance)
+Set creature's current disable resistance from ultimates (userdata)
+
+SetXPGain                       	= void SetXPGain(int nXPGain)
+Set the XP gained per level on this creature. (userdata)
+

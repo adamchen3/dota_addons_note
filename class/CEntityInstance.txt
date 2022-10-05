@@ -1,0 +1,57 @@
+ConnectOutput                   	= void ConnectOutput(string, string)
+Adds an I/O connection that will call the named function on this entity when the specified output fires. (userdata)
+
+Destroy                         	= void Destroy()
+(userdata)
+
+DisconnectOutput                	= void DisconnectOutput(string, string)
+Removes a connected script function from an I/O event on this entity. (userdata)
+
+DisconnectRedirectedOutput      	= void DisconnectRedirectedOutput(string, string, handle)
+Removes a connected script function from an I/O event on the passed entity. (userdata)
+
+FireOutput                      	= void FireOutput(string, handle, handle, table, float)
+Fire an entity output (userdata)
+
+GetClassname                    	= string GetClassname()
+(userdata)
+
+GetDebugName                    	= string GetDebugName()
+Get the entity name w/help if not defined (i.e. classname/etc) (userdata)
+
+GetEntityHandle                 	= ehandle GetEntityHandle()
+Get the entity as an EHANDLE (userdata)
+
+GetEntityIndex                  	= int GetEntityIndex()
+(userdata)
+
+GetIntAttr                      	= int GetIntAttr(string)
+Get Integer Attribute (userdata)
+
+GetName                         	= string GetName()
+(userdata)
+
+GetOrCreatePrivateScriptScope   	= handle GetOrCreatePrivateScriptScope()
+Retrieve, creating if necessary, the private per-instance script-side data associated with an entity (userdata)
+
+GetOrCreatePublicScriptScope    	= handle GetOrCreatePublicScriptScope()
+Retrieve, creating if necessary, the public script-side data associated with an entity (userdata)
+
+GetPrivateScriptScope           	= handle GetPrivateScriptScope()
+Retrieve the private per-instance script-side data associated with an entity (userdata)
+
+GetPublicScriptScope            	= handle GetPublicScriptScope()
+Retrieve the public script-side data associated with an entity (userdata)
+
+RedirectOutput                  	= void RedirectOutput(string, string, handle)
+Adds an I/O connection that will call the named function on the passed entity when the specified output fires. (userdata)
+
+RemoveSelf                      	= void RemoveSelf()
+Delete this entity (userdata)
+
+SetIntAttr                      	= void SetIntAttr(string, int)
+Set Integer Attribute (userdata)
+
+entindex                        	= int entindex()
+(userdata)
+

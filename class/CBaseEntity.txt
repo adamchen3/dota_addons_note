@@ -1,0 +1,273 @@
+AddEffects                      	= void AddEffects(int nFlags)
+AddEffects( int ): Adds the render effect flag. (userdata)
+
+ApplyAbsVelocityImpulse         	= void ApplyAbsVelocityImpulse(Vector vecImpulse)
+Apply a Velocity Impulse (userdata)
+
+ApplyLocalAngularVelocityImpulse	= void ApplyLocalAngularVelocityImpulse(Vector angImpulse)
+Apply an Ang Velocity Impulse (userdata)
+
+Attribute_GetFloatValue         	= float Attribute_GetFloatValue(string pName, float flDefault)
+Get float value for an entity attribute. (userdata)
+
+Attribute_GetIntValue           	= int Attribute_GetIntValue(string pName, int nDefault)
+Get int value for an entity attribute. (userdata)
+
+Attribute_SetFloatValue         	= void Attribute_SetFloatValue(string pName, float flValue)
+Set float value for an entity attribute. (userdata)
+
+Attribute_SetIntValue           	= void Attribute_SetIntValue(string pName, int nValue)
+Set int value for an entity attribute. (userdata)
+
+DeleteAttribute                 	= void DeleteAttribute(string pName)
+Delete an entity attribute. (userdata)
+
+EmitSound                       	= void EmitSound(string soundname)
+Plays a sound from this entity. (userdata)
+
+EmitSoundParams                 	= void EmitSoundParams(string soundname, int nPitch, float flVolume, float flDelay)
+Plays/modifies a sound from this entity. changes sound if nPitch and/or flVol or flSoundTime is > 0. (userdata)
+
+EyeAngles                       	= QAngle EyeAngles()
+Get the qangles that this entity is looking at. (userdata)
+
+EyePosition                     	= Vector EyePosition()
+Get vector to eye position - absolute coords. (userdata)
+
+FirstMoveChild                  	= handle FirstMoveChild()
+(userdata)
+
+FollowEntity                    	= void FollowEntity(handle hEnt, bool bBoneMerge)
+hEntity to follow, bool bBoneMerge (userdata)
+
+GatherCriteria                  	= void GatherCriteria(handle hResult)
+Returns a table containing the criteria that would be used for response queries on this entity. This is the same as the table that is passed to response rule script function callbacks. (userdata)
+
+GetAbsOrigin                    	= Vector GetAbsOrigin()
+(userdata)
+
+GetAbsScale                     	= float GetAbsScale()
+(userdata)
+
+GetAngles                       	= QAngle GetAngles()
+(userdata)
+
+GetAnglesAsVector               	= Vector GetAnglesAsVector()
+Get entity pitch, yaw, roll as a vector. (userdata)
+
+GetAngularVelocity              	= Vector GetAngularVelocity()
+Get the local angular velocity - returns a vector of pitch,yaw,roll (userdata)
+
+GetBaseVelocity                 	= Vector GetBaseVelocity()
+Get Base? velocity. (userdata)
+
+GetBoundingMaxs                 	= Vector GetBoundingMaxs()
+Get a vector containing max bounds, centered on object. (userdata)
+
+GetBoundingMins                 	= Vector GetBoundingMins()
+Get a vector containing min bounds, centered on object. (userdata)
+
+GetBounds                       	= table GetBounds()
+Get a table containing the 'Mins' & 'Maxs' vector bounds, centered on object. (userdata)
+
+GetCenter                       	= Vector GetCenter()
+Get vector to center of object - absolute coords (userdata)
+
+GetChildren                     	= handle GetChildren()
+Get the entities parented to this entity. (userdata)
+
+GetContext                      	= table GetContext(string name)
+GetContext( name ): looks up a context and returns it if available. May return string, float, or null (if the context isn't found). (userdata)
+
+GetForwardVector                	= Vector GetForwardVector()
+Get the forward vector of the entity. (userdata)
+
+GetHealth                       	= int GetHealth()
+Get the health of this entity. (userdata)
+
+GetLocalAngles                  	= QAngle GetLocalAngles()
+Get entity local pitch, yaw, roll as a QAngle (userdata)
+
+GetLocalAngularVelocity         	= QAngle GetLocalAngularVelocity()
+Maybe local angvel (userdata)
+
+GetLocalOrigin                  	= Vector GetLocalOrigin()
+Get entity local origin as a Vector (userdata)
+
+GetLocalScale                   	= float GetLocalScale()
+(userdata)
+
+GetLocalVelocity                	= Vector GetLocalVelocity()
+Get Entity relative velocity. (userdata)
+
+GetMass                         	= float GetMass()
+Get the mass of an entity. (returns 0 if it doesn't have a physics object) (userdata)
+
+GetMaxHealth                    	= int GetMaxHealth()
+Get the maximum health of this entity. (userdata)
+
+GetModelName                    	= string GetModelName()
+Returns the name of the model. (userdata)
+
+GetMoveParent                   	= handle GetMoveParent()
+If in hierarchy, retrieves the entity's parent. (userdata)
+
+GetOrigin                       	= Vector GetOrigin()
+(userdata)
+
+GetOwner                        	= handle GetOwner()
+Gets this entity's owner (userdata)
+
+GetOwnerEntity                  	= handle GetOwnerEntity()
+Get the owner entity, if there is one (userdata)
+
+GetRightVector                  	= Vector GetRightVector()
+Get the right vector of the entity. (userdata)
+
+GetRootMoveParent               	= handle GetRootMoveParent()
+If in hierarchy, walks up the hierarchy to find the root parent. (userdata)
+
+GetSoundDuration                	= float GetSoundDuration(string soundname, string actormodel)
+Returns float duration of the sound. Takes soundname and optional actormodelname. (userdata)
+
+GetSpawnGroupHandle             	= int GetSpawnGroupHandle()
+Returns the spawn group handle of this entity (userdata)
+
+GetTeam                         	= int GetTeam()
+Get the team number of this entity. (userdata)
+
+GetTeamNumber                   	= int GetTeamNumber()
+Get the team number of this entity. (userdata)
+
+GetUpVector                     	= Vector GetUpVector()
+Get the up vector of the entity. (userdata)
+
+GetVelocity                     	= Vector GetVelocity()
+(userdata)
+
+HasAttribute                    	= bool HasAttribute(string pName)
+See if an entity has a particular attribute. (userdata)
+
+IsAlive                         	= bool IsAlive()
+Is this entity alive? (userdata)
+
+IsDOTANPC                       	= bool IsDOTANPC()
+Is this entity a Dota NPC? (userdata)
+
+IsNPC                           	= bool IsNPC()
+Is this entity an CAI_BaseNPC? (userdata)
+
+IsPlayer                        	= bool IsPlayer()
+Back compat: Is this entity a player pawn *or* controller? (userdata)
+
+IsPlayerController              	= bool IsPlayerController()
+Is this entity a player controller? (userdata)
+
+IsPlayerPawn                    	= bool IsPlayerPawn()
+Is this entity a player pawn? (userdata)
+
+Kill                            	= void Kill()
+(userdata)
+
+NextMovePeer                    	= handle NextMovePeer()
+(userdata)
+
+OverrideFriction                	= void OverrideFriction(float duration, float friction)
+Takes duration, value for a temporary override. (userdata)
+
+PrecacheScriptSound             	= void PrecacheScriptSound(string soundname)
+Precache a sound for later playing. (userdata)
+
+RemoveEffects                   	= void RemoveEffects(int nFlags)
+RemoveEffects( int ): Removes the render effect flag. (userdata)
+
+SetAbsAngles                    	= void SetAbsAngles(float fPitch, float fYaw, float fRoll)
+Set entity pitch, yaw, roll by component. (userdata)
+
+SetAbsOrigin                    	= void SetAbsOrigin(Vector origin)
+(userdata)
+
+SetAbsScale                     	= void SetAbsScale(float flScale)
+(userdata)
+
+SetAngles                       	= void SetAngles(float fPitch, float fYaw, float fRoll)
+Set entity pitch, yaw, roll by component. (userdata)
+
+SetAngularVelocity              	= void SetAngularVelocity(float pitchVel, float yawVel, float rollVel)
+Set the local angular velocity - takes float pitch,yaw,roll velocities (userdata)
+
+SetConstraint                   	= void SetConstraint(Vector vPos)
+Set the position of the constraint. (userdata)
+
+SetContext                      	= void SetContext(string pName, string pValue, float duration)
+SetContext( name , value, duration ): store any key/value pair in this entity's dialog contexts. Value must be a string. Will last for duration (set 0 to mean 'forever'). (userdata)
+
+SetContextNum                   	= void SetContextNum(string pName, float fValue, float duration)
+SetContextNum( name , value, duration ): store any key/value pair in this entity's dialog contexts. Value must be a number (int or float). Will last for duration (set 0 to mean 'forever'). (userdata)
+
+SetContextThink                 	= void SetContextThink(string pszContextName, handle hThinkFunc, float flInterval)
+Set a think function on this entity. (userdata)
+
+SetEntityName                   	= void SetEntityName(string pName)
+Set the name of an entity. (userdata)
+
+SetForwardVector                	= void SetForwardVector(Vector v)
+Set the orientation of the entity to have this forward vector. (userdata)
+
+SetFriction                     	= void SetFriction(float flFriction)
+Set PLAYER friction, ignored for objects. (userdata)
+
+SetGravity                      	= void SetGravity(float flGravity)
+Set PLAYER gravity, ignored for objects. (userdata)
+
+SetHealth                       	= void SetHealth(int nHealth)
+Set the health of this entity. (userdata)
+
+SetLocalAngles                  	= void SetLocalAngles(float fPitch, float fYaw, float fRoll)
+Set entity local pitch, yaw, roll by component (userdata)
+
+SetLocalOrigin                  	= void SetLocalOrigin(Vector origin)
+Set entity local origin from a Vector (userdata)
+
+SetLocalScale                   	= void SetLocalScale(float flScale)
+(userdata)
+
+SetMass                         	= void SetMass(float flMass)
+Set the mass of an entity. (does nothing if it doesn't have a physics object) (userdata)
+
+SetMaxHealth                    	= void SetMaxHealth(int amt)
+Set the maximum health of this entity. (userdata)
+
+SetOrigin                       	= void SetOrigin(Vector v)
+(userdata)
+
+SetOwner                        	= void SetOwner(handle pOwner)
+Sets this entity's owner (userdata)
+
+SetParent                       	= void SetParent(handle hParent, string pAttachmentname)
+Set the parent for this entity. (userdata)
+
+SetTeam                         	= void SetTeam(int iTeamNum)
+(userdata)
+
+SetVelocity                     	= void SetVelocity(Vector vecVelocity)
+(userdata)
+
+StopSound                       	= void StopSound(string soundname)
+Stops a named sound playing from this entity. (userdata)
+
+TakeDamage                      	= int TakeDamage(handle hInfo)
+Apply damage to this entity. Use CreateDamageInfo() to create a damageinfo object. (userdata)
+
+TransformPointEntityToWorld     	= Vector TransformPointEntityToWorld(Vector vPoint)
+Returns the input Vector transformed from entity to world space (userdata)
+
+TransformPointWorldToEntity     	= Vector TransformPointWorldToEntity(Vector vPoint)
+Returns the input Vector transformed from world to entity space (userdata)
+
+Trigger                         	= void Trigger()
+Fires off this entity's OnTrigger responses. (userdata)
+
+ValidatePrivateScriptScope      	= void ValidatePrivateScriptScope()
+Validates the private script scope and creates it if one doesn't exist. (userdata)
+

@@ -1,0 +1,24 @@
+Naming Convention:
+    --Modules(File Name/Dir): snake_case
+    Types(Class):           UpperCamelCase
+    Enum variants:          UpperCamelCase
+    Functions:              UpperCamelCase
+    Methods:                UpperCamelCase
+    --Variables:              lowerCamelCase
+    Constants:              SCREAMING_SNAKE_CASE
+
+
+定义类（因为是全局变量）时，不用return类定义，比如
+if NewClass == nil then
+    NewClass = {}
+    ....
+end
+-- return NewClass --不需要此行代码
+
+
+缩写表：
+def -- define     // 数据定义
+mon -- monster
+exp -- experience // 经验
+qty -- quantity   // 数量
+dura -- durability // 耐久度

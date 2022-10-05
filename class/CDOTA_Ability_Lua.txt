@@ -1,0 +1,171 @@
+CastFilterResult                	= int CastFilterResult()
+Determine whether an issued command with no target is valid. (userdata)
+
+CastFilterResultLocation        	= int CastFilterResultLocation(Vector vLocation)
+(Vector vLocation) Determine whether an issued command on a location is valid. (userdata)
+
+CastFilterResultTarget          	= int CastFilterResultTarget(handle hTarget)
+(HSCRIPT hTarget) Determine whether an issued command on a target is valid. (userdata)
+
+GetAOERadius                    	= float GetAOERadius()
+Controls the size of the AOE casting cursor. (userdata)
+
+GetAssociatedPrimaryAbilities   	= string GetAssociatedPrimaryAbilities()
+Returns abilities that are stolen simultaneously, or otherwise related in functionality. (userdata)
+
+GetAssociatedSecondaryAbilities 	= string GetAssociatedSecondaryAbilities()
+Returns other abilities that are stolen simultaneously, or otherwise related in functionality.  Generally hidden abilities. (userdata)
+
+GetBehavior                     	= uint64 GetBehavior()
+Return cast behavior type of this ability. (userdata)
+
+GetCastAnimation                	= int GetCastAnimation()
+Return casting animation of this ability. (userdata)
+
+GetCastPoint                    	= float GetCastPoint()
+Return cast point of this ability. (userdata)
+
+GetCastRange                    	= int GetCastRange(Vector vLocation, handle hTarget)
+Return cast range of this ability. (userdata)
+
+GetCastRangeBonus               	= int GetCastRangeBonus(handle hTarget, int iPseudoCastRange)
+(userdata)
+
+GetChannelAnimation             	= int GetChannelAnimation()
+Return channel animation of this ability. (userdata)
+
+GetChannelTime                  	= float GetChannelTime()
+Return the channel time of this ability. (userdata)
+
+GetChannelledManaCostPerSecond  	= int GetChannelledManaCostPerSecond(int iLevel)
+Return mana cost at the given level per second while channeling (-1 is current). (userdata)
+
+GetConceptRecipientType         	= int GetConceptRecipientType()
+Return who hears speech when this spell is cast. (userdata)
+
+GetCooldown                     	= float GetCooldown(int iLevel)
+Return cooldown of this ability. (userdata)
+
+GetCustomCastError              	= string GetCustomCastError()
+Return the error string of a failed command with no target. (userdata)
+
+GetCustomCastErrorLocation      	= string GetCustomCastErrorLocation(Vector vLocation)
+(Vector vLocation) Return the error string of a failed command on a location. (userdata)
+
+GetCustomCastErrorTarget        	= string GetCustomCastErrorTarget(handle hTarget)
+(HSCRIPT hTarget) Return the error string of a failed command on a target. (userdata)
+
+GetEffectiveCastRange           	= int GetEffectiveCastRange(Vector vLocation, handle hTarget)
+Return cast range of this ability, accounting for modifiers. (userdata)
+
+GetGoldCost                     	= int GetGoldCost(int iLevel)
+Return gold cost at the given level (-1 is current). (userdata)
+
+GetIntrinsicModifierName        	= string GetIntrinsicModifierName()
+Returns the name of the modifier applied passively by this ability. (userdata)
+
+GetManaCost                     	= int GetManaCost(int iLevel)
+Return mana cost at the given level (-1 is current). (userdata)
+
+GetPlaybackRateOverride         	= float GetPlaybackRateOverride()
+Return the animation rate of the cast animation. (userdata)
+
+IsCosmetic                      	= bool IsCosmetic(handle hEntity)
+Is this a cosmetic only ability? (userdata)
+
+IsHiddenAbilityCastable         	= bool IsHiddenAbilityCastable()
+Returns true if this ability can be used when not on the action panel. (userdata)
+
+IsHiddenWhenStolen              	= bool IsHiddenWhenStolen()
+Returns true if this ability is hidden when stolen by Spell Steal. (userdata)
+
+IsRefreshable                   	= bool IsRefreshable()
+Returns true if this ability is refreshed by Refresher Orb. (userdata)
+
+IsStealable                     	= bool IsStealable()
+Returns true if this ability can be stolen by Spell Steal. (userdata)
+
+OnAbilityPhaseInterrupted       	= void OnAbilityPhaseInterrupted()
+Cast time did not complete successfully. (userdata)
+
+OnAbilityPhaseStart             	= bool OnAbilityPhaseStart()
+Cast time begins (return true for successful cast). (userdata)
+
+OnAbilityPinged                 	= void OnAbilityPinged(int nPlayerID, bool bCtrlHeld)
+The ability was pinged (nPlayerID, bCtrlHeld). (userdata)
+
+OnChannelFinish                 	= void OnChannelFinish(bool bInterrupted)
+(bool bInterrupted) Channel finished. (userdata)
+
+OnChannelThink                  	= void OnChannelThink(float flInterval)
+(float flInterval) Channeling is taking place. (userdata)
+
+OnHeroCalculateStatBonus        	= void OnHeroCalculateStatBonus()
+Caster (hero only) gained a level, skilled an ability, or received a new stat bonus. (userdata)
+
+OnHeroDiedNearby                	= void OnHeroDiedNearby(handle unit, handle attacker, handle table)
+A hero has died in the vicinity (ie Urn), takes table of params. (userdata)
+
+OnHeroLevelUp                   	= void OnHeroLevelUp()
+Caster gained a level. (userdata)
+
+OnInventoryContentsChanged      	= void OnInventoryContentsChanged()
+Caster inventory changed. (userdata)
+
+OnItemEquipped                  	= void OnItemEquipped(handle hItem)
+( HSCRIPT hItem ) Caster equipped item. (userdata)
+
+OnOwnerDied                     	= void OnOwnerDied()
+Caster died. (userdata)
+
+OnOwnerSpawned                  	= void OnOwnerSpawned()
+Caster respawned or spawned for the first time. (userdata)
+
+OnProjectileHit                 	= bool OnProjectileHit(handle hTarget, Vector vLocation)
+(HSCRIPT hTarget, Vector vLocation) Projectile has collided with a given target or reached its destination (target is invalid). (userdata)
+
+OnProjectileHitHandle           	= bool OnProjectileHitHandle(handle hTarget, Vector vLocation, int iProjectileHandle)
+(HSCRIPT hTarget, Vector vLocation, int nHandle) Projectile has collided with a given target or reached its destination (target is invalid). (userdata)
+
+OnProjectileHit_ExtraData       	= bool OnProjectileHit_ExtraData(handle hTarget, Vector vLocation, handle table)
+(HSCRIPT hTarget, Vector vLocation, table kv) Projectile has collided with a given target or reached its destination (target is invalid). (userdata)
+
+OnProjectileThink               	= void OnProjectileThink(Vector vLocation)
+(Vector vLocation) Projectile is actively moving. (userdata)
+
+OnProjectileThinkHandle         	= void OnProjectileThinkHandle(int iProjectileHandle)
+(int nProjectileHandle) Projectile is actively moving. (userdata)
+
+OnProjectileThink_ExtraData     	= void OnProjectileThink_ExtraData(Vector vLocation, handle table)
+(Vector vLocation, table kv ) Projectile is actively moving. (userdata)
+
+OnSpellStart                    	= void OnSpellStart()
+Cast time finished, spell effects begin. (userdata)
+
+OnStolen                        	= void OnStolen(handle hSourceAbility)
+( HSCRIPT hAbility ) Special behavior when stolen by Spell Steal. (userdata)
+
+OnToggle                        	= void OnToggle()
+Ability is toggled on/off. (userdata)
+
+OnUnStolen                      	= void OnUnStolen()
+Special behavior when lost by Spell Steal. (userdata)
+
+OnUpgrade                       	= void OnUpgrade()
+Ability gained a level. (userdata)
+
+OtherAbilitiesAlwaysInterruptChanneling	= bool OtherAbilitiesAlwaysInterruptChanneling()
+(userdata)
+
+ProcsMagicStick                 	= bool ProcsMagicStick()
+Returns true if this ability will generate magic stick charges for nearby enemies. (userdata)
+
+RequiresFacing                  	= bool RequiresFacing()
+Does this ability need the caster to face the target before executing? (userdata)
+
+ResetToggleOnRespawn            	= bool ResetToggleOnRespawn()
+Returns true if this ability should return to the default toggle state when its parent respawns. (userdata)
+
+SpeakTrigger                    	= int SpeakTrigger()
+Return the type of speech used. (userdata)
+

@@ -1,0 +1,416 @@
+AddBotPlayerWithEntityScript    	= handle AddBotPlayerWithEntityScript(string, string, int, string, bool)
+Spawn a bot player of the passed hero name, player name, and team. (userdata)
+
+AddEventMetadataLeaderboardEntry	= bool AddEventMetadataLeaderboardEntry(string, unsigned, unsigned, unsigned, unsigned, unsigned, unsigned, unsigned, unsigned)
+Event-only ( string szNameSuffix, int nStars, int nMaxStars, int nExtraData1, int nExtraData2 ) (userdata)
+
+AddEventMetadataLeaderboardEntryRawScore	= bool AddEventMetadataLeaderboardEntryRawScore(string, unsigned, unsigned, unsigned, unsigned, unsigned, unsigned, unsigned)
+Event-only ( string szNameSuffix, int nScore, int nExtraData1, int nExtraData2 ) (userdata)
+
+AddHeroIDToBlacklist            	= void AddHeroIDToBlacklist(int)
+Add the hero ID to the hero blacklist if it is not already present (userdata)
+
+AddHeroIDToWhitelist            	= void AddHeroIDToWhitelist(int)
+Add the hero ID to the hero whitelist if it is not already present (userdata)
+
+AddHeroToBlacklist              	= void AddHeroToBlacklist(string)
+Add the hero to the hero blacklist if it is not already present (userdata)
+
+AddHeroToPlayerAvailability     	= void AddHeroToPlayerAvailability(int, int)
+Adds hero of given ID to available heroes of player of given ID (userdata)
+
+AddHeroToWhitelist              	= void AddHeroToWhitelist(string)
+Add the hero to the hero whitelist if it is not already present (userdata)
+
+AddItemToWhiteList              	= void AddItemToWhiteList(string)
+Add an item to the whitelist (userdata)
+
+AddMinimapDebugPoint            	= void AddMinimapDebugPoint(int, Vector, int, int, int, int, float)
+Add a point on the minimap. (userdata)
+
+AddMinimapDebugPointForTeam     	= void AddMinimapDebugPointForTeam(int, Vector, int, int, int, int, float, int)
+Add a point on the minimap for a specific team. (userdata):
+SetHeroSelectPenaltyTime        	= void SetHeroSelectPenaltyTime(float)
+Sets amount of penalty time before randoming a hero (userdata)
+
+BeginNightstalkerNight          	= void BeginNightstalkerNight(float)
+Begin night stalker night. (userdata)
+
+BeginTemporaryNight             	= void BeginTemporaryNight(float)
+Begin temporary night. (userdata)
+
+BotPopulate                     	= void BotPopulate()
+Fills all the teams with bots if cheat mode is enabled. (userdata)
+
+ClearHeroBlacklist              	= void ClearHeroBlacklist()
+Clears the hero blacklist (userdata)
+
+ClearHeroWhitelist              	= void ClearHeroWhitelist()
+Clears the hero whitelist (userdata)
+
+ClearPlayerHeroAvailability     	= void ClearPlayerHeroAvailability(int)
+Clears available heroes of player of given ID (userdata)
+
+ClearRiverPaint                 	= void ClearRiverPaint()
+Clears the current river paint (userdata)
+
+Defeated                        	= void Defeated()
+Kills the ancient, etc. (userdata)
+
+DidMatchSignoutTimeOut          	= bool DidMatchSignoutTimeOut()
+true when we have waited some time after end of the game and not received signout (userdata)
+
+EnableCustomGameSetupAutoLaunch 	= void EnableCustomGameSetupAutoLaunch(bool)
+Enabled (true) or disable (false) auto launch for custom game setup. (userdata)
+
+ExecuteTeamPing                 	= void ExecuteTeamPing(int, float, float, handle, int)
+Sends a minimap ping to all players on the team (userdata)
+
+FinishCustomGameSetup           	= void FinishCustomGameSetup()
+Indicate that the custom game setup phase is complete, and advance to the game. (userdata)
+
+ForceCreepSpawn                 	= void ForceCreepSpawn()
+Spawn the next wave of creeps. (userdata)
+
+ForceGameStart                  	= void ForceGameStart()
+Transition game state to DOTA_GAMERULES_STATE_GAME_IN_PROGRESS (userdata)
+
+GetAnnouncer                    	= handle GetAnnouncer(int)
+Get the announcer for a team (userdata)
+
+GetBannedHeroIDs                	= table GetBannedHeroIDs()
+Returns the hero unit IDs banned in this game, if any (userdata)
+
+GetBannedHeroes                 	= table GetBannedHeroes()
+Returns the hero unit names banned in this game, if any (userdata)
+
+GetCustomGameDifficulty         	= int GetCustomGameDifficulty()
+Returns the difficulty level of the custom game mode (userdata)
+
+GetCustomGameTeamMaxPlayers     	= int GetCustomGameTeamMaxPlayers(int)
+Get whether a team is selectable during game setup (userdata)
+
+GetDOTATime                     	= float GetDOTATime(bool, bool)
+(b IncludePregameTime b IncludeNegativeTime) Returns the actual DOTA in-game clock time. (userdata)
+
+GetDifficulty                   	= int GetDifficulty()
+Returns difficulty level of the custom game mode (userdata)
+
+GetDroppedItem                  	= handle GetDroppedItem(int)
+Gets the Xth dropped item (userdata)
+
+GetGameFrameTime                	= float GetGameFrameTime()
+Returns the number of seconds elapsed since the last frame was renderered. This time doesn't count up when the game is paused (userdata)
+
+GetGameModeEntity               	= handle GetGameModeEntity()
+Get the game mode entity (userdata)
+
+GetGameSessionConfigValue       	= string GetGameSessionConfigValue(string, string)
+Get a string value from the game session config (map options) (userdata)
+
+GetGameTime                     	= float GetGameTime()
+Returns the number of seconds elapsed since map start. This time doesn't count up when the game is paused (userdata)
+
+GetIetmStockDuration            	= float GetIetmStockDuration(int, string, int)
+Get the time it takes to add a new item to stock (userdata)
+
+GetItemStockCount               	= int GetItemStockCount(int, string, int)
+Get the stock count of the item (userdata)
+
+GetItemStockTime                	= float GetItemStockTime(int, string, int)
+Get the time an item will be added to stock (userdata)
+
+GetMatchSignoutComplete         	= bool GetMatchSignoutComplete()
+Have we received the post match signout message that includes reward information (userdata)
+
+GetNextBountyRuneSpawnTime      	= float GetNextBountyRuneSpawnTime()
+Gets next bounty rune spawn time (userdata)
+
+GetNextRuneSpawnTime            	= float GetNextRuneSpawnTime()
+Gets next rune spawn time (userdata)
+
+GetNianTotalDamageTaken         	= int GetNianTotalDamageTaken()
+For New Bloom, get total damage taken by the Nian / Year Beast (userdata)
+
+GetPlayerCustomGameAccountRecord	= table GetPlayerCustomGameAccountRecord(int)
+(Preview/Unreleased) Gets the player's custom game account record, as it looked at the start of this session (userdata)
+
+GetStateTransitionTime          	= float GetStateTransitionTime()
+Get time remaining between state changes. (userdata)
+
+GetTimeOfDay                    	= float GetTimeOfDay()
+Get the time of day (userdata)
+
+GetWeatherWindDirection         	= Vector GetWeatherWindDirection()
+Get Weather Wind Direction Vector (userdata)
+
+IncreaseItemStock               	= void IncreaseItemStock(int, string, int, int)
+Increase an item's stock count, clamped to item max (nTeamNumber, szItemName, nCount, nPlayerID . (userdata)
+
+IsCheatMode                     	= bool IsCheatMode()
+Are cheats enabled on the server (userdata)
+
+IsDaytime                       	= bool IsDaytime()
+Is it day time? (userdata)
+
+IsDev                           	= bool IsDev()
+(userdata)
+
+IsGamePaused                    	= bool IsGamePaused()
+Returns whether the game is paused. (userdata)
+
+IsHeroEnabledViaLists           	= bool IsHeroEnabledViaLists(string)
+Is the hero not blacklisted, and is it either whitelisted or the whitelist is empty? (userdata)
+
+IsHeroRespawnEnabled            	= bool IsHeroRespawnEnabled()
+Returns whether hero respawn is enabled. (userdata)
+
+IsInBanPhase                    	= bool IsInBanPhase()
+Are we in the ban phase of hero pick? (userdata)
+
+IsItemInWhiteList               	= bool IsItemInWhiteList(string)
+Query an item in the whitelist (userdata)
+
+IsNightstalkerNight             	= bool IsNightstalkerNight()
+Is it night stalker night-time? (userdata)
+
+IsTemporaryNight                	= bool IsTemporaryNight()
+Is it temporarily night-time? (userdata)
+
+LockCustomGameSetupTeamAssignment	= void LockCustomGameSetupTeamAssignment(bool)
+Lock (true) or unlock (false) team assignemnt. If team assignment is locked players cannot change teams. (userdata)
+
+MakeTeamLose                    	= void MakeTeamLose(int)
+Makes the specified team lose (userdata)
+
+ModifyGoldFiltered              	= int ModifyGoldFiltered(int, int, bool, int)
+Like ModifyGold, but will use the gold filter if SetFilterMoreGold has been set true (userdata)
+
+NumDroppedItems                 	= int NumDroppedItems()
+Returns the number of items currently dropped on the ground (userdata)
+
+PlayerHasCustomGameHostPrivileges	= bool PlayerHasCustomGameHostPrivileges(handle)
+Whether a player has custom game host privileges (shuffle teams, etc.) (userdata)
+
+Playtesting_UpdateAddOnKeyValues	= void Playtesting_UpdateAddOnKeyValues()
+Updates custom hero, unit and ability KeyValues in memory with the latest values from disk (userdata)
+
+PrepareSpawners                 	= void PrepareSpawners(float)
+Prepare Dota lane style spawners with a given interval (userdata)
+
+RemoveFakeClient                	= void RemoveFakeClient(int)
+Removes a fake client (userdata)
+
+RemoveHeroFromBlacklist         	= void RemoveHeroFromBlacklist(string)
+Remove the hero from the hero blacklist if present (userdata)
+
+RemoveHeroFromWhitelist         	= void RemoveHeroFromWhitelist(string)
+Remove the hero from the hero whitelist if present (userdata)
+
+RemoveHeroIDFromBlacklist       	= void RemoveHeroIDFromBlacklist(int)
+Remove the hero ID from the hero blacklist if present (userdata)
+
+RemoveHeroIDFromWhitelist       	= void RemoveHeroIDFromWhitelist(int)
+Remove the hero ID from the hero whitelist if present (userdata)
+
+RemoveItemFromWhiteList         	= void RemoveItemFromWhiteList(string)
+Remove an item from the whitelist (userdata)
+
+ResetDefeated                   	= void ResetDefeated()
+Restart after killing the ancient, etc. (userdata)
+
+ResetGameTime                   	= void ResetGameTime()
+Restart gametime from 0 (userdata)
+
+ResetToCustomGameSetup          	= void ResetToCustomGameSetup()
+Restart at custom game setup. (userdata)
+
+ResetToHeroSelection            	= void ResetToHeroSelection()
+Restart the game at hero selection (userdata)
+
+Script_GetMatchID               	= uint64 Script_GetMatchID()
+Get the MatchID for this game. (userdata)
+
+SendCustomMessage               	= void SendCustomMessage(string, int, int)
+Sends a message on behalf of a player. (userdata)
+
+SendCustomMessageToTeam         	= void SendCustomMessageToTeam(string, int, int, int)
+Sends a message on behalf of a player to the specified team. (userdata)
+
+SetAllowOutpostBonuses          	= void SetAllowOutpostBonuses(bool)
+Allow Outposts granting XP (userdata)
+
+SetCreepMinimapIconScale        	= void SetCreepMinimapIconScale(float)
+(flMinimapCreepIconScale) - Scale the creep icons on the minimap. (userdata)
+
+SetCreepSpawningEnabled         	= void SetCreepSpawningEnabled(bool)
+Sets whether the regular Dota creeps spawn. (userdata)
+
+SetCustomGameAccountRecordSaveFunction	= void SetCustomGameAccountRecordSaveFunction(handle, handle)
+(Preview/Unreleased) Sets a callback to handle saving custom game account records (callback is passed a Player ID and should return a flat simple table) (userdata)
+
+SetCustomGameAllowBattleMusic   	= void SetCustomGameAllowBattleMusic(bool)
+Sets a flag to enable/disable the default music handling code for custom games (userdata)
+
+SetCustomGameAllowHeroPickMusic 	= void SetCustomGameAllowHeroPickMusic(bool)
+Sets a flag to enable/disable the default music handling code for custom games (userdata)
+
+SetCustomGameAllowMusicAtGameStart	= void SetCustomGameAllowMusicAtGameStart(bool)
+Sets a flag to enable/disable the default music handling code for custom games (userdata)
+
+SetCustomGameAllowSecondaryAbilitiesOnOtherUnits	= void SetCustomGameAllowSecondaryAbilitiesOnOtherUnits(bool)
+Sets a flag to enable/disable the casting secondary abilities from units other than the player's own hero. (userdata)
+
+SetCustomGameBansPerTeam        	= void SetCustomGameBansPerTeam(int)
+Set number of hero bans each team gets (userdata)
+
+SetCustomGameDifficulty         	= void SetCustomGameDifficulty(int)
+Set the difficulty level of the custom game mode (userdata)
+
+SetCustomGameEndDelay           	= void SetCustomGameEndDelay(float)
+Sets the game end delay. (userdata)
+
+SetCustomGameSetupAutoLaunchDelay	= void SetCustomGameSetupAutoLaunchDelay(float)
+Set the amount of time to wait for auto launch. (userdata)
+
+SetCustomGameSetupRemainingTime 	= void SetCustomGameSetupRemainingTime(float)
+Set the amount of remaining time, in seconds, for custom game setup. 0 = finish immediately, -1 = wait forever (userdata)
+
+SetCustomGameSetupTimeout       	= void SetCustomGameSetupTimeout(float)
+Setup (pre-gameplay) phase timeout. 0 = instant, -1 = forever (until FinishCustomGameSetup is called) (userdata)
+
+SetCustomGameTeamMaxPlayers     	= void SetCustomGameTeamMaxPlayers(int, int)
+Set whether a team is selectable during game setup (userdata)
+
+SetCustomVictoryMessage         	= void SetCustomVictoryMessage(string)
+Sets the victory message. (userdata)
+
+SetCustomVictoryMessageDuration 	= void SetCustomVictoryMessageDuration(float)
+Sets the victory message duration. (userdata)
+
+SetEnableAlternateHeroGrids     	= void SetEnableAlternateHeroGrids(bool)
+Allow alternate hero grids to be used (DOTA+, etc).  True by default. (userdata)
+
+SetEventMetadataCustomTable     	= bool SetEventMetadataCustomTable(handle)
+Event-only ( table hMetadataTable ) (userdata)
+
+SetEventSignoutCustomTable      	= bool SetEventSignoutCustomTable(handle)
+Event-only ( table hMetadataTable ) (userdata)
+
+SetFilterMoreGold               	= void SetFilterMoreGold(bool)
+Sets whether to filter more gold events than normal (userdata)
+
+SetFirstBloodActive             	= void SetFirstBloodActive(bool)
+Sets whether First Blood has been triggered. (userdata)
+
+SetGameTimeFrozen               	= void SetGameTimeFrozen(bool)
+Freeze the game time. (userdata)
+
+SetGameWinner                   	= void SetGameWinner(int)
+Makes the specified team win (userdata)
+
+SetGlyphCooldown                	= void SetGlyphCooldown(int, float)
+Set Glyph cooldown for team (userdata)
+
+SetGoldPerTick                  	= void SetGoldPerTick(int)
+Set the auto gold increase per timed interval. (userdata)
+
+SetGoldTickTime                 	= void SetGoldTickTime(float)
+Set the time interval between auto gold increases. (userdata)
+
+SetHeroMinimapIconScale         	= void SetHeroMinimapIconScale(float)
+(flMinimapHeroIconScale) - Scale the hero minimap icons on the minimap. (userdata)
+
+SetHeroRespawnEnabled           	= void SetHeroRespawnEnabled(bool)
+Control if the normal DOTA hero respawn rules apply. (userdata)
+
+SetHeroSelectionTime            	= void SetHeroSelectionTime(float)
+Sets the amount of time players have to pick their hero. (userdata)
+
+SetHideBlacklistedHeroes        	= void SetHideBlacklistedHeroes(bool)
+Should blacklisted heroes be hidden, or just dimmed, in hero picking? (userdata)
+
+SetHideKillMessageHeaders       	= void SetHideKillMessageHeaders(bool)
+Sets whether the multikill, streak, and first-blood banners appear at the top of the screen. (userdata)
+
+SetIgnoreLobbyTeamsInCustomGame 	= void SetIgnoreLobbyTeamsInCustomGame(bool)
+Set whether custom and event games should ignore Lobby teams when assigning players to teams. Defaults to true. (userdata)
+
+SetItemStockCount               	= void SetItemStockCount(int, int, string, int)
+Set the stock count of the item (userdata)
+
+SetNextBountyRuneSpawnTime      	= void SetNextBountyRuneSpawnTime(float)
+Sets next bounty rune spawn time (userdata)
+
+SetNextRuneSpawnTime            	= void SetNextRuneSpawnTime(float)
+Sets next rune spawn time (userdata)
+
+SetOverlayHealthBarUnit         	= void SetOverlayHealthBarUnit(handle, int)
+Show this unit's health on the overlay health bar (userdata)
+
+SetPostGameTime                 	= void SetPostGameTime(float)
+Sets the amount of time players have between the game ending and the server disconnecting them. (userdata)
+
+SetPreGameTime                  	= void SetPreGameTime(float)
+Sets the amount of time players have between picking their hero and game start. (userdata)
+
+SetRiverPaint                   	= void SetRiverPaint(int, float)
+Paints the river for a duration (userdata)
+
+SetRuneMinimapIconScale         	= void SetRuneMinimapIconScale(float)
+(flMinimapRuneIconScale) - Scale the rune icons on the minimap. (userdata)
+
+SetRuneSpawnTime                	= void SetRuneSpawnTime(float)
+Sets the amount of time between rune spawns. (userdata)
+
+SetSafeToLeave                  	= void SetSafeToLeave(bool)
+(bSafeToLeave) - Mark this game as safe to leave. (userdata)
+
+SetSameHeroSelectionEnabled     	= void SetSameHeroSelectionEnabled(bool)
+When true, players can repeatedly pick the same hero. (userdata)
+
+SetShowcaseTime                 	= void SetShowcaseTime(float)
+Sets the amount of time players have between the strategy phase and entering the pre-game phase. (userdata)
+
+SetSpeechUseSpawnInsteadOfRespawnConcept	= void SetSpeechUseSpawnInsteadOfRespawnConcept(bool)
+Set whether to speak a Spawn concept instead of a Respawn concept on respawn. (userdata)
+
+SetStartingGold                 	= void SetStartingGold(int)
+Set the starting gold amount. (userdata)
+
+SetStrategyTime                 	= void SetStrategyTime(float)
+Sets the amount of time players have between the hero selection and entering the showcase phase. (userdata)
+
+SetTimeOfDay                    	= void SetTimeOfDay(float)
+Set the time of day. (userdata)
+
+SetTreeRegrowTime               	= void SetTreeRegrowTime(float)
+Sets the tree regrow time in seconds. (userdata)
+
+SetUseBaseGoldBountyOnHeroes    	= void SetUseBaseGoldBountyOnHeroes(bool)
+Heroes will use the basic NPC functionality for determining their bounty, rather than DOTA specific formulas. (userdata)
+
+SetUseCustomHeroXPValues        	= void SetUseCustomHeroXPValues(bool)
+Allows heroes in the map to give a specific amount of XP (this value must be set). (userdata)
+
+SetUseUniversalShopMode         	= void SetUseUniversalShopMode(bool)
+When true, all items are available at as long as any shop is in range. (userdata)
+
+SetWeatherWindDirection         	= void SetWeatherWindDirection(Vector)
+Set Weather Wind Direction Vector (userdata)
+
+SetWhiteListEnabled             	= void SetWhiteListEnabled(bool)
+Item whitelist functionality enable/disable (userdata)
+
+ShouldHideBlacklistedHeroes     	= bool ShouldHideBlacklistedHeroes()
+Are blacklisted heroes hidden, or just dimmed, in hero picking? (userdata)
+
+SpawnAndReleaseCreeps           	= void SpawnAndReleaseCreeps()
+Spawn and release the next creep wave from Dota lane style spawners. (userdata)
+
+SpawnNeutralCreeps              	= void SpawnNeutralCreeps()
+Spawn and release the next set of neutral camps. (userdata)
+
+State_Get                       	= int State_Get()
+Get the current Gamerules state (userdata)
+

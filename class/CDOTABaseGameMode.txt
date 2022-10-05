@@ -1,0 +1,456 @@
+AddAbilityUpgradeToWhitelist    	= void AddAbilityUpgradeToWhitelist(string pszAbilityName)
+const char* pszAbilityName (userdata)
+
+AddItemToCustomShop             	= void AddItemToCustomShop(string pszItemName, string pszShopName, string pszCategory)
+( pszItem, pszShop, pszCategory ) Add an item to purchase at a custom shop. (userdata)
+
+AddRealTimeCombatAnalyzerQuery  	= int AddRealTimeCombatAnalyzerQuery(handle hQueryTable, handle hPlayer, string pszQueryName)
+Begin tracking a sequence of events using the real time combat analyzer. (userdata)
+
+AllocateFowBlockerRegion        	= handle AllocateFowBlockerRegion(float flMinX, float flMinY, float flMaxX, float flMaxY, float flGridSize)
+Allocates an entity which can be used by custom games to control FoW occlusion volumes (userdata)
+
+AreWeatherEffectsDisabled       	= bool AreWeatherEffectsDisabled()
+Get if weather effects are disabled on the client. (userdata)
+
+ClearBountyRunePickupFilter     	= void ClearBountyRunePickupFilter()
+Clear the script filter that controls bounty rune pickup behavior. (userdata)
+
+ClearDamageFilter               	= void ClearDamageFilter()
+Clear the script filter that controls how a unit takes damage. (userdata)
+
+ClearExecuteOrderFilter         	= void ClearExecuteOrderFilter()
+Clear the script filter that controls when a unit picks up an item. (userdata)
+
+ClearHealingFilter              	= void ClearHealingFilter()
+Clear the script filter that controls how a unit heals. (userdata)
+
+ClearItemAddedToInventoryFilter 	= void ClearItemAddedToInventoryFilter()
+Clear the script filter that controls the item added to inventory filter. (userdata)
+
+ClearModifierGainedFilter       	= void ClearModifierGainedFilter()
+Clear the script filter that controls the modifier filter. (userdata)
+
+ClearModifyExperienceFilter     	= void ClearModifyExperienceFilter()
+Clear the script filter that controls how hero experience is modified. (userdata)
+
+ClearModifyGoldFilter           	= void ClearModifyGoldFilter()
+Clear the script filter that controls how hero gold is modified. (userdata)
+
+ClearRuneSpawnFilter            	= void ClearRuneSpawnFilter()
+Clear the script filter that controls what rune spawns. (userdata)
+
+ClearTrackingProjectileFilter   	= void ClearTrackingProjectileFilter()
+Clear the script filter that controls when tracking projectiles are launched. (userdata)
+
+DisableClumpingBehaviorByDefault	= void DisableClumpingBehaviorByDefault(bool bDisabled)
+Disable npc_dota_creature clumping behavior by default. (userdata)
+
+DisableHudFlip                  	= void DisableHudFlip(bool bDisable)
+Use to disable hud flip for this mod (userdata)
+
+EnableAbilityUpgradeWhitelist   	= void EnableAbilityUpgradeWhitelist(bool bEnabled)
+bool bEnabled (userdata)
+
+GetAlwaysShowPlayerInventory    	= bool GetAlwaysShowPlayerInventory()
+Show the player hero's inventory in the HUD, regardless of what unit is selected. (userdata)
+
+GetAlwaysShowPlayerNames        	= bool GetAlwaysShowPlayerNames()
+Get whether player names are always shown, regardless of client setting. (userdata)
+
+GetAnnouncerDisabled            	= bool GetAnnouncerDisabled()
+Are in-game announcers disabled? (userdata)
+
+GetCameraDistanceOverride       	= float GetCameraDistanceOverride()
+Set a different camera distance; dota default is 1134. (userdata)
+
+GetCustomAttributeDerivedStatValue	= float GetCustomAttributeDerivedStatValue(int nDerivedStatType)
+Get current derived stat value constant. (userdata)
+
+GetCustomBackpackCooldownPercent	= float GetCustomBackpackCooldownPercent()
+Get the current rate cooldown ticks down for items in the backpack. (userdata)
+
+GetCustomBackpackSwapCooldown   	= float GetCustomBackpackSwapCooldown()
+Get the current custom backpack swap cooldown. (userdata)
+
+GetCustomBuybackCooldownEnabled 	= bool GetCustomBuybackCooldownEnabled()
+Turns on capability to define custom buyback cooldowns. (userdata)
+
+GetCustomBuybackCostEnabled     	= bool GetCustomBuybackCostEnabled()
+Turns on capability to define custom buyback costs. (userdata)
+
+GetCustomDireScore              	= int GetCustomDireScore()
+Get the topbar score display value for dire. (userdata)
+
+GetCustomGlyphCooldown          	= float GetCustomGlyphCooldown()
+Get the current custom glyph cooldown. (userdata)
+
+GetCustomHeroMaxLevel           	= int GetCustomHeroMaxLevel()
+Allows definition of the max level heroes can achieve (default is 25). (userdata)
+
+GetCustomRadiantScore           	= int GetCustomRadiantScore()
+Get the topbar score display value for radiant. (userdata)
+
+GetCustomScanCooldown           	= float GetCustomScanCooldown()
+Get the current custom scan cooldown. (userdata)
+
+GetDaynightCycleAdvanceRate     	= float GetDaynightCycleAdvanceRate()
+Get the rate at which the day/night cycle advances (1.0 = default). (userdata)
+
+GetEventGameSeed                	= int GetEventGameSeed()
+Get the Game Seed passed from the GC. (userdata)
+
+GetEventWindowStartTime         	= unsigned GetEventWindowStartTime()
+Get the Event Window Start Time passed from the GC. (userdata)
+
+GetFixedRespawnTime             	= float GetFixedRespawnTime()
+Gets the fixed respawn time. (userdata)
+
+GetFogOfWarDisabled             	= bool GetFogOfWarDisabled()
+Turn the fog of war on or off. (userdata)
+
+GetGoldSoundDisabled            	= bool GetGoldSoundDisabled()
+Turn the sound when gold is acquired off/on. (userdata)
+
+GetHUDVisible                   	= bool GetHUDVisible(int iElement)
+Returns the HUD element visibility. (userdata)
+
+GetMaximumAttackSpeed           	= int GetMaximumAttackSpeed()
+Get the maximum attack speed for units. (userdata)
+
+GetMinimumAttackSpeed           	= int GetMinimumAttackSpeed()
+Get the minimum attack speed for units. (userdata)
+
+GetRecommendedItemsDisabled     	= bool GetRecommendedItemsDisabled()
+Turn the panel for showing recommended items at the shop off/on. (userdata)
+
+GetRespawnTimeScale             	= float GetRespawnTimeScale()
+Returns the scale applied to non-fixed respawn times. (userdata)
+
+GetStashPurchasingDisabled      	= bool GetStashPurchasingDisabled()
+Turn purchasing items to the stash off/on. If purchasing to the stash is off the player must be at a shop to purchase items. (userdata)
+
+GetStickyItemDisabled           	= bool GetStickyItemDisabled()
+Hide the sticky item in the quickbuy. (userdata)
+
+GetTopBarTeamValuesOverride     	= bool GetTopBarTeamValuesOverride()
+Override the values of the team values on the top game bar. (userdata)
+
+GetTopBarTeamValuesVisible      	= bool GetTopBarTeamValuesVisible()
+Turning on/off the team values on the top game bar. (userdata)
+
+GetTowerBackdoorProtectionEnabled	= bool GetTowerBackdoorProtectionEnabled()
+Gets whether tower backdoor protection is enabled or not. (userdata)
+
+GetUseCustomHeroLevels          	= bool GetUseCustomHeroLevels()
+Are custom-defined XP values for hero level ups in use? (userdata)
+
+GetWaterRuneLastSpawnTime       	= int GetWaterRuneLastSpawnTime()
+Gets the time from game start during which water runes spawn (userdata)
+
+IsAbilityUpgradeWhitelisted     	= bool IsAbilityUpgradeWhitelisted(string pszAbilityName)
+const char* pszAbilityName (userdata)
+
+IsBuybackEnabled                	= bool IsBuybackEnabled()
+Enables or disables buyback completely. (userdata)
+
+IsDaynightCycleDisabled         	= bool IsDaynightCycleDisabled()
+Is the day/night cycle disabled? (userdata)
+
+ListenForQueryFailed            	= void ListenForQueryFailed(handle hFunction, handle hContext)
+Set function and context for real time combat analyzer query failed. (userdata)
+
+ListenForQueryProgressChanged   	= void ListenForQueryProgressChanged(handle hFunction, handle hContext)
+Set function and context for real time combat analyzer query progress changed. (userdata)
+
+ListenForQuerySucceeded         	= void ListenForQuerySucceeded(handle hFunction, handle hContext)
+Set function and context for real time combat analyzer query succeeded. (userdata)
+
+RemoveAbilityUpgradeFromWhitelist	= void RemoveAbilityUpgradeFromWhitelist(string pszAbilityName)
+const char* pszAbilityName (userdata)
+
+RemoveItemFromCustomShop        	= void RemoveItemFromCustomShop(string pszItemName, string pszShopName)
+( pszItem, pszShop ) Remove an item to purchase at a custom shop. (userdata)
+
+RemoveRealTimeCombatAnalyzerQuery	= void RemoveRealTimeCombatAnalyzerQuery(int nQueryID)
+Stop tracking a combat analyzer query. (userdata)
+
+SetAbilityTuningValueFilter     	= void SetAbilityTuningValueFilter(handle hFunction, handle hContext)
+Set a filter function to control the tuning values that abilities use. (Modify the table and Return true to use new values, return false to use the old values) (userdata)
+
+SetAllowNeutralItemDrops        	= void SetAllowNeutralItemDrops(bool bEnabled)
+If set to true, neutral items will be dropped on killing neutral monsters.  Otherwise nothing will be dropped. (userdata)
+
+SetAlwaysShowPlayerInventory    	= void SetAlwaysShowPlayerInventory(bool bAlwaysShow)
+Show the player hero's inventory in the HUD, regardless of what unit is selected. (userdata)
+
+SetAlwaysShowPlayerNames        	= void SetAlwaysShowPlayerNames(bool bEnabled)
+Set whether player names are always shown, regardless of client setting. (userdata)
+
+SetAnnouncerDisabled            	= void SetAnnouncerDisabled(bool bDisabled)
+Mutes the in-game announcer. (userdata)
+
+SetBotThinkingEnabled           	= void SetBotThinkingEnabled(bool bEnabled)
+Enables/Disables bots in custom games. Note: this will only work with default heroes in the dota map. (userdata)
+
+SetBotsAlwaysPushWithHuman      	= void SetBotsAlwaysPushWithHuman(bool bAlwaysPush)
+Set if the bots should try their best to push with a human player. (userdata)
+
+SetBotsInLateGame               	= void SetBotsInLateGame(bool bLateGame)
+Set if bots should enable their late game behavior. (userdata)
+
+SetBotsMaxPushTier              	= void SetBotsMaxPushTier(int nMaxTier)
+Set the max tier of tower that bots want to push. (-1 to disable) (userdata)
+
+SetBountyRunePickupFilter       	= void SetBountyRunePickupFilter(handle hFunction, handle hContext)
+Set a filter function to control the behavior when a bounty rune is picked up. (Modify the table and Return true to use new values, return false to cancel the event) (userdata)
+
+SetBountyRuneSpawnInterval      	= void SetBountyRuneSpawnInterval(float flInterval)
+Set bounty rune spawn rate (userdata)
+
+SetBuybackEnabled               	= void SetBuybackEnabled(bool bEnabled)
+Enables or disables buyback completely. (userdata)
+
+SetCameraDistanceOverride       	= void SetCameraDistanceOverride(float flCameraDistanceOverride)
+Set a different camera distance; dota default is 1134. (userdata)
+
+SetCameraSmoothCountOverride    	= void SetCameraSmoothCountOverride(int nSmoothCount)
+Set a different camera smooth count; dota default is 8. (userdata)
+
+SetCameraZRange                 	= void SetCameraZRange(float flMinZ, float flMaxZ)
+Sets the camera Z range (userdata)
+
+SetCanSellAnywhere              	= void SetCanSellAnywhere(bool bAllow)
+bool bAllow (userdata)
+
+SetCustomAttributeDerivedStatValue	= void SetCustomAttributeDerivedStatValue(int nStatType, float flNewValue)
+Modify derived stat value constants. ( AttributeDerivedStat eStatType, float flNewValue. (userdata)
+
+SetCustomBackpackCooldownPercent	= void SetCustomBackpackCooldownPercent(float flPercent)
+Set the rate cooldown ticks down for items in the backpack. (userdata)
+
+SetCustomBackpackSwapCooldown   	= void SetCustomBackpackSwapCooldown(float flCooldown)
+Set a custom cooldown for swapping items into the backpack. (userdata)
+
+SetCustomBuybackCooldownEnabled 	= void SetCustomBuybackCooldownEnabled(bool bEnabled)
+Turns on capability to define custom buyback cooldowns. (userdata)
+
+SetCustomBuybackCostEnabled     	= void SetCustomBuybackCostEnabled(bool bEnabled)
+Turns on capability to define custom buyback costs. (userdata)
+
+SetCustomDireScore              	= void SetCustomDireScore(int nScore)
+Sets the topbar score display value for dire. (userdata)
+
+SetCustomGameForceHero          	= void SetCustomGameForceHero(string pHeroName)
+Force all players to use the specified hero and disable the normal hero selection process. Must be used before hero selection. (userdata)
+
+SetCustomGlyphCooldown          	= void SetCustomGlyphCooldown(float flCooldown)
+Set a custom cooldown for team Glyph ability. (userdata)
+
+SetCustomHeroMaxLevel           	= void SetCustomHeroMaxLevel(int)
+Allows definition of the max level heroes can achieve (default is 25). (userdata)
+
+SetCustomRadiantScore           	= void SetCustomRadiantScore(int nScore)
+Sets the topbar score display value for radiant. (userdata)
+
+SetCustomScanCooldown           	= void SetCustomScanCooldown(float flCooldown)
+Set a custom cooldown for team Scan ability. (userdata)
+
+SetCustomTerrainWeatherEffect   	= void SetCustomTerrainWeatherEffect(string pszEffectName)
+Set the effect used as a custom weather effect, when units are on non-default terrain, in this mode. (userdata)
+
+SetCustomXPRequiredToReachNextLevel	= void SetCustomXPRequiredToReachNextLevel(handle hTable)
+Allows definition of a table of hero XP values. (userdata)
+
+SetDamageFilter                 	= void SetDamageFilter(handle hFunction, handle hContext)
+Set a filter function to control the behavior when a unit takes damage. (Modify the table and Return true to use new values, return false to cancel the event) (userdata)
+
+SetDaynightCycleAdvanceRate     	= void SetDaynightCycleAdvanceRate(float flRate)
+Sets the rate at which the day/night cycle advances (1.0 = default). (userdata)
+
+SetDaynightCycleDisabled        	= void SetDaynightCycleDisabled(bool bDisable)
+Enable or disable the day/night cycle. (userdata)
+
+SetDeathOverlayDisabled         	= void SetDeathOverlayDisabled(bool bDisabled)
+Specify whether the full screen death overlay effect plays when the selected hero dies. (userdata)
+
+SetDefaultStickyItem            	= void SetDefaultStickyItem(string pItem)
+Sets the default sticky item in the quickbuy (userdata)
+
+SetDraftingBanningTimeOverride  	= void SetDraftingBanningTimeOverride(float flValue)
+Set drafting hero banning time (userdata)
+
+SetDraftingHeroPickSelectTimeOverride	= void SetDraftingHeroPickSelectTimeOverride(float flValue)
+Set drafting hero pick time (userdata)
+
+SetExecuteOrderFilter           	= void SetExecuteOrderFilter(handle hFunction, handle hContext)
+Set a filter function to control the behavior when a unit picks up an item. (Modify the table and Return true to use new values, return false to cancel the event) (userdata)
+
+SetFixedRespawnTime             	= void SetFixedRespawnTime(float flFixedRespawnTime)
+Set a fixed delay for all players to respawn after. (userdata)
+
+SetFogOfWarDisabled             	= void SetFogOfWarDisabled(bool bDisabled)
+Turn the fog of war on or off. (userdata)
+
+SetForceRightClickAttackDisabled	= void SetForceRightClickAttackDisabled(bool bDisabled)
+Prevent users from using the right click deny setting. (userdata)
+
+SetForcedHUDSkin                	= void SetForcedHUDSkin(string pValue)
+Specify a HUD skin that is forced on for this game mode. (userdata)
+
+SetFountainConstantManaRegen    	= void SetFountainConstantManaRegen(float flConstantManaRegen)
+Set the constant rate that the fountain will regen mana. (-1 for default) (userdata)
+
+SetFountainPercentageHealthRegen	= void SetFountainPercentageHealthRegen(float flPercentageHealthRegen)
+Set the percentage rate that the fountain will regen health. (-1 for default) (userdata)
+
+SetFountainPercentageManaRegen  	= void SetFountainPercentageManaRegen(float flPercentageManaRegen)
+Set the percentage rate that the fountain will regen mana. (-1 for default) (userdata)
+
+SetFreeCourierModeEnabled       	= void SetFreeCourierModeEnabled(bool bEnabled)
+If set to true, enable 7.23 free courier mode. (userdata)
+
+SetFriendlyBuildingMoveToEnabled	= void SetFriendlyBuildingMoveToEnabled(bool bEnabled)
+Allows clicks on friendly buildings to be handled normally. (userdata)
+
+SetGiveFreeTPOnDeath            	= void SetGiveFreeTPOnDeath(bool bGive)
+bool bGive (userdata)
+
+SetGoldSoundDisabled            	= void SetGoldSoundDisabled(bool bDisabled)
+Turn the sound when gold is acquired off/on. (userdata)
+
+SetHUDVisible                   	= void SetHUDVisible(int iHUDElement, bool bVisible)
+Set the HUD element visibility. (userdata)
+
+SetHealingFilter                	= void SetHealingFilter(handle hFunction, handle hContext)
+Set a filter function to control the behavior when a unit heals. (Modify the table and Return true to use new values, return false to cancel the event) (userdata)
+
+SetHudCombatEventsDisabled      	= void SetHudCombatEventsDisabled(bool bDisabled)
+Specify whether the default combat events will show in the HUD. (userdata)
+
+SetInnateMeleeDamageBlockAmount 	= void SetInnateMeleeDamageBlockAmount(int nAmount)
+Set the amount blocked innately by melee heroes. (userdata)
+
+SetInnateMeleeDamageBlockPerLevelAmount	= void SetInnateMeleeDamageBlockPerLevelAmount(int nPerLevelAmount)
+Set the amount innately blocked by melee heroes gained per level. (userdata)
+
+SetInnateMeleeDamageBlockPercent	= void SetInnateMeleeDamageBlockPercent(int nPercent)
+Set the percent chance a melee hero will innately block damage. (userdata)
+
+SetItemAddedToInventoryFilter   	= void SetItemAddedToInventoryFilter(handle hFunction, handle hContext)
+Set a filter function to control what happens to items that are added to an inventory, return false to cancel the event (userdata)
+
+SetKillableTombstones           	= void SetKillableTombstones(bool bEnabled)
+Set whether tombstones can be channeled to be removed by enemy heroes. (userdata)
+
+SetKillingSpreeAnnouncerDisabled	= void SetKillingSpreeAnnouncerDisabled(bool bDisabled)
+Mutes the in-game killing spree announcer. (userdata)
+
+SetLoseGoldOnDeath              	= void SetLoseGoldOnDeath(bool bEnabled)
+Use to disable gold loss on death. (userdata)
+
+SetMaximumAttackSpeed           	= void SetMaximumAttackSpeed(int nMaxSpeed)
+Set the maximum attack speed for units. (userdata)
+
+SetMinimumAttackSpeed           	= void SetMinimumAttackSpeed(int nMinSpeed)
+Set the minimum attack speed for units. (userdata)
+
+SetModifierGainedFilter         	= void SetModifierGainedFilter(handle hFunction, handle hContext)
+Set a filter function to control modifiers that are gained, return false to destroy modifier. (userdata)
+
+SetModifyExperienceFilter       	= void SetModifyExperienceFilter(handle hFunction, handle hContext)
+Set a filter function to control the behavior when a hero's experience is modified. (Modify the table and Return true to use new values, return false to cancel the event) (userdata)
+
+SetModifyGoldFilter             	= void SetModifyGoldFilter(handle hFunction, handle hContext)
+Set a filter function to control the behavior when a hero's gold is modified. (Modify the table and Return true to use new values, return false to cancel the event) (userdata)
+
+SetNeutralItemHideUndiscoveredEnabled	= void SetNeutralItemHideUndiscoveredEnabled(bool bEnable)
+When enabled, undiscovered items in the neutral item stash are hidden. (userdata)
+
+SetNeutralStashEnabled          	= void SetNeutralStashEnabled(bool bEnable)
+Allow items to be sent to the neutral stash. (userdata)
+
+SetNeutralStashTeamViewOnlyEnabled	= void SetNeutralStashTeamViewOnlyEnabled(bool bEnable)
+When enabled, the all neutral items tab cannot be viewed. (userdata)
+
+SetOverrideSelectionEntity      	= void SetOverrideSelectionEntity(handle hOverrideEntity)
+Set an override for the default selection entity, instead of each player's hero. (userdata)
+
+SetPauseEnabled                 	= void SetPauseEnabled(bool bEnabled)
+Set pausing enabled/disabled (userdata)
+
+SetPlayerHeroAvailabilityFiltered	= void SetPlayerHeroAvailabilityFiltered(bool bFilter)
+bool bFilter (userdata)
+
+SetPowerRuneSpawnInterval       	= void SetPowerRuneSpawnInterval(float flInterval)
+Set power rune spawn rate (userdata)
+
+SetRandomHeroBonusItemGrantDisabled	= void SetRandomHeroBonusItemGrantDisabled(bool bDisabled)
+Disables bonus items for randoming a hero. (userdata)
+
+SetRecommendedItemsDisabled     	= void SetRecommendedItemsDisabled(bool bDisabled)
+Turn the panel for showing recommended items at the shop off/on. (userdata)
+
+SetRemoveIllusionsOnDeath       	= void SetRemoveIllusionsOnDeath(bool bRemove)
+Make it so illusions are immediately removed upon death, rather than sticking around for a few seconds. (userdata)
+
+SetRespawnTimeScale             	= void SetRespawnTimeScale(float flValue)
+Sets the scale applied to non-fixed respawn times. 1 = default DOTA respawn calculations. (userdata)
+
+SetRuneEnabled                  	= void SetRuneEnabled(int nRune, bool bEnabled)
+Set if a given type of rune is enabled. (userdata)
+
+SetRuneSpawnFilter              	= void SetRuneSpawnFilter(handle hFunction, handle hContext)
+Set a filter function to control what rune spawns. (Modify the table and Return true to use new values, return false to cancel the event) (userdata)
+
+SetSelectionGoldPenaltyEnabled  	= void SetSelectionGoldPenaltyEnabled(bool bEnabled)
+Enable/disable gold penalty for late picking. (userdata)
+
+SetSendToStashEnabled           	= void SetSendToStashEnabled(bool bEnable)
+Allow items to be sent to the stash. (userdata)
+
+SetStashPurchasingDisabled      	= void SetStashPurchasingDisabled(bool bDisabled)
+Turn purchasing items to the stash off/on. If purchasing to the stash is off the player must be at a shop to purchase items. (userdata)
+
+SetStickyItemDisabled           	= void SetStickyItemDisabled(bool bDisabled)
+Hide the sticky item in the quickbuy. (userdata)
+
+SetTPScrollSlotItemOverride     	= void SetTPScrollSlotItemOverride(string pItemName)
+Sets the item which goes in the TP scroll slot (userdata)
+
+SetTopBarTeamValue              	= void SetTopBarTeamValue(int iTeam, int nValue)
+Set the team values on the top game bar. (userdata)
+
+SetTopBarTeamValuesOverride     	= void SetTopBarTeamValuesOverride(bool bOverride)
+Override the values of the team values on the top game bar. (userdata)
+
+SetTopBarTeamValuesVisible      	= void SetTopBarTeamValuesVisible(bool bVisible)
+Turning on/off the team values on the top game bar. (userdata)
+
+SetTowerBackdoorProtectionEnabled	= void SetTowerBackdoorProtectionEnabled(bool bEnabled)
+Enables/Disables tower backdoor protection. (userdata)
+
+SetTrackingProjectileFilter     	= void SetTrackingProjectileFilter(handle hFunction, handle hContext)
+Set a filter function to control when tracking projectiles are launched. (Modify the table and Return true to use new values, return false to cancel the event) (userdata)
+
+SetUnseenFogOfWarEnabled        	= void SetUnseenFogOfWarEnabled(bool bEnabled)
+Enable or disable unseen fog of war. When enabled parts of the map the player has never seen will be completely hidden by fog of war. (userdata)
+
+SetUseCustomHeroLevels          	= void SetUseCustomHeroLevels(bool bEnabled)
+Turn on custom-defined XP values for hero level ups.  The table should be defined before switching this on. (userdata)
+
+SetUseDefaultDOTARuneSpawnLogic 	= void SetUseDefaultDOTARuneSpawnLogic(bool bEnabled)
+If set to true, use current rune spawn rules.  Either setting respects custom spawn intervals. (userdata)
+
+SetUseTurboCouriers             	= void SetUseTurboCouriers(bool bEnabled)
+Enables or disables turbo couriers. (userdata)
+
+SetWaterRuneLastSpawnTime       	= void SetWaterRuneLastSpawnTime(int nValue)
+Sets the time from game start during which water runes spawn (userdata)
+
+SetWeatherEffectsDisabled       	= void SetWeatherEffectsDisabled(bool bDisable)
+Set if weather effects are disabled. (userdata)
+
+ShouldGiveFreeTPOnDeath         	= bool ShouldGiveFreeTPOnDeath()
+(userdata)
+

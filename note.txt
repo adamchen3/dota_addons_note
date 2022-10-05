@@ -1,0 +1,36 @@
+可以直接使用的类对象:
+    CDOTA_PlayerResource[PlayerResource]
+    CDOTAGamerules[GameRules]
+    CEntities[Entities]
+    Vector[Vector(x,y,z)]
+    CScriptHeroList[HeroList]
+    CDOTA_CustomUIManager[CustomUI]
+    CScriptParticleManager[ParticleManager]
+    Convars[ConVars]
+    CDOTATutorial[Tutorial]
+    CCustomGameEventManager[CustomGameEventManager]
+    CCustomNetTableManager[CustomNetTables]
+
+对象类型及继承关系:
+    PlayerResource                  => CDOTA_PlayerResource-->CBaseEntity-->CEntityInstance
+    GameRules                       => CDOTAGameRules
+    Entities                        => CEntities
+    HeroList                        => CScriptHeroList
+    CustomGameEventManager          => CCustomGameEventManager
+
+    GameRules:GetGameModeEntity()   => CDOTABaseGameMode-->CBaseEntity-->CEntityInstance
+
+    CDOTA_BaseNPC_Creature-->CDOTA_BaseNPC-->CBaseFlex-->CBaseAnimating-->CBaseModelEntity-->CBaseEntity-->CEntityInstance
+    CDOTA_BaseNPC_Hero-->CDOTA_BaseNPC-->CBaseFlex-->CBaseAnimating-->CBaseModelEntity-->CBaseEntity-->CEntityInstance
+    C_DOTA_BaseNPC-->C_BaseEntity-->CEntityInstance
+    CDOTA_Ability_Lua-->CDOTA_Ability_Lua-->CDOTABaseAbility-->CBaseEntity-->CEntityInstance
+    C_DOTA_Modifier_Lua-->C_DOTA_Modifier_Lua-->CDOTA_Buff
+
+    CDotaQuest-->CBaseEntity-->CEntityInstance
+    [创建方法：SpawnEntityFromTableSynchronous( "quest", { name = "KillBoss", title = "#quest_boss_kill" } )]
+
+动态生成地图的方法：
+    DOTA_SpawnMapAtPosition
+
+在lua中执行控制台命令:
+    SendToConsole("clear"), 而connect ip[:port]可以连接服务器，那是不是可以利用这种方式跨服务器

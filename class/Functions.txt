@@ -1,0 +1,703 @@
+AddFOWViewer                    	= int AddFOWViewer(int, Vector, float, float, bool)
+Add temporary vision for a given team, returns a ViewerID ( nTeamID, vLocation, flRadius, flDuration, bObstructedVision) (userdata)
+
+AngleDiff                       	= float AngleDiff(float, float)
+Returns the number of degrees difference between two yaw angles (userdata)
+
+AnglesToVector                  	= Vector AnglesToVector(QAngle)
+Generate a vector given a QAngles (userdata)
+
+AppendToLogFile                 	= void AppendToLogFile(string, string)
+AppendToLogFile is deprecated. Print to the console for logging instead. (userdata)
+
+ApplyDamage                     	= float ApplyDamage(handle)
+Damage an npc. (userdata)
+
+AxisAngleToQuaternion           	= Quaternion AxisAngleToQuaternion(Vector, float)
+(vector,float) constructs a quaternion representing a rotation by angle around the specified vector axis (userdata)
+
+CalcClosestPointOnEntityOBB     	= Vector CalcClosestPointOnEntityOBB(handle, Vector)
+Compute the closest point on the OBB of an entity. (userdata)
+
+CalcDistanceBetweenEntityOBB    	= float CalcDistanceBetweenEntityOBB(handle, handle)
+Compute the distance between two entity OBB. A negative return value indicates an input error. A return value of zero indicates that the OBBs are overlapping. (userdata)
+
+CalcDistanceToLineSegment2D     	= float CalcDistanceToLineSegment2D(Vector, Vector, Vector)
+(userdata)
+
+CancelEntityIOEvents            	= void CancelEntityIOEvents(ehandle)
+Create all I/O events for a particular entity (userdata)
+
+CenterCameraOnUnit              	= void CenterCameraOnUnit(int, handle)
+CenterCameraOnUnit( nPlayerId, hUnit ): Centers each players' camera on a unit. (userdata)
+
+ClearTeamCustomHealthbarColor   	= void ClearTeamCustomHealthbarColor(int)
+( teamNumber ) (userdata)
+
+CreateDamageInfo                	= handle CreateDamageInfo(handle, handle, Vector, Vector, float, int)
+(hInflictor, hAttacker, flDamage) - Allocate a damageinfo object, used as an argument to TakeDamage(). Call DestroyDamageInfo( hInfo ) to free the object. (userdata)
+
+CreateEffect                    	= bool CreateEffect(handle)
+Pass table - Inputs: entity, effect (userdata)
+
+CreateHTTPRequest               	= handle CreateHTTPRequest(string, string)
+Create an HTTP request. (userdata)
+
+CreateHTTPRequestScriptVM       	= handle CreateHTTPRequestScriptVM(string, string)
+Create an HTTP request. (userdata)
+
+CreateHeroForPlayer             	= handle CreateHeroForPlayer(string, handle)
+Creates a DOTA hero by its dota_npc_units.txt name and sets it as the given player's controlled hero (userdata)
+
+CreateIllusions                 	= table CreateIllusions(handle, handle, handle, int, int, bool, bool)
+Create illusions of the passed hero that belong to passed unit using passed modifier data. ( hOwner, hHeroToCopy, hModiiferKeys, nNumIllusions, nPadding, bScramblePosition, bFindClearSpace ) 
+Supported keys: 
+outgoing_damage
+incoming_damage
+bounty_base
+bounty_growth
+outgoing_damage_structure
+outgoing_damage_roshan (userdata)
+
+CreateItem                      	= handle CreateItem(string, handle, handle)
+Create a DOTA item (userdata)
+
+CreateItemOnPositionForLaunch   	= handle CreateItemOnPositionForLaunch(Vector, handle)
+Create a physical item at a given location, can start in air (but doesn't clear a space) (userdata)
+
+CreateItemOnPositionSync        	= handle CreateItemOnPositionSync(Vector, handle)
+Create a physical item at a given location (userdata)
+
+CreateModifierThinker           	= handle CreateModifierThinker(handle, handle, string, handle, Vector, int, bool)
+Create a modifier not associated with an NPC. ( hCaster, hAbility, modifierName, paramTable, vOrigin, nTeamNumber, bPhantomBlocker ) (userdata)
+
+CreateRune                      	= handle CreateRune(Vector, int)
+Create a rune of the specified type (vLocation, iRuneType). (userdata)
+
+CreateSceneEntity               	= handle CreateSceneEntity(string)
+Create a scene entity to play the specified scene. (userdata)
+
+CreateTempTree                  	= handle CreateTempTree(Vector, float)
+Create a temporary tree, uses a default tree model. (vLocation, flDuration). (userdata)
+
+CreateTempTreeWithModel         	= handle CreateTempTreeWithModel(Vector, float, string)
+Create a temporary tree, specifying the tree model name. (vLocation, flDuration, szModelName). (userdata)
+
+CreateTrigger                   	= handle CreateTrigger(Vector, Vector, Vector)
+CreateTrigger( vecMin, vecMax ) : Creates and returns an AABB trigger (userdata)
+
+CreateTriggerRadiusApproximate  	= handle CreateTriggerRadiusApproximate(Vector, float)
+CreateTriggerRadiusApproximate( vecOrigin, flRadius ) : Creates and returns an AABB trigger thats bigger than the radius provided (userdata)
+
+CreateUniformRandomStream       	= handle CreateUniformRandomStream(int)
+( iSeed ) - Creates a separate random number stream. (userdata)
+
+CreateUnitByName                	= handle CreateUnitByName(string, Vector, bool, handle, handle, int)
+Creates a DOTA unit by its dota_npc_units.txt name (userdata)
+
+CreateUnitByNameAsync           	= int CreateUnitByNameAsync(string, Vector, bool, handle, handle, int, handle)
+Creates a DOTA unit by its dota_npc_units.txt name (userdata)
+
+CreateUnitFromTable             	= handle CreateUnitFromTable(handle, Vector)
+Creates a DOTA unit by its dota_npc_units.txt name from a table of entity key values and a position to spawn at. (userdata)
+
+CrossVectors                    	= Vector CrossVectors(Vector, Vector)
+(vector,vector) cross product between two vectors (userdata)
+
+DOTA_SpawnMapAtPosition         	= int DOTA_SpawnMapAtPosition(string, Vector, bool, handle, handle, handle)
+Spawn a .vmap at the target location. (userdata)
+
+DebugBreak                      	= void DebugBreak()
+Breaks in the debugger (userdata)
+
+DebugCreateUnit                 	= int DebugCreateUnit(handle, string, int, bool, handle)
+Creates a test unit controllable by the specified player. (userdata)
+
+DebugDrawBox                    	= void DebugDrawBox(Vector, Vector, Vector, int, int, int, int, float)
+Draw a debug overlay box (origin, mins, maxs, forward, r, g, b, a, duration ) (userdata)
+
+DebugDrawBoxDirection           	= void DebugDrawBoxDirection(Vector, Vector, Vector, Vector, Vector, float, float)
+Draw a debug forward box (cent, min, max, forward, vRgb, a, duration) (userdata)
+
+DebugDrawCircle                 	= void DebugDrawCircle(Vector, Vector, float, float, bool, float)
+Draw a debug circle (center, vRgb, a, rad, ztest, duration) (userdata)
+
+DebugDrawClear                  	= void DebugDrawClear()
+Try to clear all the debug overlay info (userdata)
+
+DebugDrawLine                   	= void DebugDrawLine(Vector, Vector, int, int, int, bool, float)
+Draw a debug overlay line (origin, target, r, g, b, ztest, duration) (userdata)
+
+DebugDrawLine_vCol              	= void DebugDrawLine_vCol(Vector, Vector, Vector, bool, float)
+Draw a debug line using color vec (start, end, vRgb, a, ztest, duration) (userdata)
+
+DebugDrawScreenTextLine         	= void DebugDrawScreenTextLine(float, float, int, string, int, int, int, int, float)
+Draw text with a line offset (x, y, lineOffset, text, r, g, b, a, duration) (userdata)
+
+DebugDrawSphere                 	= void DebugDrawSphere(Vector, Vector, float, float, bool, float)
+Draw a debug sphere (center, vRgb, a, rad, ztest, duration) (userdata)
+
+DebugDrawText                   	= void DebugDrawText(Vector, string, bool, float)
+Draw text in 3d (origin, text, bViewCheck, duration) (userdata)
+
+DebugScreenTextPretty           	= void DebugScreenTextPretty(float, float, int, string, int, int, int, int, float, string, int, bool)
+Draw pretty debug text (x, y, lineOffset, text, r, g, b, a, duration, font, size, bBold) (userdata)
+
+DestroyDamageInfo               	= void DestroyDamageInfo(handle)
+Free a damageinfo object that was created with CreateDamageInfo(). (userdata)
+
+DisconnectClient                	= void DisconnectClient(int, bool)
+Kick a specific player from the game (userdata)
+
+DoCleaveAttack                  	= int DoCleaveAttack(handle, handle, handle, float, float, float, float, string)
+(hAttacker, hTarget, hAbility, fDamage, fRadius, effectName) (userdata)
+
+DoEntFire                       	= void DoEntFire(string, string, string, float, handle, handle)
+#EntFire:Generate and entity i/o event (userdata)
+
+DoEntFireByInstanceHandle       	= void DoEntFireByInstanceHandle(handle, string, string, float, handle, handle)
+#EntFireByHandle:Generate and entity i/o event (userdata)
+
+DoIncludeScript                 	= bool DoIncludeScript(string, handle)
+Execute a script (internal) (userdata)
+
+DoScriptAssert                  	= void DoScriptAssert(bool, string)
+#ScriptAssert:Asserts the passed in value. Prints out a message and brings up the assert dialog. (userdata)
+
+DoUniqueString                  	= string DoUniqueString(string)
+#UniqueString:Generate a string guaranteed to be unique across the life of the script VM, with an optional root string. Useful for adding data to tables when not sure what keys are already in use in that table. (userdata)
+
+DotProduct                      	= float DotProduct(Vector, Vector)
+(userdata)
+
+DropNeutralItemAtPositionForHero	= handle DropNeutralItemAtPositionForHero(string, Vector, handle, int, bool)
+Drop a neutral item for the team of the hero at the given tier. (userdata)
+
+EmitAnnouncerSound              	= void EmitAnnouncerSound(string)
+Emit an announcer sound for all players. (userdata)
+
+EmitAnnouncerSoundForPlayer     	= void EmitAnnouncerSoundForPlayer(string, int)
+Emit an announcer sound for a player. (userdata)
+
+EmitAnnouncerSoundForTeam       	= void EmitAnnouncerSoundForTeam(string, int)
+Emit an announcer sound for a team. (userdata)
+
+EmitAnnouncerSoundForTeamOnLocation	= void EmitAnnouncerSoundForTeamOnLocation(string, int, Vector)
+Emit an announcer sound for a team at a specific location. (userdata)
+
+EmitGlobalSound                 	= void EmitGlobalSound(string)
+Play named sound for all players (userdata)
+
+EmitSoundOn                     	= void EmitSoundOn(string, handle)
+Play named sound on Entity (userdata)
+
+EmitSoundOnClient               	= void EmitSoundOnClient(string, handle)
+Play named sound only on the client for the passed in player (userdata)
+
+EmitSoundOnEntityForPlayer      	= void EmitSoundOnEntityForPlayer(string, handle, int)
+Emit a sound on an entity for only a specific player (userdata)
+
+EmitSoundOnLocationForAllies    	= void EmitSoundOnLocationForAllies(Vector, string, handle)
+Emit a sound on a location from a unit, only for players allied with that unit (vLocation, soundName, hCaster (userdata)
+
+EmitSoundOnLocationForPlayer    	= void EmitSoundOnLocationForPlayer(string, Vector, int)
+Emit a sound on a location for only a specific player (userdata)
+
+EmitSoundOnLocationWithCaster   	= void EmitSoundOnLocationWithCaster(Vector, string, handle)
+Emit a sound on a location from a unit. (vLocation, soundName, hCaster). (userdata)
+
+EntIndexToHScript               	= handle EntIndexToHScript(int)
+Turn an entity index integer to an HScript representing that entity's script instance. (userdata)
+
+ExecuteOrderFromTable           	= void ExecuteOrderFromTable(handle)
+Issue an order from a script table (userdata)
+
+ExponentialDecay                	= float ExponentialDecay(float, float, float)
+Smooth curve decreasing slower as it approaches zero (userdata)
+
+FindClearRandomPositionAroundUnit	= bool FindClearRandomPositionAroundUnit(handle, handle, int)
+Finds a clear random position around a given target unit, using the target unit's padded collision radius. (userdata)
+
+FindClearSpaceForUnit           	= bool FindClearSpaceForUnit(handle, Vector, bool)
+Place a unit somewhere not already occupied. (userdata)
+
+FindSpawnEntityForTeam          	= handle FindSpawnEntityForTeam(int)
+Find a spawn point for the given team. (userdata)
+
+FindUnitsInLine                 	= table FindUnitsInLine(int, Vector, Vector, handle, float, int, int, int)
+Find units that intersect the given line with the given flags. (userdata)
+
+FindUnitsInRadius               	= table FindUnitsInRadius(int, Vector, handle, float, int, int, int, int, bool)
+Finds the units in a given radius with the given flags. (userdata)
+
+FireEntityIOInputNameOnly       	= void FireEntityIOInputNameOnly(ehandle, string)
+Fire Entity's Action Input w/no data (userdata)
+
+FireEntityIOInputString         	= void FireEntityIOInputString(ehandle, string, string)
+Fire Entity's Action Input with passed String - you own the memory (userdata)
+
+FireEntityIOInputVec            	= void FireEntityIOInputVec(ehandle, string, Vector)
+Fire Entity's Action Input with passed Vector - you own the memory (userdata)
+
+FireGameEvent                   	= void FireGameEvent(string, handle)
+Fire a game event. (userdata)
+
+FireGameEventLocal              	= void FireGameEventLocal(string, handle)
+Fire a game event without broadcasting to the client. (userdata)
+
+FrameTime                       	= float FrameTime()
+Get the time spent on the server in the last frame (userdata)
+
+GetAbilityKeyValuesByName       	= table GetAbilityKeyValuesByName(string)
+Get ability data by ability name. (userdata)
+
+GetAbilityTextureNameForAbility 	= string GetAbilityTextureNameForAbility(string)
+Gets the ability texture name for an ability (userdata)
+
+GetActiveSpawnGroupHandle       	= int GetActiveSpawnGroupHandle()
+Returns the currently active spawn group handle (userdata)
+
+GetDedicatedServerKey           	= string GetDedicatedServerKey(string)
+( version ) (userdata)
+
+GetDedicatedServerKeyV2         	= string GetDedicatedServerKeyV2(string)
+( version ) (userdata)
+
+GetEntityIndexForTreeId         	= int GetEntityIndexForTreeId(unsigned)
+Get the enity index for a tree id specified as the entindex_target of a DOTA_UNIT_ORDER_CAST_TARGET_TREE. (userdata)
+
+GetFrameCount                   	= int GetFrameCount()
+Returns the engines current frame count (userdata)
+
+GetGroundHeight                 	= float GetGroundHeight(Vector, handle)
+(userdata)
+
+GetGroundPosition               	= Vector GetGroundPosition(Vector, handle)
+Returns the supplied position moved to the ground. Second parameter is an NPC for measuring movement collision hull offset. (userdata)
+
+GetItemCost                     	= int GetItemCost(string)
+Get the cost of an item by name. (userdata)
+
+GetItemDefOwnedCount            	= int GetItemDefOwnedCount(int, int)
+(userdata)
+
+GetItemDefQuantity              	= int GetItemDefQuantity(int, int)
+(userdata)
+
+GetListenServerHost             	= handle GetListenServerHost()
+Get the local player on a listen server. (userdata)
+
+GetLobbyEventGameDetails        	= table GetLobbyEventGameDetails()
+( ) (userdata)
+
+GetMapName                      	= string GetMapName()
+Get the name of the map. (userdata)
+
+GetMaxOutputDelay               	= float GetMaxOutputDelay(ehandle, string)
+Get the longest delay for all events attached to an output (userdata)
+
+GetPhysAngularVelocity          	= Vector GetPhysAngularVelocity(handle)
+Get Angular Velocity for VPHYS or normal object. Returns a vector of the axis of rotation, multiplied by the degrees of rotation per second. (userdata)
+
+GetPhysVelocity                 	= Vector GetPhysVelocity(handle)
+Get Velocity for VPHYS or normal object (userdata)
+
+GetPotentialNeutralItemDrop     	= string GetPotentialNeutralItemDrop(int, int)
+Given the item tier and the team, roll for the name of a valid neutral item drop, considering previous drops and consumables. (userdata)
+
+GetSystemDate                   	= string GetSystemDate()
+Get the current real world date (userdata)
+
+GetSystemTime                   	= string GetSystemTime()
+Get the current real world time (userdata)
+
+GetSystemTimeMS                 	= double GetSystemTimeMS()
+Get system time in milliseconds (userdata)
+
+GetTargetAOELocation            	= Vector GetTargetAOELocation(int, int, int, Vector, int, int, int)
+(userdata)
+
+GetTargetLinearLocation         	= Vector GetTargetLinearLocation(int, int, int, Vector, int, int, int)
+(userdata)
+
+GetTeamHeroKills                	= int GetTeamHeroKills(int)
+( int teamID ) (userdata)
+
+GetTeamName                     	= string GetTeamName(int)
+( int teamID ) (userdata)
+
+GetTreeIdForEntityIndex         	= int GetTreeIdForEntityIndex(int)
+Given and entity index of a tree, get the tree id for use for use with with unit orders. (userdata)
+
+GetUnitKeyValuesByName          	= table GetUnitKeyValuesByName(string)
+Get unit data by ability name. (userdata)
+
+GetWorldMaxX                    	= float GetWorldMaxX()
+Gets the world's maximum X position. (userdata)
+
+GetWorldMaxY                    	= float GetWorldMaxY()
+Gets the world's maximum Y position. (userdata)
+
+GetWorldMinX                    	= float GetWorldMinX()
+Gets the world's minimum X position. (userdata)
+
+GetWorldMinY                    	= float GetWorldMinY()
+Gets the world's minimum Y position. (userdata)
+
+GetXPNeededToReachNextLevel     	= int GetXPNeededToReachNextLevel(int)
+Get amount of XP required to reach the next level. (userdata)
+
+HeroMaxLevel                    	= void HeroMaxLevel(handle)
+Max out a hero's level and give them all appropriate abilities and talents. (userdata)
+
+InitLogFile                     	= void InitLogFile(string, string)
+InitLogFile is deprecated. Print to the console for logging instead. (userdata)
+
+IsClient                        	= bool IsClient()
+Returns true if this is lua running from the client.dll. (userdata)
+
+IsDedicatedServer               	= bool IsDedicatedServer()
+Returns true if this server is a dedicated server. (userdata)
+
+IsInToolsMode                   	= bool IsInToolsMode()
+Returns true if this is lua running within tools mode. (userdata)
+
+IsLocationVisible               	= bool IsLocationVisible(int, Vector)
+Ask fog of war if a location is visible to a certain team (nTeamNumber, vLocation). (userdata)
+
+IsMangoTree                     	= bool IsMangoTree(handle)
+Is this entity a mango tree? (hEntity). (userdata)
+
+IsMarkedForDeletion             	= bool IsMarkedForDeletion(handle)
+Returns true if the entity is valid and marked for deletion. (userdata)
+
+IsServer                        	= bool IsServer()
+Returns true if this is lua running from the server.dll. (userdata)
+
+IsUnitInValidPosition           	= bool IsUnitInValidPosition(handle)
+Returns true if the unit is in a valid position in the gridnav. (userdata)
+
+IsValidEntity                   	= bool IsValidEntity(handle)
+Checks to see if the given hScript is a valid entity (userdata)
+
+LerpVectors                     	= Vector LerpVectors(Vector, Vector, float)
+(vector,vector,float) lerp between two vectors by a float factor returning new vector (userdata)
+
+LimitPathingSearchDepth         	= void LimitPathingSearchDepth(float)
+Set the limit on the pathfinding search space. (userdata)
+
+LinkLuaModifier                 	= void LinkLuaModifier(string, string, int)
+Link a lua-defined modifier with the associated class ( className, fileName, LuaModifierType). (userdata)
+
+ListenToGameEvent               	= int ListenToGameEvent(string, handle, handle)
+Register as a listener for a game event from script. (userdata)
+
+LoadKeyValues                   	= table LoadKeyValues(string)
+Creates a table from the specified keyvalues text file (userdata)
+
+LoadKeyValuesFromString         	= table LoadKeyValuesFromString(string)
+Creates a table from the specified keyvalues string (userdata)
+
+LocalTime                       	= table LocalTime()
+Get the current local time (userdata)
+
+MakeStringToken                 	= int MakeStringToken(string)
+Checks to see if the given hScript is a valid entity (userdata)
+
+ManuallyTriggerSpawnGroupCompletion	= void ManuallyTriggerSpawnGroupCompletion(int)
+Triggers the creation of entities in a manually-completed spawn group (userdata)
+
+MinimapEvent                    	= void MinimapEvent(int, handle, int, int, int, int)
+Start a minimap event. (nTeamID, hEntity, nXCoord, nYCoord, nEventType, nEventDuration). (userdata)
+
+Msg                             	= void Msg(string)
+Print a message (userdata)
+
+PauseGame                       	= void PauseGame(bool)
+Pause or unpause the game. (userdata)
+
+Plat_FloatTime                  	= float Plat_FloatTime()
+Get the current float time from the engine (userdata)
+
+PlayerInstanceFromIndex         	= handle PlayerInstanceFromIndex(int)
+Get a script instance of a player by index. (userdata)
+
+PrecacheEntityFromTable         	= void PrecacheEntityFromTable(string, handle, handle)
+Precache an entity from KeyValues in table (userdata)
+
+PrecacheEntityListFromTable     	= void PrecacheEntityListFromTable(handle, handle)
+Precache a list of entity KeyValues tables (userdata)
+
+PrecacheItemByNameAsync         	= void PrecacheItemByNameAsync(string, handle)
+Asynchronously precaches a DOTA item by its dota_npc_items.txt name, provides a callback when it's finished. (userdata)
+
+PrecacheItemByNameSync          	= void PrecacheItemByNameSync(string, handle)
+Precaches a DOTA item by its dota_npc_items.txt name (userdata)
+
+PrecacheModel                   	= void PrecacheModel(string, handle)
+( modelName, context ) - Manually precache a single model (userdata)
+
+PrecacheResource                	= void PrecacheResource(string, string, handle)
+Manually precache a single resource (userdata)
+
+PrecacheUnitByNameAsync         	= void PrecacheUnitByNameAsync(string, handle, int)
+Asynchronously precaches a DOTA unit by its dota_npc_units.txt name, provides a callback when it's finished. (userdata)
+
+PrecacheUnitByNameSync          	= void PrecacheUnitByNameSync(string, handle, int)
+Precaches a DOTA unit by its dota_npc_units.txt name (userdata)
+
+PrecacheUnitFromTableAsync      	= void PrecacheUnitFromTableAsync(handle, handle)
+Precaches a DOTA unit from a table of entity key values. (userdata)
+
+PrecacheUnitFromTableSync       	= void PrecacheUnitFromTableSync(handle, handle)
+Precaches a DOTA unit from a table of entity key values. (userdata)
+
+PrintLinkedConsoleMessage       	= void PrintLinkedConsoleMessage(string, string)
+Print a console message with a linked console command (userdata)
+
+QSlerp                          	= QAngle QSlerp(QAngle, QAngle, float)
+(from angle, to angle, time) - Spherical lerp of angle from->to based on time (userdata)
+
+RandomFloat                     	= float RandomFloat(float, float)
+Get a random float within a range (userdata)
+
+RandomInt                       	= int RandomInt(int, int)
+Get a random int within a range (userdata)
+
+RandomVector                    	= Vector RandomVector(float)
+Get a random 2D vector of the given length. (userdata)
+
+RegisterCustomAnimationScriptForModel	= void RegisterCustomAnimationScriptForModel(string, string)
+Register a custom animation script to run when a model loads (userdata)
+
+RegisterSpawnGroupFilterProxy   	= void RegisterSpawnGroupFilterProxy(string)
+Create a C proxy for a script-based spawn group filter (userdata)
+
+ReloadMOTD                      	= void ReloadMOTD()
+Reloads the MotD file (userdata)
+
+RemapValClamped                 	= float RemapValClamped(float, float, float, float, float)
+(userdata)
+
+RemoveFOWViewer                 	= void RemoveFOWViewer(int, int)
+Remove temporary vision for a given team ( nTeamID, nViewerID ) (userdata)
+
+RemoveSpawnGroupFilterProxy     	= void RemoveSpawnGroupFilterProxy(string)
+Remove the C proxy for a script-based spawn group filter (userdata)
+
+ResolveNPCPositions             	= void ResolveNPCPositions(Vector, float)
+Check and fix units that have been assigned a position inside collision radius of other NPCs. (userdata)
+
+RollPercentage                  	= bool RollPercentage(int)
+(int nPct) (userdata)
+
+RollPseudoRandomPercentage      	= bool RollPseudoRandomPercentage(unsigned, int, handle)
+( chance, pseudo random id, unit. (userdata)
+
+RotateOrientation               	= QAngle RotateOrientation(QAngle, QAngle)
+Rotate a QAngle by another QAngle. (userdata)
+
+RotatePosition                  	= Vector RotatePosition(Vector, QAngle, Vector)
+Rotate a Vector around a point. (userdata)
+
+RotateQuaternionByAxisAngle     	= Quaternion RotateQuaternionByAxisAngle(Quaternion, Vector, float)
+(quaternion,vector,float) rotates a quaternion by the specified angle around the specified vector axis (userdata)
+
+RotationDelta                   	= QAngle RotationDelta(QAngle, QAngle)
+Find the delta between two QAngles. (userdata)
+
+RotationDeltaAsAngularVelocity  	= Vector RotationDeltaAsAngularVelocity(QAngle, QAngle)
+converts delta QAngle to an angular velocity Vector (userdata)
+
+Say                             	= void Say(handle, string, bool)
+Have Entity say string, and teamOnly or not (userdata)
+
+ScreenShake                     	= void ScreenShake(Vector, float, float, float, float, int, bool)
+Start a screenshake with the following parameters. vecCenter, flAmplitude, flFrequency, flDuration, flRadius, eCommand( SHAKE_START = 0, SHAKE_STOP = 1 ), bAirShake (userdata)
+
+SendOverheadEventMessage        	= void SendOverheadEventMessage(handle, int, handle, int, handle)
+( DOTAPlayer sendToPlayer, int iMessageType, Entity targetEntity, int iValue, DOTAPlayer sourcePlayer ) - sendToPlayer and sourcePlayer can be nil - iMessageType is one of OVERHEAD_ALERT_* (userdata)
+
+SendToConsole                   	= void SendToConsole(string)
+Send a string to the console as a client command (userdata)
+
+SendToServerConsole             	= void SendToServerConsole(string)
+Send a string to the console as a server command (userdata)
+
+SetOpvarFloatAll                	= void SetOpvarFloatAll(string, string, string, float)
+Sets an opvar value for all players (userdata)
+
+SetOpvarFloatPlayer             	= void SetOpvarFloatPlayer(string, string, string, float, handle)
+Sets an opvar value for a single player (userdata)
+
+SetPhysAngularVelocity          	= void SetPhysAngularVelocity(handle, Vector)
+Set Angular Velocity for VPHYS or normal object, from a vector of the axis of rotation, multiplied by the degrees of rotation per second. (userdata)
+
+SetQuestName                    	= void SetQuestName(string)
+Set the current quest name. (userdata)
+
+SetQuestPhase                   	= void SetQuestPhase(int)
+Set the current quest phase. (userdata)
+
+SetRenderingEnabled             	= void SetRenderingEnabled(ehandle, bool)
+Set rendering on/off for an ehandle (userdata)
+
+SetTeamCustomHealthbarColor     	= void SetTeamCustomHealthbarColor(int, int, int, int)
+( teamNumber, r, g, b ) (userdata)
+
+ShowCustomHeaderMessage         	= void ShowCustomHeaderMessage(string, int, int, float)
+( const char *pszMessage, PlayerID_t nPlayerID, int nValue, float flTime ) - Supports localized strings - %s1 = PlayerName, %s2 = Value, %s3 = TeamName (userdata)
+
+ShowGenericPopup                	= void ShowGenericPopup(string, string, string, string, int)
+Show a generic popup dialog for all players. (userdata)
+
+ShowGenericPopupToPlayer        	= void ShowGenericPopupToPlayer(handle, string, string, string, string, int)
+Show a generic popup dialog to a specific player. (userdata)
+
+ShowMessage                     	= void ShowMessage(string)
+Print a hud message on all clients (userdata)
+
+SpawnDOTAShopTriggerRadiusApproximate	= handle SpawnDOTAShopTriggerRadiusApproximate(Vector, float)
+(Vector vOrigin, float flRadius ) (userdata)
+
+SpawnEffigyOfUnitOrModel        	= handle SpawnEffigyOfUnitOrModel(string, int, Vector, Vector, float, float, int)
+Spawn an effigy of the target unit. (userdata)
+
+SpawnEntityFromTableAsynchronous	= void SpawnEntityFromTableAsynchronous(string, handle, handle, handle)
+Asynchronously spawns a single entity from a table (userdata)
+
+SpawnEntityFromTableSynchronous 	= handle SpawnEntityFromTableSynchronous(string, handle)
+Synchronously spawns a single entity from a table (userdata)
+
+SpawnEntityGroupFromTable       	= bool SpawnEntityGroupFromTable(handle, bool, handle)
+Hierarchically spawn an entity group from a set of spawn tables. (userdata)
+
+SpawnEntityListFromTableAsynchronous	= int SpawnEntityListFromTableAsynchronous(handle, handle)
+Asynchronously spawn an entity group from a list of spawn tables. A callback will be triggered when the spawning is complete (userdata)
+
+SpawnEntityListFromTableSynchronous	= handle SpawnEntityListFromTableSynchronous(handle)
+Synchronously spawn an entity group from a list of spawn tables. (userdata)
+
+SpawnMangoTree                  	= handle SpawnMangoTree(Vector, int, float, float, int)
+Spawn a mango tree ( vPos, nTeam, flDuration, flMangoInterval, nInitialMangoes ) (userdata)
+
+SplineQuaternions               	= Quaternion SplineQuaternions(Quaternion, Quaternion, float)
+(quaternion,quaternion,float) very basic interpolation of v0 to v1 over t on [0,1] (userdata)
+
+SplineVectors                   	= Vector SplineVectors(Vector, Vector, float)
+(vector,vector,float) very basic interpolation of v0 to v1 over t on [0,1] (userdata)
+
+StartSoundEvent                 	= void StartSoundEvent(string, handle)
+Start a sound event (userdata)
+
+StartSoundEventFromPosition     	= void StartSoundEventFromPosition(string, Vector)
+Start a sound event from position (userdata)
+
+StartSoundEventFromPositionReliable	= void StartSoundEventFromPositionReliable(string, Vector)
+Start a sound event from position with reliable delivery (userdata)
+
+StartSoundEventFromPositionUnreliable	= void StartSoundEventFromPositionUnreliable(string, Vector)
+Start a sound event from position with optional delivery (userdata)
+
+StartSoundEventReliable         	= void StartSoundEventReliable(string, handle)
+Start a sound event with reliable delivery (userdata)
+
+StartSoundEventUnreliable       	= void StartSoundEventUnreliable(string, handle)
+Start a sound event with optional delivery (userdata)
+
+StopEffect                      	= void StopEffect(handle, string)
+Pass entity and effect name (userdata)
+
+StopGlobalSound                 	= void StopGlobalSound(string)
+Stop named sound for all players (userdata)
+
+StopListeningToAllGameEvents    	= void StopListeningToAllGameEvents(handle)
+Stop listening to all game events within a specific context. (userdata)
+
+StopListeningToGameEvent        	= bool StopListeningToGameEvent(int)
+Stop listening to a particular game event. (userdata)
+
+StopSoundEvent                  	= void StopSoundEvent(string, handle)
+Stops a sound event with optional delivery (userdata)
+
+StopSoundOn                     	= void StopSoundOn(string, handle)
+Stop named sound on Entity (userdata)
+
+Time                            	= float Time()
+Get the current server time (userdata)
+
+TraceCollideable                	= bool TraceCollideable(handle)
+Pass table - Inputs: start, end, ent, (optional mins, maxs) -- outputs: pos, fraction, hit, startsolid, normal (userdata)
+
+TraceHull                       	= bool TraceHull(handle)
+Pass table - Inputs: start, end, min, max, mask, ignore  -- outputs: pos, fraction, hit, enthit, startsolid (userdata)
+
+TraceLine                       	= bool TraceLine(handle)
+Pass table - Inputs: startpos, endpos, mask, ignore  -- outputs: pos, fraction, hit, enthit, startsolid (userdata)
+
+UTIL_MessageText                	= void UTIL_MessageText(int, string, int, int, int, int)
+Sends colored text to one client. (userdata)
+
+UTIL_MessageTextAll             	= void UTIL_MessageTextAll(string, int, int, int, int)
+Sends colored text to all clients. (userdata)
+
+UTIL_MessageTextAll_WithContext 	= void UTIL_MessageTextAll_WithContext(string, int, int, int, int, handle)
+Sends colored text to all clients. (Valid context keys: player_id, value, team_id) (userdata)
+
+UTIL_MessageText_WithContext    	= void UTIL_MessageText_WithContext(int, string, int, int, int, int, handle)
+Sends colored text to one client. (Valid context keys: player_id, value, team_id) (userdata)
+
+UTIL_Remove                     	= void UTIL_Remove(handle)
+Removes the specified entity (userdata)
+
+UTIL_RemoveImmediate            	= void UTIL_RemoveImmediate(handle)
+Immediately removes the specified entity (userdata)
+
+UTIL_ResetMessageText           	= void UTIL_ResetMessageText(int)
+Clear all message text on one client. (userdata)
+
+UTIL_ResetMessageTextAll        	= void UTIL_ResetMessageTextAll()
+Clear all message text from all clients. (userdata)
+
+UnitFilter                      	= int UnitFilter(handle, int, int, int, int)
+Check if a unit passes a set of filters. (hNPC, nTargetTeam, nTargetType, nTargetFlags, nTeam (userdata)
+
+UnloadSpawnGroup                	= void UnloadSpawnGroup(string)
+Unload a spawn group by name (userdata)
+
+UnloadSpawnGroupByHandle        	= void UnloadSpawnGroupByHandle(int)
+Unload a spawn group by handle (userdata)
+
+UpdateEventPoints               	= void UpdateEventPoints(handle)
+( hEventPointData ) (userdata)
+
+UserIDToControllerHScript       	= handle UserIDToControllerHScript(int)
+Turn a userid integer (typically, fields named 'userid' in game events) to an HScript representing the associated player controller's script instance. (userdata)
+
+VectorAngles                    	= QAngle VectorAngles(Vector)
+(userdata)
+
+VectorToAngles                  	= QAngle VectorToAngles(Vector)
+Get Qangles (with no roll) for a Vector. (userdata)
+
+Warning                         	= void Warning(string)
+Print a warning (userdata)
+
+cvar_getf                       	= float cvar_getf(string)
+Gets the value of the given cvar, as a float. (userdata)
+
+cvar_setf                       	= bool cvar_setf(string, float)
+Sets the value of the given cvar, as a float. (userdata)
+
+rr_AddDecisionRule              	= bool rr_AddDecisionRule(handle)
+Add a rule to the decision database. (userdata)
+
+rr_CommitAIResponse             	= bool rr_CommitAIResponse(handle, handle)
+Commit the result of QueryBestResponse back to the given entity to play. Call with params (entity, airesponse) (userdata)
+
+rr_GetResponseTargets           	= handle rr_GetResponseTargets()
+Retrieve a table of all available expresser targets, in the form { name : handle, name: handle }. (userdata)
+
+rr_QueryBestResponse            	= bool rr_QueryBestResponse(handle, handle, handle)
+Params: (entity, query) : tests 'query' against entity's response system and returns the best response found (or null if none found). (userdata)
+

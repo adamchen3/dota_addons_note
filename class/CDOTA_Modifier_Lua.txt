@@ -1,0 +1,110 @@
+AllowIllusionDuplicate          	= bool AllowIllusionDuplicate()
+True/false if this modifier is active on illusions. (userdata)
+
+CanParentBeAutoAttacked         	= bool CanParentBeAutoAttacked()
+(userdata)
+
+DestroyOnExpire                 	= bool DestroyOnExpire()
+True/false if this buff is removed when the duration expires. (userdata)
+
+GetAttributes                   	= int GetAttributes()
+Return the types of attributes applied to this modifier (enum value from DOTAModifierAttribute_t (userdata)
+
+GetAuraDuration                 	= float GetAuraDuration()
+Returns aura stickiness (userdata)
+
+GetAuraEntityReject             	= bool GetAuraEntityReject(handle hEntity)
+Return true/false if this entity should receive the aura under specific conditions (userdata)
+
+GetAuraRadius                   	= int GetAuraRadius()
+Return the range around the parent this aura tries to apply its buff. (userdata)
+
+GetAuraSearchFlags              	= int GetAuraSearchFlags()
+Return the unit flags this aura respects when placing buffs. (userdata)
+
+GetAuraSearchTeam               	= int GetAuraSearchTeam()
+Return the teams this aura applies its buff to. (userdata)
+
+GetAuraSearchType               	= int GetAuraSearchType()
+Return the unit classifications this aura applies its buff to. (userdata)
+
+GetCritDamage                   	= float GetCritDamage()
+A Modifier that listens to MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE has to have a GetCritDamage implementation so we can know when to evaluate it. Value should be in 'times the original value format' e.g: 1.5 not 150 (userdata)
+
+GetEffectAttachType             	= int GetEffectAttachType()
+Return the attach type of the particle system from GetEffectName. (userdata)
+
+GetEffectName                   	= string GetEffectName()
+Return the name of the particle system that is created while this modifier is active. (userdata)
+
+GetHeroEffectName               	= string GetHeroEffectName()
+Return the name of the hero effect particle system that is created while this modifier is active. (userdata)
+
+GetModifierAura                 	= string GetModifierAura()
+The name of the secondary modifier that will be applied by this modifier (if it is an aura). (userdata)
+
+GetPriority                     	= int GetPriority()
+Return the priority order this modifier will be applied over others. (userdata)
+
+GetStatusEffectName             	= string GetStatusEffectName()
+Return the name of the status effect particle system that is created while this modifier is active. (userdata)
+
+GetTexture                      	= string GetTexture()
+Return the name of the buff icon to be shown for this modifier. (userdata)
+
+HeroEffectPriority              	= int HeroEffectPriority()
+Relationship of this hero effect with those from other buffs (higher is more likely to be shown). (userdata)
+
+IsAura                          	= bool IsAura()
+True/false if this modifier is an aura. (userdata)
+
+IsAuraActiveOnDeath             	= bool IsAuraActiveOnDeath()
+True/false if this aura provides buffs when the parent is dead. (userdata)
+
+IsDebuff                        	= bool IsDebuff()
+True/false if this modifier should be displayed as a debuff. (userdata)
+
+IsHidden                        	= bool IsHidden()
+True/false if this modifier should be displayed on the buff bar. (userdata)
+
+IsPermanent                     	= bool IsPermanent()
+(userdata)
+
+IsPurgable                      	= bool IsPurgable()
+True/false if this modifier can be purged. (userdata)
+
+IsPurgeException                	= bool IsPurgeException()
+True/false if this modifier can be purged by strong dispels. (userdata)
+
+IsStunDebuff                    	= bool IsStunDebuff()
+True/false if this modifier is considered a stun for purge reasons. (userdata)
+
+OnCreated                       	= void OnCreated(handle table)
+Runs when the modifier is created. (userdata)
+
+OnDestroy                       	= void OnDestroy()
+Runs when the modifier is destroyed (after unit loses modifier). (userdata)
+
+OnIntervalThink                 	= void OnIntervalThink()
+Runs when the think interval occurs. (userdata)
+
+OnRefresh                       	= void OnRefresh(handle table)
+Runs when the modifier is refreshed. (userdata)
+
+OnRemoved                       	= void OnRemoved()
+Runs when the modifier is destroyed (before unit loses modifier). (userdata)
+
+OnStackCountChanged             	= void OnStackCountChanged(int iStackCount)
+Runs when stack count changes (param is old count). (userdata)
+
+RemoveOnDeath                   	= bool RemoveOnDeath()
+True/false if this modifier is removed when the parent dies. (userdata)
+
+SetHasCustomTransmitterData     	= void SetHasCustomTransmitterData(bool bHasCustomData)
+(userdata)
+
+ShouldUseOverheadOffset         	= bool ShouldUseOverheadOffset()
+Apply the overhead offset to the attached effect. (userdata)
+
+StatusEffectPriority            	= int StatusEffectPriority()
+Relationship of this status effect with those from other buffs (higher is more likely to be shown). (userdata)

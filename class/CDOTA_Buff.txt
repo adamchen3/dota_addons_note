@@ -1,0 +1,92 @@
+AddParticle                     	= void AddParticle(int i, bool bDestroyImmediately, bool bStatusEffect, int iPriority, bool bHeroEffect, bool bOverheadEffect)
+(index, bDestroyImmediately, bStatusEffect, priority, bHeroEffect, bOverheadEffect (userdata)
+
+CheckStateToTable               	= void CheckStateToTable(handle table)
+(userdata)
+
+DecrementStackCount             	= void DecrementStackCount()
+Decrease this modifier's stack count by 1. (userdata)
+
+Destroy                         	= void Destroy()
+Run all associated destroy functions, then remove the modifier. (userdata)
+
+DestroyOnExpire                 	= bool DestroyOnExpire()
+(userdata)
+
+ForceRefresh                    	= void ForceRefresh()
+Run all associated refresh functions on this modifier as if it was re-applied. (userdata)
+
+GetAbility                      	= handle GetAbility()
+Get the ability that generated the modifier. (userdata)
+
+GetAuraDuration                 	= float GetAuraDuration()
+Returns aura stickiness (default 0.5) (userdata)
+
+GetAuraOwner                    	= handle GetAuraOwner()
+(userdata)
+
+GetCaster                       	= handle GetCaster()
+Get the owner of the ability responsible for the modifier. (userdata)
+
+GetClass                        	= string GetClass()
+(userdata)
+
+GetCreationTime                 	= float GetCreationTime()
+(userdata)
+
+GetDieTime                      	= float GetDieTime()
+(userdata)
+
+GetDuration                     	= float GetDuration()
+(userdata)
+
+GetElapsedTime                  	= float GetElapsedTime()
+(userdata)
+
+GetLastAppliedTime              	= float GetLastAppliedTime()
+(userdata)
+
+GetName                         	= string GetName()
+(userdata)
+
+GetParent                       	= handle GetParent()
+Get the unit the modifier is parented to. (userdata)
+
+GetRemainingTime                	= float GetRemainingTime()
+(userdata)
+
+GetSerialNumber                 	= int GetSerialNumber()
+(userdata)
+
+GetStackCount                   	= int GetStackCount()
+(userdata)
+
+HasFunction                     	= bool HasFunction(int iFunction)
+(userdata)
+
+IncrementStackCount             	= void IncrementStackCount()
+Increase this modifier's stack count by 1. (userdata)
+
+IsDebuff                        	= bool IsDebuff()
+(userdata)
+
+IsHexDebuff                     	= bool IsHexDebuff()
+(userdata)
+
+IsStunDebuff                    	= bool IsStunDebuff()
+(userdata)
+
+SendBuffRefreshToClients        	= void SendBuffRefreshToClients()
+(userdata)
+
+SetDuration                     	= void SetDuration(float flDuration, bool bInformClient)
+(flTime, bInformClients) (userdata)
+
+SetOverheadEffectOffset         	= bool SetOverheadEffectOffset(float flOffset)
+(userdata)
+
+SetStackCount                   	= void SetStackCount(int iCount)
+(userdata)
+
+StartIntervalThink              	= void StartIntervalThink(float flInterval)
+Start this modifier's think function (OnIntervalThink) with the given interval (float).  To stop, call with -1. (userdata)

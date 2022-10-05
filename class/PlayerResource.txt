@@ -1,0 +1,441 @@
+AddAegisPickup                  	= void AddAegisPickup(int iPlayerID)
+(userdata)
+
+AddCandyEvent                   	= void AddCandyEvent(int iPlayerID, int nReason)
+(userdata)
+
+AddClaimedFarm                  	= void AddClaimedFarm(int iPlayerID, float flFarmValue, bool bEarnedValue)
+(userdata)
+
+AddGoldSpentOnSupport           	= void AddGoldSpentOnSupport(int iPlayerID, int iCost)
+(userdata)
+
+AddNeutralItemToStash           	= void AddNeutralItemToStash(int iPlayerID, int nTeamNumber, handle hItem)
+(userdata)
+
+AddRunePickup                   	= void AddRunePickup(int iPlayerID, int nRunes)
+(userdata)
+
+AreUnitsSharedWithPlayerID      	= bool AreUnitsSharedWithPlayerID(int nUnitOwnerPlayerID, int nOtherPlayerID)
+(userdata)
+
+CanRepick                       	= bool CanRepick(int iPlayerID)
+(userdata)
+
+ClearKillsMatrix                	= void ClearKillsMatrix(int iPlayerID)
+(userdata)
+
+ClearLastHitMultikill           	= void ClearLastHitMultikill(int iPlayerID)
+(userdata)
+
+ClearLastHitStreak              	= void ClearLastHitStreak(int iPlayerID)
+(userdata)
+
+ClearRawPlayerDamageMatrix      	= void ClearRawPlayerDamageMatrix(int iPlayerID)
+(userdata)
+
+ClearStreak                     	= void ClearStreak(int iPlayerID)
+(userdata)
+
+GetAegisPickups                 	= int GetAegisPickups(int iPlayerID)
+(userdata)
+
+GetAssists                      	= int GetAssists(int iPlayerID)
+(userdata)
+
+GetBroadcasterChannel           	= unsigned GetBroadcasterChannel(int iPlayerID)
+(userdata)
+
+GetBroadcasterChannelSlot       	= unsigned GetBroadcasterChannelSlot(int iPlayerID)
+(userdata)
+
+GetClaimedDenies                	= int GetClaimedDenies(int iPlayerID)
+(userdata)
+
+GetClaimedFarm                  	= float GetClaimedFarm(int iPlayerID, bool bOnlyEarned)
+(userdata)
+
+GetClaimedMisses                	= int GetClaimedMisses(int iPlayerID)
+(userdata)
+
+GetConnectionState              	= <unknown> GetConnectionState(int iPlayerID)
+(userdata)
+
+GetCreepDamageTaken             	= int GetCreepDamageTaken(int iPlayerID, bool bTotal)
+(userdata)
+
+GetCustomBuybackCooldown        	= float GetCustomBuybackCooldown(int iPlayerID)
+(userdata)
+
+GetCustomBuybackCost            	= int GetCustomBuybackCost(int iPlayerID)
+(userdata)
+
+GetCustomTeamAssignment         	= int GetCustomTeamAssignment(int iPlayerID)
+Get the current custom team assignment for this player. (userdata)
+
+GetDamageDoneToHero             	= int GetDamageDoneToHero(int iPlayerID, int iVictimID)
+(userdata)
+
+GetDeaths                       	= int GetDeaths(int iPlayerID)
+(userdata)
+
+GetDenies                       	= int GetDenies(int iPlayerID)
+(userdata)
+
+GetEventGameCustomActionClaimCount	= int GetEventGameCustomActionClaimCount(int nPlayerID, unsigned unActionID)
+(nPlayerID, nActionID) (userdata)
+
+GetEventGameCustomActionClaimCountByName	= int GetEventGameCustomActionClaimCountByName(int nPlayerID, string pActionName)
+(nPlayerID, pActionName) (userdata)
+
+GetEventGameUpgrades            	= handle GetEventGameUpgrades(int nPlayerID)
+(nPlayerID) (userdata)
+
+GetEventPointsForPlayerID       	= unsigned GetEventPointsForPlayerID(int nPlayerID)
+(userdata)
+
+GetEventPremiumPoints           	= unsigned GetEventPremiumPoints(int nPlayerID)
+(userdata)
+
+GetEventRanks                   	= <unknown> GetEventRanks(int nPlayerID)
+(userdata)
+
+GetGold                         	= int GetGold(int iPlayerID)
+(userdata)
+
+GetGoldLostToDeath              	= int GetGoldLostToDeath(int iPlayerID)
+(userdata)
+
+GetGoldPerMin                   	= float GetGoldPerMin(int iPlayerID)
+(userdata)
+
+GetGoldSpentOnBuybacks          	= int GetGoldSpentOnBuybacks(int iPlayerID)
+(userdata)
+
+GetGoldSpentOnConsumables       	= int GetGoldSpentOnConsumables(int iPlayerID)
+(userdata)
+
+GetGoldSpentOnItems             	= int GetGoldSpentOnItems(int iPlayerID)
+(userdata)
+
+GetGoldSpentOnSupport           	= int GetGoldSpentOnSupport(int iPlayerID)
+(userdata)
+
+GetHealing                      	= float GetHealing(int iPlayerID)
+(userdata)
+
+GetHeroDamageTaken              	= int GetHeroDamageTaken(int iPlayerID, bool bTotal)
+(userdata)
+
+GetKills                        	= int GetKills(int iPlayerID)
+(userdata)
+
+GetKillsDoneToHero              	= int GetKillsDoneToHero(int iPlayerID, int iVictimID)
+(userdata)
+
+GetLabyrinthEventGameHeroUnlocks	= handle GetLabyrinthEventGameHeroUnlocks(int nPlayerID)
+(nPlayerID) (userdata)
+
+GetLastHitMultikill             	= int GetLastHitMultikill(int iPlayerID)
+(userdata)
+
+GetLastHitStreak                	= int GetLastHitStreak(int iPlayerID)
+(userdata)
+
+GetLastHits                     	= int GetLastHits(int iPlayerID)
+(userdata)
+
+GetLevel                        	= int GetLevel(int iPlayerID)
+(userdata)
+
+GetLiveSpectatorTeam            	= <unknown> GetLiveSpectatorTeam(int iPlayerID)
+(userdata)
+
+GetMisses                       	= int GetMisses(int iPlayerID)
+(userdata)
+
+GetNearbyCreepDeaths            	= int GetNearbyCreepDeaths(int iPlayerID)
+(userdata)
+
+GetNetWorth                     	= int GetNetWorth(int iPlayerID)
+(userdata)
+
+GetNthCourierForTeam            	= handle GetNthCourierForTeam(int nCourierIndex, int nTeamNumber)
+(userdata)
+
+GetNthPlayerIDOnTeam            	= int GetNthPlayerIDOnTeam(int iTeamNumber, int iNthPlayer)
+(userdata)
+
+GetNumConnectedHumanPlayers     	= int GetNumConnectedHumanPlayers()
+Players on a valid team (radiant, dire, or custom*) who haven't abandoned the game (userdata)
+
+GetNumConsumablesPurchased      	= int GetNumConsumablesPurchased(int iPlayerID)
+(userdata)
+
+GetNumCouriersForTeam           	= int GetNumCouriersForTeam(int nTeamNumber)
+(userdata)
+
+GetNumItemsPurchased            	= int GetNumItemsPurchased(int iPlayerID)
+(userdata)
+
+GetPartyID                      	= uint64 GetPartyID(int iPlayerID)
+(userdata)
+
+GetPlayer                       	= handle GetPlayer(int iPlayerID)
+(userdata)
+
+GetPlayerCount                  	= int GetPlayerCount()
+Includes spectators and players not assigned to a team (userdata)
+
+GetPlayerCountForTeam           	= int GetPlayerCountForTeam(int iTeam)
+(userdata)
+
+GetPlayerLoadedCompletely       	= bool GetPlayerLoadedCompletely(int iPlayerID)
+(userdata)
+
+GetPlayerName                   	= string GetPlayerName(int iPlayerID)
+(userdata)
+
+GetPreferredCourierForPlayer    	= handle GetPreferredCourierForPlayer(int nPlayerId)
+(userdata)
+
+GetRawPlayerDamage              	= int GetRawPlayerDamage(int iPlayerID)
+(userdata)
+
+GetReliableGold                 	= int GetReliableGold(int iPlayerID)
+(userdata)
+
+GetRespawnSeconds               	= int GetRespawnSeconds(int iPlayerID)
+(userdata)
+
+GetRoshanKills                  	= int GetRoshanKills(int iPlayerID)
+(userdata)
+
+GetRunePickups                  	= int GetRunePickups(int iPlayerID)
+(userdata)
+
+GetSelectedHeroEntity           	= handle GetSelectedHeroEntity(int iPlayerID)
+(userdata)
+
+GetSelectedHeroID               	= int GetSelectedHeroID(int iPlayerID)
+(userdata)
+
+GetSelectedHeroName             	= string GetSelectedHeroName(int iPlayerID)
+(userdata)
+
+GetSteamAccountID               	= unsigned GetSteamAccountID(int iPlayerID)
+(userdata)
+
+GetSteamID                      	= uint64 GetSteamID(int iPlayerID)
+Get the 64 bit steam ID for a given player. (userdata)
+
+GetStreak                       	= int GetStreak(int iPlayerID)
+(userdata)
+
+GetStuns                        	= float GetStuns(int iPlayerID)
+(userdata)
+
+GetTeam                         	= int GetTeam(int iPlayerID)
+(userdata)
+
+GetTeamKills                    	= int GetTeamKills(int iTeam)
+(userdata)
+
+GetTeamPlayerCount              	= int GetTeamPlayerCount()
+(Deprecated: use GetNumConnectedHumanPlayers) Players on a valid team (radiant, dire, or custom*) who haven't abandoned the game (userdata)
+
+GetTimeOfLastConsumablePurchase 	= float GetTimeOfLastConsumablePurchase(int iPlayerID)
+(userdata)
+
+GetTimeOfLastDeath              	= float GetTimeOfLastDeath(int iPlayerID)
+(userdata)
+
+GetTimeOfLastItemPurchase       	= float GetTimeOfLastItemPurchase(int iPlayerID)
+(userdata)
+
+GetTotalEarnedGold              	= int GetTotalEarnedGold(int iPlayerID)
+(userdata)
+
+GetTotalEarnedXP                	= int GetTotalEarnedXP(int iPlayerID)
+(userdata)
+
+GetTotalGoldSpent               	= int GetTotalGoldSpent(int iPlayerID)
+(userdata)
+
+GetTowerDamageTaken             	= int GetTowerDamageTaken(int iPlayerID, bool bTotal)
+(userdata)
+
+GetTowerKills                   	= int GetTowerKills(int iPlayerID)
+(userdata)
+
+GetUnitShareMaskForPlayer       	= int GetUnitShareMaskForPlayer(int nPlayerID, int nOtherPlayerID)
+(userdata)
+
+GetUnreliableGold               	= int GetUnreliableGold(int iPlayerID)
+(userdata)
+
+GetXPPerMin                     	= float GetXPPerMin(int iPlayerID)
+(userdata)
+
+HasCustomGameTicketForPlayerID  	= bool HasCustomGameTicketForPlayerID(int iPlayerID)
+Does this player have a custom game ticket for this game? (userdata)
+
+HasRandomed                     	= bool HasRandomed(int iPlayerID)
+(userdata)
+
+HasSelectedHero                 	= bool HasSelectedHero(int iPlayerID)
+(userdata)
+
+HasSetEventGameCustomActionClaimCount	= bool HasSetEventGameCustomActionClaimCount()
+(userdata)
+
+HaveAllPlayersJoined            	= bool HaveAllPlayersJoined()
+(userdata)
+
+IncrementAssists                	= void IncrementAssists(int iPlayerID, int iVictimID)
+(userdata)
+
+IncrementClaimedDenies          	= void IncrementClaimedDenies(int iPlayerID, int nValue)
+(userdata)
+
+IncrementClaimedMisses          	= void IncrementClaimedMisses(int iPlayerID, int nValue)
+(userdata)
+
+IncrementDeaths                 	= void IncrementDeaths(int iPlayerID, int iKillerID)
+(userdata)
+
+IncrementDenies                 	= void IncrementDenies(int iPlayerID, int nValue)
+(userdata)
+
+IncrementKills                  	= void IncrementKills(int iPlayerID, int iVictimID)
+(userdata)
+
+IncrementLastHitMultikill       	= void IncrementLastHitMultikill(int iPlayerID, int nCount)
+(userdata)
+
+IncrementLastHitStreak          	= void IncrementLastHitStreak(int iPlayerID, int nCount)
+(userdata)
+
+IncrementLastHits               	= void IncrementLastHits(int iPlayerID, int nCount)
+(userdata)
+
+IncrementMisses                 	= void IncrementMisses(int iPlayerID, int nValue)
+(userdata)
+
+IncrementNearbyCreepDeaths      	= void IncrementNearbyCreepDeaths(int iPlayerID, int nCreeps)
+(userdata)
+
+IncrementStreak                 	= void IncrementStreak(int iPlayerID, int nCount)
+(userdata)
+
+IncrementTotalEarnedXP          	= void IncrementTotalEarnedXP(int iPlayerID, int iXP, int nReason)
+(userdata)
+
+IsBroadcaster                   	= bool IsBroadcaster(int iPlayerID)
+(userdata)
+
+IsDisableHelpSetForPlayerID     	= bool IsDisableHelpSetForPlayerID(int nPlayerID, int nOtherPlayerID)
+(userdata)
+
+IsFakeClient                    	= bool IsFakeClient(int iPlayerID)
+(userdata)
+
+IsHeroSelected                  	= bool IsHeroSelected(string pHeroname, bool bIgnoreUnrevealedPick)
+(userdata)
+
+IsHeroSharedWithPlayerID        	= bool IsHeroSharedWithPlayerID(int nUnitOwnerPlayerID, int nOtherPlayerID)
+(userdata)
+
+IsValidPlayer                   	= bool IsValidPlayer(int iPlayerID)
+(userdata)
+
+IsValidPlayerID                 	= bool IsValidPlayerID(int iPlayerID)
+(userdata)
+
+IsValidTeamPlayer               	= bool IsValidTeamPlayer(int iPlayerID)
+(userdata)
+
+IsValidTeamPlayerID             	= bool IsValidTeamPlayerID(int nPlayerID)
+(userdata)
+
+ModifyGold                      	= int ModifyGold(int iPlayerID, int iGoldChange, bool bReliable, int nReason)
+(userdata)
+
+NumPlayers                      	= int NumPlayers()
+(userdata)
+
+NumTeamPlayers                  	= int NumTeamPlayers()
+(userdata)
+
+RecordConsumableAbilityChargeChange	= void RecordConsumableAbilityChargeChange(int iPlayerID, int item_definition_index, int nChargeIncrementOrDecrement)
+Increment or decrement consumable charges (nPlayerID, item_definition_index, nChargeIncrementOrDecrement) (userdata)
+
+RecordEventActionGrant          	= void RecordEventActionGrant(int iPlayerID, int eEvent, int unActionID, int unAudit, unsigned unQuantity, unsigned unAuditData)
+(userdata)
+
+RecordEventActionGrantForPrimaryEvent	= void RecordEventActionGrantForPrimaryEvent(int iPlayerID, string pszActionName, int unAudit, unsigned unQuantity, unsigned unAuditData)
+(userdata)
+
+ReplaceHeroWith                 	= handle ReplaceHeroWith(int iPlayerID, string pszHeroClass, int nGold, int nXP)
+(playerID, heroClassName, gold, XP) - replaces the player's hero with a new one of the specified class, gold and XP (userdata)
+
+ReplaceHeroWithNoTransfer       	= handle ReplaceHeroWithNoTransfer(int iPlayerID, string pszHeroClass, int nGold, int nXP)
+(playerID, heroClassName, gold, XP) - replaces the player's hero with a new one of the specified class, gold and XP, without transferring items/abilities if same hero (userdata)
+
+ResetBuybackCostTime            	= void ResetBuybackCostTime(int nPlayerID)
+(userdata)
+
+ResetTotalEarnedGold            	= void ResetTotalEarnedGold(int iPlayerID)
+(userdata)
+
+SetBuybackCooldownTime          	= void SetBuybackCooldownTime(int nPlayerID, float flBuybackCooldown)
+(userdata)
+
+SetBuybackGoldLimitTime         	= void SetBuybackGoldLimitTime(int nPlayerID, float flBuybackCooldown)
+(userdata)
+
+SetCameraTarget                 	= void SetCameraTarget(int nPlayerID, handle hTarget)
+(playerID, entity) - force the given player's camera to follow the given entity (userdata)
+
+SetCanRepick                    	= void SetCanRepick(int iPlayerID, bool bCanRepick)
+(userdata)
+
+SetCustomBuybackCooldown        	= void SetCustomBuybackCooldown(int iPlayerID, float flCooldownTime)
+Set the buyback cooldown for this player. (userdata)
+
+SetCustomBuybackCost            	= void SetCustomBuybackCost(int iPlayerID, int iGoldCost)
+Set the buyback cost for this player. (userdata)
+
+SetCustomIntParam               	= void SetCustomIntParam(int iPlayerID, int iParam)
+(userdata)
+
+SetCustomPlayerColor            	= void SetCustomPlayerColor(int iPlayerID, int r, int g, int b)
+Set custom color for player (minimap, scoreboard, etc) (userdata)
+
+SetCustomTeamAssignment         	= void SetCustomTeamAssignment(int iPlayerID, int iTeamAssignment)
+Set custom team assignment for this player. (userdata)
+
+SetGold                         	= void SetGold(int iPlayerID, int iGold, bool bReliable)
+(userdata)
+
+SetHasRandomed                  	= void SetHasRandomed(int iPlayerID)
+(userdata)
+
+SetLastBuybackTime              	= void SetLastBuybackTime(int iPlayerID, int iLastBuybackTime)
+(userdata)
+
+SetOverrideSelectionEntity      	= void SetOverrideSelectionEntity(int nPlayerID, handle hEntity)
+Set the forced selection entity for a player. (userdata)
+
+SetUnitShareMaskForPlayer       	= void SetUnitShareMaskForPlayer(int nPlayerID, int nOtherPlayerID, int nFlag, bool bState)
+(userdata)
+
+SpendGold                       	= void SpendGold(int iPlayerID, int iCost, int iReason)
+(userdata)
+
+UpdateTeamSlot                  	= void UpdateTeamSlot(int iPlayerID, int iTeamNumber, int desiredSlot)
+(userdata)
+
+WhoSelectedHero                 	= int WhoSelectedHero(string pHeroFilename, bool bIgnoreUnrevealedPick)
+(userdata)
+

@@ -1,0 +1,981 @@
+AddAbility                      	= handle AddAbility(string pszAbilityName)
+Add an ability to this unit by name. (userdata)
+
+AddActivityModifier             	= void AddActivityModifier(string szName)
+Add an activity modifier that affects future StartGesture calls (userdata)
+
+AddItem                         	= handle AddItem(handle hItem)
+Add an item to this unit's inventory. (userdata)
+
+AddItemByName                   	= handle AddItemByName(string pszItemName)
+Add an item to this unit's inventory. (userdata)
+
+AddNewModifier                  	= handle AddNewModifier(handle hCaster, handle hAbility, string pszScriptName, handle hModifierTable)
+Add a modifier to this unit. (userdata)
+
+AddNoDraw                       	= void AddNoDraw()
+Adds the no draw flag. (userdata)
+
+AddSpeechBubble                 	= void AddSpeechBubble(int iBubble, string pszSpeech, float flDuration, unsigned unOffsetX, unsigned unOffsetY)
+Add a speech bubble(1-4 live at a time) to this NPC. (userdata)
+
+AlertNearbyUnits                	= void AlertNearbyUnits(handle hAttacker, handle hAbility)
+(userdata)
+
+AngerNearbyUnits                	= void AngerNearbyUnits()
+(userdata)
+
+AttackNoEarlierThan             	= void AttackNoEarlierThan(float flTime, float flTimeDisparityTolerance)
+(userdata)
+
+AttackReady                     	= bool AttackReady()
+(userdata)
+
+BoundingRadius2D                	= float BoundingRadius2D()
+(userdata)
+
+CalculateGenericBonuses         	= void CalculateGenericBonuses()
+(userdata)
+
+CanBeSeenByAnyOpposingTeam      	= bool CanBeSeenByAnyOpposingTeam()
+(userdata)
+
+CanEntityBeSeenByMyTeam         	= bool CanEntityBeSeenByMyTeam(handle hEntity)
+Check FoW to see if an entity is visible. (userdata)
+
+CanSellItems                    	= bool CanSellItems()
+Query if this unit can sell items. (userdata)
+
+CastAbilityImmediately          	= void CastAbilityImmediately(handle hAbility, int iPlayerIndex)
+Cast an ability immediately. (userdata)
+
+CastAbilityNoTarget             	= void CastAbilityNoTarget(handle hAbility, int iPlayerIndex)
+Cast an ability with no target. (userdata)
+
+CastAbilityOnPosition           	= void CastAbilityOnPosition(Vector vPosition, handle hAbility, int iPlayerIndex)
+Cast an ability on a position. (userdata)
+
+CastAbilityOnTarget             	= void CastAbilityOnTarget(handle hTarget, handle hAbility, int iPlayerIndex)
+Cast an ability on a target entity. (userdata)
+
+CastAbilityToggle               	= void CastAbilityToggle(handle hAbility, int iPlayerIndex)
+Toggle an ability. (userdata)
+
+ChangeTeam                      	= void ChangeTeam(int iTeamNum)
+(userdata)
+
+ClearActivityModifiers          	= void ClearActivityModifiers()
+Clear Activity modifiers (userdata)
+
+DestroyAllSpeechBubbles         	= void DestroyAllSpeechBubbles()
+(userdata)
+
+DisassembleItem                 	= void DisassembleItem(handle hItem)
+Disassemble the passed item in this unit's inventory. (userdata)
+
+DropItemAtPosition              	= void DropItemAtPosition(Vector vDest, handle hItem)
+Drop an item at a given point. (userdata)
+
+DropItemAtPositionImmediate     	= void DropItemAtPositionImmediate(handle hItem, Vector vPosition)
+Immediately drop a carried item at a given position. (userdata)
+
+EjectItemFromStash              	= void EjectItemFromStash(handle hItem)
+Drops the selected item out of this unit's stash. (userdata)
+
+FaceTowards                     	= void FaceTowards(Vector vTarget)
+This unit will be set to face the target point. (userdata)
+
+FadeGesture                     	= void FadeGesture(int nActivity)
+Fade and remove the given gesture activity. (userdata)
+
+FindAbilityByName               	= handle FindAbilityByName(string pAbilityName)
+Retrieve an ability by name from the unit. (userdata)
+
+FindAllModifiers                	= table FindAllModifiers()
+Returns a table of all of the modifiers on the NPC. (userdata)
+
+FindAllModifiersByName          	= table FindAllModifiersByName(string pszScriptName)
+Returns a table of all of the modifiers on the NPC with the passed name (modifierName) (userdata)
+
+FindItemInInventory             	= handle FindItemInInventory(string pszItemName)
+Get handle to first item in inventory, else nil. (userdata)
+
+FindModifierByName              	= handle FindModifierByName(string pszScriptName)
+Return a handle to the modifier of the given name if found, else nil (string Name ) (userdata)
+
+FindModifierByNameAndCaster     	= handle FindModifierByNameAndCaster(string pszScriptName, handle hCaster)
+Return a handle to the modifier of the given name from the passed caster if found, else nil ( string Name, hCaster ) (userdata)
+
+ForceKill                       	= void ForceKill(bool bReincarnate)
+Kill this unit immediately. (userdata)
+
+ForcePlayActivityOnce           	= void ForcePlayActivityOnce(int nActivity)
+Play an activity once, and then go back to idle. (userdata)
+
+GetAbilityByIndex               	= handle GetAbilityByIndex(int iIndex)
+Retrieve an ability by index from the unit. (userdata)
+
+GetAbilityCount                 	= int GetAbilityCount()
+(userdata)
+
+GetAcquisitionRange             	= float GetAcquisitionRange()
+Gets the range at which this unit will auto-acquire. (userdata)
+
+GetAdditionalBattleMusicWeight  	= float GetAdditionalBattleMusicWeight()
+Combat involving this creature will have this weight added to the music calcuations. (userdata)
+
+GetAggroTarget                  	= handle GetAggroTarget()
+Returns this unit's aggro target. (userdata)
+
+GetAttackAnimationPoint         	= float GetAttackAnimationPoint()
+(userdata)
+
+GetAttackCapability             	= int GetAttackCapability()
+(userdata)
+
+GetAttackDamage                 	= int GetAttackDamage()
+Returns a random integer between the minimum and maximum base damage of the unit. (userdata)
+
+GetAttackRangeBuffer            	= float GetAttackRangeBuffer()
+Gets the attack range buffer. (userdata)
+
+GetAttackSpeed                  	= float GetAttackSpeed()
+(userdata)
+
+GetAttackTarget                 	= handle GetAttackTarget()
+(userdata)
+
+GetAttacksPerSecond             	= float GetAttacksPerSecond()
+(userdata)
+
+GetAverageTrueAttackDamage      	= int GetAverageTrueAttackDamage(handle hTarget)
+Returns the average value of the minimum and maximum damage values. (userdata)
+
+GetBaseAttackRange              	= int GetBaseAttackRange()
+(userdata)
+
+GetBaseAttackTime               	= float GetBaseAttackTime()
+(userdata)
+
+GetBaseDamageMax                	= int GetBaseDamageMax()
+Get the maximum attack damage of this unit. (userdata)
+
+GetBaseDamageMin                	= int GetBaseDamageMin()
+Get the minimum attack damage of this unit. (userdata)
+
+GetBaseDayTimeVisionRange       	= int GetBaseDayTimeVisionRange()
+Returns the vision range before modifiers. (userdata)
+
+GetBaseHealthBarOffset          	= int GetBaseHealthBarOffset()
+(userdata)
+
+GetBaseHealthRegen              	= float GetBaseHealthRegen()
+(userdata)
+
+GetBaseMagicalResistanceValue   	= float GetBaseMagicalResistanceValue()
+Returns base magical armor value. (userdata)
+
+GetBaseMaxHealth                	= float GetBaseMaxHealth()
+Gets the base max health value. (userdata)
+
+GetBaseMoveSpeed                	= float GetBaseMoveSpeed()
+(userdata)
+
+GetBaseNightTimeVisionRange     	= int GetBaseNightTimeVisionRange()
+Returns the vision range after modifiers. (userdata)
+
+GetBonusManaRegen               	= float GetBonusManaRegen()
+This Mana regen is derived from constant bonuses like Basilius. (userdata)
+
+GetCastPoint                    	= float GetCastPoint(bool bAttack)
+(userdata)
+
+GetCastRangeBonus               	= float GetCastRangeBonus()
+(userdata)
+
+GetCloneSource                  	= handle GetCloneSource()
+Get clone source (Meepo Prime, if this is a Meepo) (userdata)
+
+GetCollisionPadding             	= float GetCollisionPadding()
+Returns the size of the collision padding around the hull. (userdata)
+
+GetCooldownReduction            	= float GetCooldownReduction()
+(userdata)
+
+GetCreationTime                 	= float GetCreationTime()
+(userdata)
+
+GetCurrentActiveAbility         	= handle GetCurrentActiveAbility()
+Get the ability this unit is currently casting. (userdata)
+
+GetCurrentVisionRange           	= int GetCurrentVisionRange()
+Gets the current vision range. (userdata)
+
+GetCursorCastTarget             	= handle GetCursorCastTarget()
+(userdata)
+
+GetCursorPosition               	= Vector GetCursorPosition()
+(userdata)
+
+GetCursorTargetingNothing       	= bool GetCursorTargetingNothing()
+(userdata)
+
+GetDamageMax                    	= int GetDamageMax()
+Get the maximum attack damage of this unit. (userdata)
+
+GetDamageMin                    	= int GetDamageMin()
+Get the minimum attack damage of this unit. (userdata)
+
+GetDayTimeVisionRange           	= int GetDayTimeVisionRange()
+Returns the vision range after modifiers. (userdata)
+
+GetDeathXP                      	= int GetDeathXP()
+Get the XP bounty on this unit. (userdata)
+
+GetDisplayAttackSpeed           	= float GetDisplayAttackSpeed()
+Attack speed expressed as constant value (userdata)
+
+GetEvasion                      	= float GetEvasion()
+(userdata)
+
+GetForceAttackTarget            	= handle GetForceAttackTarget()
+(userdata)
+
+GetGoldBounty                   	= int GetGoldBounty()
+Get the gold bounty on this unit. (userdata)
+
+GetHasteFactor                  	= float GetHasteFactor()
+(userdata)
+
+GetHealthDeficit                	= int GetHealthDeficit()
+Returns integer amount of health missing from max. (userdata)
+
+GetHealthPercent                	= int GetHealthPercent()
+Get the current health percent of the unit. (userdata)
+
+GetHealthRegen                  	= float GetHealthRegen()
+(userdata)
+
+GetHullRadius                   	= float GetHullRadius()
+Get the collision hull radius of this NPC. (userdata)
+
+GetIdealSpeed                   	= float GetIdealSpeed()
+Returns speed after all modifiers. (userdata)
+
+GetIdealSpeedNoSlows            	= float GetIdealSpeedNoSlows()
+Returns speed after all modifiers, but excluding those that reduce speed. (userdata)
+
+GetIncreasedAttackSpeed         	= float GetIncreasedAttackSpeed()
+(userdata)
+
+GetInitialGoalEntity            	= handle GetInitialGoalEntity()
+Returns the initial waypoint goal for this NPC. (userdata)
+
+GetInitialGoalPosition          	= Vector GetInitialGoalPosition()
+Get waypoint position for this NPC. (userdata)
+
+GetItemInSlot                   	= handle GetItemInSlot(int i)
+Returns nth item in inventory slot (index is zero based). (userdata)
+
+GetLastAttackTime               	= float GetLastAttackTime()
+(userdata)
+
+GetLastDamageTime               	= float GetLastDamageTime()
+Get the last time this NPC took damage (userdata)
+
+GetLastIdleChangeTime           	= float GetLastIdleChangeTime()
+Get the last game time that this unit switched to/from idle state. (userdata)
+
+GetLevel                        	= int GetLevel()
+Returns the level of this unit. (userdata)
+
+GetMagicalArmorValue            	= float GetMagicalArmorValue()
+Returns current magical armor value. (userdata)
+
+GetMainControllingPlayer        	= int GetMainControllingPlayer()
+Returns the player ID of the controlling player. (userdata)
+
+GetMana                         	= float GetMana()
+Get the mana on this unit. (userdata)
+
+GetManaPercent                  	= int GetManaPercent()
+Get the percent of mana remaining. (userdata)
+
+GetManaRegen                    	= float GetManaRegen()
+(userdata)
+
+GetMaxMana                      	= float GetMaxMana()
+Get the maximum mana of this unit. (userdata)
+
+GetMaximumGoldBounty            	= int GetMaximumGoldBounty()
+Get the maximum gold bounty for this unit. (userdata)
+
+GetMinimumGoldBounty            	= int GetMinimumGoldBounty()
+Get the minimum gold bounty for this unit. (userdata)
+
+GetModelRadius                  	= float GetModelRadius()
+(userdata)
+
+GetModifierCount                	= int GetModifierCount()
+How many modifiers does this unit have? (userdata)
+
+GetModifierNameByIndex          	= string GetModifierNameByIndex(int nIndex)
+Get a modifier name by index. (userdata)
+
+GetModifierStackCount           	= int GetModifierStackCount(string pszScriptName, handle hCaster)
+Gets the stack count of a given modifier. (userdata)
+
+GetMoveSpeedModifier            	= float GetMoveSpeedModifier(float flBaseSpeed, bool bReturnUnslowed)
+(userdata)
+
+GetMustReachEachGoalEntity      	= bool GetMustReachEachGoalEntity()
+Set whether this NPC is required to reach each goal entity, rather than being allowed to unkink their path. (userdata)
+
+GetNeutralSpawnerName           	= string GetNeutralSpawnerName()
+Get the name of this camp's neutral spawner. (userdata)
+
+GetNeverMoveToClearSpace        	= bool GetNeverMoveToClearSpace()
+If set to true, we will never attempt to move this unit to clear space, even when it unphases. (userdata)
+
+GetNightTimeVisionRange         	= int GetNightTimeVisionRange()
+Returns the vision range after modifiers. (userdata)
+
+GetOpposingTeamNumber           	= int GetOpposingTeamNumber()
+(userdata)
+
+GetPaddedCollisionRadius        	= float GetPaddedCollisionRadius()
+Get the collision hull radius (including padding) of this NPC. (userdata)
+
+GetPhysicalArmorBaseValue       	= float GetPhysicalArmorBaseValue()
+Returns base physical armor value. (userdata)
+
+GetPhysicalArmorValue           	= float GetPhysicalArmorValue(bool bIgnoreBase)
+Returns current physical armor value. (userdata)
+
+GetPlayerOwner                  	= handle GetPlayerOwner()
+Returns the player that owns this unit. (userdata)
+
+GetPlayerOwnerID                	= int GetPlayerOwnerID()
+Get the owner player ID for this unit. (userdata)
+
+GetProjectileSpeed              	= int GetProjectileSpeed()
+(userdata)
+
+GetRangeToUnit                  	= float GetRangeToUnit(handle hNPC)
+(userdata)
+
+GetRangedProjectileName         	= string GetRangedProjectileName()
+(userdata)
+
+GetSecondsPerAttack             	= float GetSecondsPerAttack()
+(userdata)
+
+GetSpellAmplification           	= float GetSpellAmplification(bool bBaseOnly)
+(userdata)
+
+GetStatusResistance             	= float GetStatusResistance()
+(userdata)
+
+GetTotalPurchasedUpgradeGoldCost	= int GetTotalPurchasedUpgradeGoldCost()
+Get how much gold has been spent on ability upgrades. (userdata)
+
+GetUnitLabel                    	= string GetUnitLabel()
+(userdata)
+
+GetUnitName                     	= string GetUnitName()
+Get the name of this unit. (userdata)
+
+GiveMana                        	= void GiveMana(float flMana)
+Give mana to this unit, this can be used for mana gained by abilities or item usage. (userdata)
+
+HasAbility                      	= bool HasAbility(string pszAbilityName)
+See whether this unit has an ability by name. (userdata)
+
+HasAnyActiveAbilities           	= bool HasAnyActiveAbilities()
+(userdata)
+
+HasAttackCapability             	= bool HasAttackCapability()
+(userdata)
+
+HasFlyMovementCapability        	= bool HasFlyMovementCapability()
+(userdata)
+
+HasFlyingVision                 	= bool HasFlyingVision()
+(userdata)
+
+HasGroundMovementCapability     	= bool HasGroundMovementCapability()
+(userdata)
+
+HasInventory                    	= bool HasInventory()
+Does this unit have an inventory. (userdata)
+
+HasItemInInventory              	= bool HasItemInInventory(string pItemName)
+See whether this unit has an item by name. (userdata)
+
+HasModifier                     	= bool HasModifier(string pszScriptName)
+Sees if this unit has a given modifier. (userdata)
+
+HasMovementCapability           	= bool HasMovementCapability()
+(userdata)
+
+HasScepter                      	= bool HasScepter()
+(userdata)
+
+Heal                            	= void Heal(float flAmount, handle hInflictor)
+Heal this unit. (userdata)
+
+HealWithParams                  	= void HealWithParams(float flAmount, handle hInflictor, bool bLifesteal, bool bAmplify, handle hSource, bool bSpellLifesteal)
+Heal this unit (with more parameters) (userdata)
+
+Hold                            	= void Hold()
+Hold position. (userdata)
+
+Interrupt                       	= void Interrupt()
+(userdata)
+
+InterruptChannel                	= void InterruptChannel()
+(userdata)
+
+InterruptMotionControllers      	= void InterruptMotionControllers(bool bFindClearSpace)
+(userdata)
+
+IsAlive                         	= bool IsAlive()
+Is this unit alive? (userdata)
+
+IsAncient                       	= bool IsAncient()
+Is this unit an Ancient? (userdata)
+
+IsAttackImmune                  	= bool IsAttackImmune()
+(userdata)
+
+IsAttacking                     	= bool IsAttacking()
+(userdata)
+
+IsAttackingEntity               	= bool IsAttackingEntity(handle hEntity)
+(userdata)
+
+IsBarracks                      	= bool IsBarracks()
+Is this unit a Barracks? (userdata)
+
+IsBlind                         	= bool IsBlind()
+(userdata)
+
+IsBlockDisabled                 	= bool IsBlockDisabled()
+(userdata)
+
+IsBoss                          	= bool IsBoss()
+Is this unit a boss? (userdata)
+
+IsBossCreature                  	= bool IsBossCreature()
+Is this unit a Boss Creature? (used by custom games) (userdata)
+
+IsBuilding                      	= bool IsBuilding()
+Is this unit a building? (userdata)
+
+IsChanneling                    	= bool IsChanneling()
+Is this unit currently channeling a spell? (userdata)
+
+IsClone                         	= bool IsClone()
+Is this unit a clone? (Meepo) (userdata)
+
+IsCommandRestricted             	= bool IsCommandRestricted()
+(userdata)
+
+IsConsideredHero                	= bool IsConsideredHero()
+Is this unit a considered a hero for targeting purposes? (userdata)
+
+IsControllableByAnyPlayer       	= bool IsControllableByAnyPlayer()
+Is this unit controlled by any non-bot player? (userdata)
+
+IsCourier                       	= bool IsCourier()
+Is this unit a courier? (userdata)
+
+IsCreature                      	= bool IsCreature()
+Is this a Creature type NPC? (userdata)
+
+IsCreep                         	= bool IsCreep()
+Is this unit a creep? (userdata)
+
+IsCreepHero                     	= bool IsCreepHero()
+Is this unit a creep hero? (userdata)
+
+IsCurrentlyHorizontalMotionControlled	= bool IsCurrentlyHorizontalMotionControlled()
+(userdata)
+
+IsCurrentlyVerticalMotionControlled	= bool IsCurrentlyVerticalMotionControlled()
+(userdata)
+
+IsDisarmed                      	= bool IsDisarmed()
+(userdata)
+
+IsDominated                     	= bool IsDominated()
+(userdata)
+
+IsEvadeDisabled                 	= bool IsEvadeDisabled()
+(userdata)
+
+IsFort                          	= bool IsFort()
+Is this unit an Ancient? (userdata)
+
+IsFrozen                        	= bool IsFrozen()
+(userdata)
+
+IsHero                          	= bool IsHero()
+Is this a hero or hero illusion? (userdata)
+
+IsHexed                         	= bool IsHexed()
+(userdata)
+
+IsIdle                          	= bool IsIdle()
+Is this creature currently idle? (userdata)
+
+IsIllusion                      	= bool IsIllusion()
+(userdata)
+
+IsInRangeOfShop                 	= bool IsInRangeOfShop(int nShopType, bool bPhysical)
+Ask whether this unit is in range of the specified shop ( DOTA_SHOP_TYPE shop, bool bMustBePhysicallyNear (userdata)
+
+IsInvisible                     	= bool IsInvisible()
+(userdata)
+
+IsInvulnerable                  	= bool IsInvulnerable()
+(userdata)
+
+IsLowAttackPriority             	= bool IsLowAttackPriority()
+(userdata)
+
+IsMagicImmune                   	= bool IsMagicImmune()
+(userdata)
+
+IsMovementImpaired              	= bool IsMovementImpaired()
+(userdata)
+
+IsMoving                        	= bool IsMoving()
+Is this unit moving? (userdata)
+
+IsMuted                         	= bool IsMuted()
+(userdata)
+
+IsNeutralUnitType               	= bool IsNeutralUnitType()
+Is this a neutral? (userdata)
+
+IsNightmared                    	= bool IsNightmared()
+(userdata)
+
+IsOpposingTeam                  	= bool IsOpposingTeam(int nTeam)
+(userdata)
+
+IsOther                         	= bool IsOther()
+Is this unit a ward-type unit? (userdata)
+
+IsOutOfGame                     	= bool IsOutOfGame()
+(userdata)
+
+IsOwnedByAnyPlayer              	= bool IsOwnedByAnyPlayer()
+Is this unit owned by any non-bot player? (userdata)
+
+IsPhantom                       	= bool IsPhantom()
+Is this a phantom unit? (userdata)
+
+IsPhantomBlocker                	= bool IsPhantomBlocker()
+(userdata)
+
+IsPhased                        	= bool IsPhased()
+(userdata)
+
+IsPositionInRange               	= bool IsPositionInRange(Vector vPosition, float flRange)
+(userdata)
+
+IsRangedAttacker                	= bool IsRangedAttacker()
+Is this unit a ranged attacker? (userdata)
+
+IsRealHero                      	= bool IsRealHero()
+Is this a real hero? (userdata)
+
+IsReincarnating                 	= bool IsReincarnating()
+(userdata)
+
+IsRooted                        	= bool IsRooted()
+(userdata)
+
+IsShrine                        	= bool IsShrine()
+Is this a shrine? (userdata)
+
+IsSilenced                      	= bool IsSilenced()
+(userdata)
+
+IsSpeciallyDeniable             	= bool IsSpeciallyDeniable()
+(userdata)
+
+IsSpeciallyUndeniable           	= bool IsSpeciallyUndeniable()
+(userdata)
+
+IsStunned                       	= bool IsStunned()
+(userdata)
+
+IsSummoned                      	= bool IsSummoned()
+Is this unit summoned? (userdata)
+
+IsTempestDouble                 	= bool IsTempestDouble()
+(userdata)
+
+IsTower                         	= bool IsTower()
+Is this a tower? (userdata)
+
+IsUnableToMiss                  	= bool IsUnableToMiss()
+(userdata)
+
+IsUnselectable                  	= bool IsUnselectable()
+(userdata)
+
+IsUntargetable                  	= bool IsUntargetable()
+(userdata)
+
+IsZombie                        	= bool IsZombie()
+Is this entity an Undying Zombie? (userdata)
+
+Kill                            	= void Kill(handle hAbility, handle hAttacker)
+Kills this NPC, with the params Ability and Attacker. (userdata)
+
+MakeIllusion                    	= void MakeIllusion()
+(userdata)
+
+MakePhantomBlocker              	= void MakePhantomBlocker()
+(userdata)
+
+MakeVisibleDueToAttack          	= void MakeVisibleDueToAttack(int iTeam, float flRadius)
+(userdata)
+
+MakeVisibleToTeam               	= void MakeVisibleToTeam(int iTeam, float flDuration)
+(userdata)
+
+ManageModelChanges              	= void ManageModelChanges()
+(userdata)
+
+ModifyHealth                    	= void ModifyHealth(int iDesiredHealthValue, handle hAbility, bool bLethal, int iAdditionalFlags)
+Sets the health to a specific value, with optional flags or inflictors. (userdata)
+
+MoveToNPC                       	= void MoveToNPC(handle hNPC)
+Move to follow a unit. (userdata)
+
+MoveToNPCToGiveItem             	= void MoveToNPCToGiveItem(handle hNPC, handle hItem)
+Give an item to another unit. (userdata)
+
+MoveToPosition                  	= void MoveToPosition(Vector vDest)
+Issue a Move-To command. (userdata)
+
+MoveToPositionAggressive        	= void MoveToPositionAggressive(Vector vDest)
+Issue an Attack-Move-To command. (userdata)
+
+MoveToTargetToAttack            	= void MoveToTargetToAttack(handle hTarget)
+Move to a target to attack. (userdata)
+
+NoHealthBar                     	= bool NoHealthBar()
+(userdata)
+
+NoTeamMoveTo                    	= bool NoTeamMoveTo()
+(userdata)
+
+NoTeamSelect                    	= bool NoTeamSelect()
+(userdata)
+
+NoUnitCollision                 	= bool NoUnitCollision()
+(userdata)
+
+NotOnMinimap                    	= bool NotOnMinimap()
+(userdata)
+
+NotOnMinimapForEnemies          	= bool NotOnMinimapForEnemies()
+(userdata)
+
+NotifyWearablesOfModelChange    	= void NotifyWearablesOfModelChange(bool bOriginalModel)
+(userdata)
+
+PassivesDisabled                	= bool PassivesDisabled()
+(userdata)
+
+PatrolToPosition                	= void PatrolToPosition(Vector vDest)
+Issue a Patrol-To command. (userdata)
+
+PerformAttack                   	= void PerformAttack(handle hTarget, bool bUseCastAttackOrb, bool bProcessProcs, bool bSkipCooldown, bool bIgnoreInvis, bool bUseProjectile, bool bFakeAttack, bool bNeverMiss)
+Performs an attack on a target. (userdata)
+
+PickupDroppedItem               	= void PickupDroppedItem(handle hItem)
+Pick up a dropped item. (userdata)
+
+PickupRune                      	= void PickupRune(handle hItem)
+Pick up a rune. (userdata)
+
+PlayVCD                         	= void PlayVCD(string pVCD)
+Play a VCD on the NPC. (userdata)
+
+ProvidesVision                  	= bool ProvidesVision()
+(userdata)
+
+Purge                           	= void Purge(bool bRemovePositiveBuffs, bool bRemoveDebuffs, bool bFrameOnly, bool bRemoveStuns, bool bRemoveExceptions)
+(bool RemovePositiveBuffs, bool RemoveDebuffs, bool BuffsCreatedThisFrameOnly, bool RemoveStuns, bool RemoveExceptions) (userdata)
+
+QueueConcept                    	= void QueueConcept(float flDelay, handle hCriteriaTable, handle hCompletionCallbackFn, handle hContext, handle hCallbackInfo)
+Queue a response system concept with the TLK_DOTA_CUSTOM concept, after a delay. (userdata)
+
+QueueTeamConcept                	= void QueueTeamConcept(float flDelay, handle hCriteriaTable, handle hCompletionCallbackFn, handle hContext, handle hCallbackInfo)
+Queue a response system concept with the TLK_DOTA_CUSTOM concept, after a delay, for the same team this speaker is on. (userdata)
+
+QueueTeamConceptNoSpectators    	= void QueueTeamConceptNoSpectators(float flDelay, handle hCriteriaTable, handle hCompletionCallbackFn, handle hContext, handle hCallbackInfo)
+Queue a response system concept with the TLK_DOTA_CUSTOM concept, after a delay, for the same team this speaker is on. Is not played for spectators. (userdata)
+
+ReduceMana                      	= void ReduceMana(float flAmount)
+Remove mana from this unit, this can be used for involuntary mana loss, not for mana that is spent. (userdata)
+
+RemoveAbility                   	= void RemoveAbility(string pszAbilityName)
+Remove an ability from this unit by name. (userdata)
+
+RemoveAbilityByHandle           	= void RemoveAbilityByHandle(handle hAbility)
+Remove the passed ability from this unit. (userdata)
+
+RemoveAbilityFromIndexByName    	= void RemoveAbilityFromIndexByName(string pszAbilityName)
+(userdata)
+
+RemoveAllModifiers              	= void RemoveAllModifiers(int targets, bool bNow, bool bPermanent, bool bDeath)
+(int targets [0=all, 1=enemy, 2=ally], bool bNow, bool bPermanent, bool bDeath) (userdata)
+
+RemoveAllModifiersOfName        	= void RemoveAllModifiersOfName(string pszScriptName)
+Removes all copies of a modifier. (userdata)
+
+RemoveGesture                   	= void RemoveGesture(int nActivity)
+Remove the given gesture activity. (userdata)
+
+RemoveHorizontalMotionController	= void RemoveHorizontalMotionController(handle hBuff)
+(userdata)
+
+RemoveItem                      	= void RemoveItem(handle hItem)
+Removes the passed item from this unit's inventory and deletes it. (userdata)
+
+RemoveModifierByName            	= void RemoveModifierByName(string pszScriptName)
+Removes a modifier. (userdata)
+
+RemoveModifierByNameAndCaster   	= void RemoveModifierByNameAndCaster(string pszScriptName, handle hCaster)
+Removes a modifier that was cast by the given caster. (userdata)
+
+RemoveNoDraw                    	= void RemoveNoDraw()
+Remove the no draw flag. (userdata)
+
+RemoveVerticalMotionController  	= void RemoveVerticalMotionController(handle hBuff)
+(userdata)
+
+RespawnUnit                     	= void RespawnUnit()
+Respawns the target unit if it can be respawned. (userdata)
+
+Script_GetAttackRange           	= float Script_GetAttackRange()
+Gets this unit's attack range after all modifiers. (userdata)
+
+Script_IsDeniable               	= bool Script_IsDeniable()
+(userdata)
+
+SellItem                        	= void SellItem(handle hItem)
+Sells the passed item in this unit's inventory. (userdata)
+
+SetAbilityByIndex               	= void SetAbilityByIndex(handle hAbility, int iIndex)
+Set the ability by index. (userdata)
+
+SetAcquisitionRange             	= void SetAcquisitionRange(int nRange)
+(userdata)
+
+SetAdditionalBattleMusicWeight  	= void SetAdditionalBattleMusicWeight(float flWeight)
+Combat involving this creature will have this weight added to the music calcuations. (userdata)
+
+SetAggroTarget                  	= void SetAggroTarget(handle hAggroTarget)
+Set this unit's aggro target to a specified unit. (userdata)
+
+SetAttackCapability             	= void SetAttackCapability(int iAttackCapabilities)
+(userdata)
+
+SetAttacking                    	= void SetAttacking(handle hAttackTarget)
+(userdata)
+
+SetBaseAttackTime               	= void SetBaseAttackTime(float flBaseAttackTime)
+(userdata)
+
+SetBaseDamageMax                	= void SetBaseDamageMax(int nMax)
+Sets the maximum base damage. (userdata)
+
+SetBaseDamageMin                	= void SetBaseDamageMin(int nMin)
+Sets the minimum base damage. (userdata)
+
+SetBaseHealthRegen              	= void SetBaseHealthRegen(float flHealthRegen)
+(userdata)
+
+SetBaseMagicalResistanceValue   	= void SetBaseMagicalResistanceValue(float flMagicalResistanceValue)
+Sets base magical armor value. (userdata)
+
+SetBaseManaRegen                	= void SetBaseManaRegen(float flManaRegen)
+(userdata)
+
+SetBaseMaxHealth                	= void SetBaseMaxHealth(float flBaseMaxHealth)
+Set a new base max health value. (userdata)
+
+SetBaseMoveSpeed                	= void SetBaseMoveSpeed(int iMoveSpeed)
+(userdata)
+
+SetCanSellItems                 	= void SetCanSellItems(bool bCanSell)
+Set whether or not this unit is allowed to sell items (bCanSellItems) (userdata)
+
+SetControllableByPlayer         	= void SetControllableByPlayer(int nPlayerID, bool bSkipAdjustingPosition)
+Set this unit controllable by the player with the passed ID. (userdata)
+
+SetCursorCastTarget             	= void SetCursorCastTarget(handle hEntity)
+(userdata)
+
+SetCursorPosition               	= void SetCursorPosition(Vector vLocation)
+(userdata)
+
+SetCursorTargetingNothing       	= void SetCursorTargetingNothing(bool bTargetingNothing)
+(userdata)
+
+SetCustomHealthLabel            	= void SetCustomHealthLabel(string pLabel, int r, int g, int b)
+(userdata)
+
+SetDayTimeVisionRange           	= void SetDayTimeVisionRange(int iRange)
+Set the base vision range. (userdata)
+
+SetDeathXP                      	= void SetDeathXP(int iXPBounty)
+Set the XP bounty on this unit. (userdata)
+
+SetFollowRange                  	= void SetFollowRange(float flFollowRange)
+(userdata)
+
+SetForceAttackTarget            	= void SetForceAttackTarget(handle hNPC)
+(userdata)
+
+SetForceAttackTargetAlly        	= void SetForceAttackTargetAlly(handle hNPC)
+(userdata)
+
+SetHasInventory                 	= void SetHasInventory(bool bHasInventory)
+Set if this unit has an inventory. (userdata)
+
+SetHealthBarOffsetOverride      	= void SetHealthBarOffsetOverride(int nOffset)
+(userdata)
+
+SetHullRadius                   	= void SetHullRadius(float flHullRadius)
+Set the collision hull radius of this NPC. (userdata)
+
+SetIdleAcquire                  	= void SetIdleAcquire(bool bIdleAcquire)
+(userdata)
+
+SetInitialGoalEntity            	= void SetInitialGoalEntity(handle hGoal)
+Sets the initial waypoint goal for this NPC. (userdata)
+
+SetInitialGoalPosition          	= void SetInitialGoalPosition(Vector vPosition)
+Set waypoint position for this NPC. (userdata)
+
+SetMana                         	= void SetMana(float flMana)
+Set the mana on this unit. (userdata)
+
+SetMaxMana                      	= void SetMaxMana(float flMaxMana)
+Set the maximum mana of this unit. (userdata)
+
+SetMaximumGoldBounty            	= void SetMaximumGoldBounty(int iGoldBountyMax)
+Set the maximum gold bounty for this unit. (userdata)
+
+SetMinimumGoldBounty            	= void SetMinimumGoldBounty(int iGoldBountyMin)
+Set the minimum gold bounty for this unit. (userdata)
+
+SetModifierStackCount           	= void SetModifierStackCount(string pszScriptName, handle hCaster, int nStackCount)
+Sets the stack count of a given modifier. (userdata)
+
+SetMoveCapability               	= void SetMoveCapability(int iMoveCapabilities)
+(userdata)
+
+SetMustReachEachGoalEntity      	= void SetMustReachEachGoalEntity(bool must)
+Set whether this NPC is required to reach each goal entity, rather than being allowed to unkink their path. (userdata)
+
+SetNeverMoveToClearSpace        	= void SetNeverMoveToClearSpace(bool neverMoveToClearSpace)
+If set to true, we will never attempt to move this unit to clear space, even when it unphases. (userdata)
+
+SetNightTimeVisionRange         	= void SetNightTimeVisionRange(int iRange)
+Returns the vision range after modifiers. (userdata)
+
+SetOrigin                       	= void SetOrigin(Vector vLocation)
+Set the unit's origin. (userdata)
+
+SetOriginalModel                	= void SetOriginalModel(string pszModelName)
+Sets the original model of this entity, which it will tend to fall back to anytime its state changes. (userdata)
+
+SetPhysicalArmorBaseValue       	= void SetPhysicalArmorBaseValue(float flPhysicalArmorValue)
+Sets base physical armor value. (userdata)
+
+SetRangedProjectileName         	= void SetRangedProjectileName(string pProjectileName)
+(userdata)
+
+SetRevealRadius                 	= void SetRevealRadius(float revealRadius)
+sets the client side map reveal radius for this unit (userdata)
+
+SetShouldDoFlyHeightVisual      	= void SetShouldDoFlyHeightVisual(bool bShouldVisuallyFly)
+(userdata)
+
+SetStolenScepter                	= void SetStolenScepter(bool bStolenScepter)
+(userdata)
+
+SetUnitCanRespawn               	= void SetUnitCanRespawn(bool bCanRespawn)
+(userdata)
+
+SetUnitName                     	= void SetUnitName(string pName)
+(userdata)
+
+ShouldIdleAcquire               	= bool ShouldIdleAcquire()
+(userdata)
+
+SpeakConcept                    	= void SpeakConcept(handle hCriteriaTable)
+Speak a response system concept with the TLK_DOTA_CUSTOM concept. (userdata)
+
+SpendMana                       	= void SpendMana(float flManaSpent, handle hAbility)
+Spend mana from this unit, this can be used for spending mana from abilities or item usage. (userdata)
+
+StartGesture                    	= void StartGesture(int nActivity)
+Add the given gesture activity. (userdata)
+
+StartGestureFadeWithSequenceSettings	= void StartGestureFadeWithSequenceSettings(int nActivity)
+Add the given gesture activity faded according to its sequence settings. (userdata)
+
+StartGestureWithFade            	= void StartGestureWithFade(int nActivity, float fFadeIn, float fFadeOut)
+Add the given gesture activity faded according to to the parameters. (userdata)
+
+StartGestureWithPlaybackRate    	= void StartGestureWithPlaybackRate(int nActivity, float flRate)
+Add the given gesture activity with a playback rate override. (userdata)
+
+Stop                            	= void Stop()
+Stop the current order. (userdata)
+
+StopFacing                      	= void StopFacing()
+(userdata)
+
+SwapAbilities                   	= void SwapAbilities(string pAbilityName1, string pAbilityName2, bool bEnable1, bool bEnable2)
+Swaps the slots of the two passed abilities and sets them enabled/disabled. (userdata)
+
+SwapItems                       	= void SwapItems(int nSlot1, int nSlot2)
+Swap the contents of two item slots (slot1, slot2) (userdata)
+
+TakeItem                        	= handle TakeItem(handle hItem)
+Removed the passed item from this unit's inventory. (userdata)
+
+TimeUntilNextAttack             	= float TimeUntilNextAttack()
+(userdata)
+
+TriggerModifierDodge            	= bool TriggerModifierDodge()
+(userdata)
+
+TriggerSpellAbsorb              	= bool TriggerSpellAbsorb(handle hAbility)
+(userdata)
+
+TriggerSpellReflect             	= void TriggerSpellReflect(handle hAbility)
+Trigger the Lotus Orb-like effect.(hAbility) (userdata)
+
+UnHideAbilityToSlot             	= void UnHideAbilityToSlot(string pszAbilityName, string pszReplacedAbilityName)
+Makes the first ability unhidden, and puts it where second ability currently is. Will do nothing if the first ability is already unhidden and in a valid slot. (userdata)
+
+UnitCanRespawn                  	= bool UnitCanRespawn()
+(userdata)
+
+WasKilledPassively              	= bool WasKilledPassively()
+(userdata)
+
