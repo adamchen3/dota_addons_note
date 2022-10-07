@@ -438,4 +438,3 @@ UpdateTeamSlot                  	= void UpdateTeamSlot(int iPlayerID, int iTeamN
 
 WhoSelectedHero                 	= int WhoSelectedHero(string pHeroFilename, bool bIgnoreUnrevealedPick)
 (userdata)
-

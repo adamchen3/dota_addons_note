@@ -25,6 +25,7 @@
     C_DOTA_BaseNPC-->C_BaseEntity-->CEntityInstance
     CDOTA_Ability_Lua-->CDOTA_Ability_Lua-->CDOTABaseAbility-->CBaseEntity-->CEntityInstance
     C_DOTA_Modifier_Lua-->C_DOTA_Modifier_Lua-->CDOTA_Buff
+    CDOTAPlayerController-->CBaseAnimating-->CBaseModelEntity-->CBaseEntity-->CEntityInstance
 
     CDotaQuest-->CBaseEntity-->CEntityInstance
     [创建方法：SpawnEntityFromTableSynchronous( "quest", { name = "KillBoss", title = "#quest_boss_kill" } )]

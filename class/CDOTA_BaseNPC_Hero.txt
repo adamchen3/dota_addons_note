@@ -1,0 +1,293 @@
+AddExperience                   	= bool AddExperience(float flXP, int nReason, bool bApplyBotDifficultyScaling, bool bIncrementTotal)
+Params: Float XP, Bool applyBotDifficultyScaling (userdata)
+
+Buyback                         	= void Buyback()
+Spend the gold and buyback with this hero. (userdata)
+
+CalculateStatBonus              	= void CalculateStatBonus(bool bForce)
+Recalculate all stats after the hero gains stats. (userdata)
+
+CanEarnGold                     	= bool CanEarnGold()
+Returns boolean value result of buyback gold limit time less than game time. (userdata)
+
+ClearLastHitMultikill           	= void ClearLastHitMultikill()
+Value is stored in PlayerResource. (userdata)
+
+ClearLastHitStreak              	= void ClearLastHitStreak()
+Value is stored in PlayerResource. (userdata)
+
+ClearStreak                     	= void ClearStreak()
+Value is stored in PlayerResource. (userdata)
+
+GetAbilityPoints                	= int GetAbilityPoints()
+Gets the current unspent ability points. (userdata)
+
+GetAdditionalOwnedUnits         	= table GetAdditionalOwnedUnits()
+(userdata)
+
+GetAgility                      	= float GetAgility()
+(userdata)
+
+GetAgilityGain                  	= float GetAgilityGain()
+(userdata)
+
+GetAssists                      	= int GetAssists()
+Value is stored in PlayerResource. (userdata)
+
+GetAttacker                     	= int GetAttacker(int nIndex)
+(userdata)
+
+GetBaseAgility                  	= float GetBaseAgility()
+(userdata)
+
+GetBaseDamageMax                	= int GetBaseDamageMax()
+Hero damage is also affected by attributes. (userdata)
+
+GetBaseDamageMin                	= int GetBaseDamageMin()
+Hero damage is also affected by attributes. (userdata)
+
+GetBaseIntellect                	= float GetBaseIntellect()
+(userdata)
+
+GetBaseManaRegen                	= float GetBaseManaRegen()
+Returns the base mana regen. (userdata)
+
+GetBaseStrength                 	= float GetBaseStrength()
+(userdata)
+
+GetBonusDamageFromPrimaryStat   	= int GetBonusDamageFromPrimaryStat()
+(userdata)
+
+GetBuybackCooldownTime          	= float GetBuybackCooldownTime()
+Return float value for the amount of time left on cooldown for this hero's buyback. (userdata)
+
+GetBuybackCost                  	= int GetBuybackCost(bool bReturnOldValues)
+Return integer value for the gold cost of a buyback. (userdata)
+
+GetBuybackGoldLimitTime         	= float GetBuybackGoldLimitTime()
+Returns the amount of time gold gain is limited after buying back. (userdata)
+
+GetCurrentXP                    	= int GetCurrentXP()
+Returns the amount of XP  (userdata)
+
+GetDeathGoldCost                	= int GetDeathGoldCost()
+(userdata)
+
+GetDeaths                       	= int GetDeaths()
+Value is stored in PlayerResource. (userdata)
+
+GetDenies                       	= int GetDenies()
+Value is stored in PlayerResource. (userdata)
+
+GetGold                         	= int GetGold()
+Returns gold amount for the player owning this hero (userdata)
+
+GetGoldBounty                   	= int GetGoldBounty()
+(userdata)
+
+GetHeroID                       	= int GetHeroID()
+(userdata)
+
+GetIncreasedAttackSpeed         	= float GetIncreasedAttackSpeed()
+Hero attack speed is also affected by agility. (userdata)
+
+GetIntellect                    	= float GetIntellect()
+(userdata)
+
+GetIntellectGain                	= float GetIntellectGain()
+(userdata)
+
+GetKills                        	= int GetKills()
+Value is stored in PlayerResource. (userdata)
+
+GetLastHits                     	= int GetLastHits()
+Value is stored in PlayerResource. (userdata)
+
+GetMostRecentDamageTime         	= float GetMostRecentDamageTime()
+(userdata)
+
+GetMultipleKillCount            	= int GetMultipleKillCount()
+(userdata)
+
+GetNumAttackers                 	= int GetNumAttackers()
+(userdata)
+
+GetNumItemsInInventory          	= int GetNumItemsInInventory()
+(userdata)
+
+GetNumItemsInStash              	= int GetNumItemsInStash()
+(userdata)
+
+GetPhysicalArmorBaseValue       	= float GetPhysicalArmorBaseValue()
+Hero armor is affected by attributes. (userdata)
+
+GetPlayerID                     	= int GetPlayerID()
+Returns player ID of the player owning this hero (userdata)
+
+GetPrimaryAttribute             	= int GetPrimaryAttribute()
+0 = strength, 1 = agility, 2 = intelligence. (userdata)
+
+GetPrimaryStatValue             	= float GetPrimaryStatValue()
+(userdata)
+
+GetReplicatingOtherHero         	= handle GetReplicatingOtherHero()
+(userdata)
+
+GetRespawnTime                  	= float GetRespawnTime()
+(userdata)
+
+GetRespawnsDisabled             	= bool GetRespawnsDisabled()
+Is this hero prevented from respawning? (userdata)
+
+GetStreak                       	= int GetStreak()
+Value is stored in PlayerResource. (userdata)
+
+GetStrength                     	= float GetStrength()
+(userdata)
+
+GetStrengthGain                 	= float GetStrengthGain()
+(userdata)
+
+GetTimeUntilRespawn             	= float GetTimeUntilRespawn()
+(userdata)
+
+GetTogglableWearable            	= handle GetTogglableWearable(int nSlotType)
+Get wearable entity in slot (slot) (userdata)
+
+HasAnyAvailableInventorySpace   	= bool HasAnyAvailableInventorySpace()
+(userdata)
+
+HasFlyingVision                 	= bool HasFlyingVision()
+(userdata)
+
+HasOwnerAbandoned               	= bool HasOwnerAbandoned()
+(userdata)
+
+HasRoomForItem                  	= int HasRoomForItem(string pItemName, bool bIncludeStashCombines, bool bAllowSelling)
+Args: const char* pItemName, bool bIncludeStashCombines, bool bAllowSelling (userdata)
+
+HeroLevelUp                     	= void HeroLevelUp(bool bPlayEffects)
+Levels up the hero, true or false to play effects. (userdata)
+
+IncrementAssists                	= void IncrementAssists(int iKillerID)
+Value is stored in PlayerResource. (userdata)
+
+IncrementDeaths                 	= void IncrementDeaths(int iKillerID)
+Value is stored in PlayerResource. (userdata)
+
+IncrementDenies                 	= void IncrementDenies()
+Value is stored in PlayerResource. (userdata)
+
+IncrementKills                  	= void IncrementKills(int iVictimID)
+Passed ID is for the victim, killer ID is ID of the current hero.  Value is stored in PlayerResource. (userdata)
+
+IncrementLastHitMultikill       	= void IncrementLastHitMultikill()
+Value is stored in PlayerResource. (userdata)
+
+IncrementLastHitStreak          	= void IncrementLastHitStreak()
+Value is stored in PlayerResource. (userdata)
+
+IncrementLastHits               	= void IncrementLastHits()
+Value is stored in PlayerResource. (userdata)
+
+IncrementNearbyCreepDeaths      	= void IncrementNearbyCreepDeaths()
+Value is stored in PlayerResource. (userdata)
+
+IncrementStreak                 	= void IncrementStreak()
+Value is stored in PlayerResource. (userdata)
+
+IsBuybackDisabledByReapersScythe	= bool IsBuybackDisabledByReapersScythe()
+(userdata)
+
+IsReincarnating                 	= bool IsReincarnating()
+(userdata)
+
+IsStashEnabled                  	= bool IsStashEnabled()
+(userdata)
+
+KilledHero                      	= void KilledHero(handle hHero, handle hInflictor)
+Args: Hero, Inflictor (userdata)
+
+ModifyAgility                   	= void ModifyAgility(float flNewAgility)
+Adds passed value to base attribute value, then calls CalculateStatBonus. (userdata)
+
+ModifyGold                      	= int ModifyGold(int iGoldChange, bool bReliable, int iReason)
+Gives this hero some gold.  Args: int nGoldChange, bool bReliable, int reason (userdata)
+
+ModifyGoldFiltered              	= int ModifyGoldFiltered(int iGoldChange, bool bReliabe, int iReason)
+Gives this hero some gold, using the gold filter if extra filtering is on.  Args: int nGoldChange, bool bReliable, int reason (userdata)
+
+ModifyIntellect                 	= void ModifyIntellect(float flNewIntellect)
+Adds passed value to base attribute value, then calls CalculateStatBonus. (userdata)
+
+ModifyStrength                  	= void ModifyStrength(float flNewStrength)
+Adds passed value to base attribute value, then calls CalculateStatBonus. (userdata)
+
+PerformTaunt                    	= void PerformTaunt()
+(userdata)
+
+RecordLastHit                   	= void RecordLastHit()
+(userdata)
+
+RespawnHero                     	= void RespawnHero(bool bBuyBack, bool bRespawnPenalty)
+Respawn this hero. (userdata)
+
+SetAbilityPoints                	= void SetAbilityPoints(int iPoints)
+Sets the current unspent ability points. (userdata)
+
+SetBaseAgility                  	= void SetBaseAgility(float flAgility)
+(userdata)
+
+SetBaseIntellect                	= void SetBaseIntellect(float flIntellect)
+(userdata)
+
+SetBaseStrength                 	= void SetBaseStrength(float flStrength)
+(userdata)
+
+SetBotDifficulty                	= void SetBotDifficulty(int nDifficulty)
+(userdata)
+
+SetBuyBackDisabledByReapersScythe	= void SetBuyBackDisabledByReapersScythe(bool bBuybackDisabled)
+(userdata)
+
+SetBuybackCooldownTime          	= void SetBuybackCooldownTime(float flTime)
+Sets the buyback cooldown time. (userdata)
+
+SetBuybackGoldLimitTime         	= void SetBuybackGoldLimitTime(float flTime)
+Set the amount of time gold gain is limited after buying back. (userdata)
+
+SetCustomDeathXP                	= void SetCustomDeathXP(int iValue)
+Sets a custom experience value for this hero.  Note, GameRules boolean must be set for this to work! (userdata)
+
+SetGold                         	= void SetGold(int iGold, bool bReliable)
+Sets the gold amount for the player owning this hero (userdata)
+
+SetPlayerID                     	= void SetPlayerID(int iPlayerID)
+(userdata)
+
+SetPrimaryAttribute             	= void SetPrimaryAttribute(int nPrimaryAttribute)
+Set this hero's primary attribute value. (userdata)
+
+SetRespawnPosition              	= void SetRespawnPosition(Vector vOrigin)
+(userdata)
+
+SetRespawnsDisabled             	= void SetRespawnsDisabled(bool bDisableRespawns)
+Prevent this hero from respawning. (userdata)
+
+SetStashEnabled                 	= void SetStashEnabled(bool bEnabled)
+(userdata)
+
+SetTimeUntilRespawn             	= void SetTimeUntilRespawn(float time)
+(userdata)
+
+ShouldDoFlyHeightVisual         	= bool ShouldDoFlyHeightVisual()
+(userdata)
+
+SpendGold                       	= void SpendGold(int iCost, int iReason)
+Args: int nGold, int nReason (userdata)
+
+UpgradeAbility                  	= void UpgradeAbility(handle hAbility)
+This upgrades the passed ability if it exists and the hero has enough ability points. (userdata)
+
+WillReincarnate                 	= bool WillReincarnate()
+(userdata)
