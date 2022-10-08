@@ -22,3 +22,7 @@ mon -- monster
 exp -- experience // 经验
 qty -- quantity   // 数量
 dura -- durability // 耐久度
+
+
+terms:
+spell/skill/ability? // 技能
