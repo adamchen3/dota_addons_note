@@ -1,0 +1,158 @@
+CanBeUsedOutOfInventory         	= bool CanBeUsedOutOfInventory()
+(userdata)
+
+GetContainer                    	= handle GetContainer()
+Get the container for this item. (userdata)
+
+GetCost                         	= int GetCost()
+(userdata)
+
+GetCurrentCharges               	= int GetCurrentCharges()
+Get the number of charges this item currently has. (userdata)
+
+GetInitialCharges               	= int GetInitialCharges()
+Get the initial number of charges this item has. (userdata)
+
+GetItemSlot                     	= int GetItemSlot()
+(userdata)
+
+GetItemState                    	= int GetItemState()
+Gets whether item is unequipped or ready. (userdata)
+
+GetParent                       	= handle GetParent()
+Get the parent for this item. (userdata)
+
+GetPurchaseTime                 	= float GetPurchaseTime()
+Get the purchase time of this item (userdata)
+
+GetPurchaser                    	= handle GetPurchaser()
+Get the purchaser for this item. (userdata)
+
+GetSecondaryCharges             	= int GetSecondaryCharges()
+Get the number of secondary charges this item currently has. (userdata)
+
+GetShareability                 	= int GetShareability()
+(userdata)
+
+GetValuelessCharges             	= int GetValuelessCharges()
+Get the number of valueless charges this item currently has. (userdata)
+
+IsAlertableItem                 	= bool IsAlertableItem()
+(userdata)
+
+IsCastOnPickup                  	= bool IsCastOnPickup()
+(userdata)
+
+IsCombinable                    	= bool IsCombinable()
+(userdata)
+
+IsCombineLocked                 	= bool IsCombineLocked()
+(userdata)
+
+IsDisassemblable                	= bool IsDisassemblable()
+(userdata)
+
+IsDroppable                     	= bool IsDroppable()
+(userdata)
+
+IsInBackpack                    	= bool IsInBackpack()
+(userdata)
+
+IsItem                          	= bool IsItem()
+(userdata)
+
+IsKillable                      	= bool IsKillable()
+(userdata)
+
+IsMuted                         	= bool IsMuted()
+(userdata)
+
+IsNeutralDrop                   	= bool IsNeutralDrop()
+(userdata)
+
+IsPermanent                     	= bool IsPermanent()
+Is this a permanent item? (userdata)
+
+IsPurchasable                   	= bool IsPurchasable()
+(userdata)
+
+IsRecipe                        	= bool IsRecipe()
+(userdata)
+
+IsRecipeGenerated               	= bool IsRecipeGenerated()
+(userdata)
+
+IsSellable                      	= bool IsSellable()
+(userdata)
+
+IsStackable                     	= bool IsStackable()
+(userdata)
+
+LaunchLoot                      	= void LaunchLoot(bool bAutoUse, float flHeight, float flDuration, Vector vEndPoint)
+(userdata)
+
+LaunchLootInitialHeight         	= void LaunchLootInitialHeight(bool bAutoUse, float flInitialHeight, float flLaunchHeight, float flDuration, Vector vEndPoint)
+(userdata)
+
+LaunchLootRequiredHeight        	= void LaunchLootRequiredHeight(bool bAutoUse, float flRequiredHeight, float flHeight, float flDuration, Vector vEndPoint)
+(userdata)
+
+ModifyNumValuelessCharges       	= void ModifyNumValuelessCharges(int iCharges)
+Modifies the number of valueless charges on this item (userdata)
+
+OnEquip                         	= void OnEquip()
+(userdata)
+
+OnUnequip                       	= void OnUnequip()
+(userdata)
+
+RequiresCharges                 	= bool RequiresCharges()
+(userdata)
+
+SetCanBeUsedOutOfInventory      	= void SetCanBeUsedOutOfInventory(bool bValue)
+(userdata)
+
+SetCastOnPickup                 	= void SetCastOnPickup(bool bCastOnPickUp)
+(userdata)
+
+SetCombineLocked                	= void SetCombineLocked(bool bCombineLocked)
+(userdata)
+
+SetCurrentCharges               	= void SetCurrentCharges(int iCharges)
+Set the number of charges on this item (userdata)
+
+SetDroppable                    	= void SetDroppable(bool bDroppable)
+(userdata)
+
+SetItemState                    	= void SetItemState(int iState)
+Sets whether item is unequipped or ready. (userdata)
+
+SetOnlyPlayerHeroPickup         	= void SetOnlyPlayerHeroPickup(bool bOnlyPlayerHero)
+(userdata)
+
+SetPurchaseTime                 	= void SetPurchaseTime(float flTime)
+Set the purchase time of this item (userdata)
+
+SetPurchaser                    	= void SetPurchaser(handle hPurchaser)
+Set the purchaser of record for this item. (userdata)
+
+SetSecondaryCharges             	= void SetSecondaryCharges(int iCharges)
+Set the number of secondary charges on this item (userdata)
+
+SetSellable                     	= void SetSellable(bool bSellable)
+(userdata)
+
+SetShareability                 	= void SetShareability(int iShareability)
+(userdata)
+
+SetStacksWithOtherOwners        	= void SetStacksWithOtherOwners(bool bStacksWithOtherOwners)
+(userdata)
+
+SpendCharge                     	= void SpendCharge()
+(userdata)
+
+StacksWithOtherOwners           	= bool StacksWithOtherOwners()
+(userdata)
+
+Think                           	= void Think()
+Think this item (userdata)
