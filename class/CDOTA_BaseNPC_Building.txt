@@ -1,0 +1,5 @@
+GetInvulnCount = int GetInvulnCount()
+Get the invulnerability count for a building.
+
+SetInvulnCount = void SetInvulnCount(int nInvulnCount)
+Set the invulnerability counter of this building.

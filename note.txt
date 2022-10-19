@@ -11,15 +11,15 @@
     CCustomGameEventManager[CustomGameEventManager]
     CCustomNetTableManager[CustomNetTables]
 
-对象类型及继承关系:
+特定对象类型及继承关系:
     PlayerResource                  => CDOTA_PlayerResource-->CBaseEntity-->CEntityInstance
     GameRules                       => CDOTAGameRules
     Entities                        => CEntities
     HeroList                        => CScriptHeroList
     CustomGameEventManager          => CCustomGameEventManager
-
     GameRules:GetGameModeEntity()   => CDOTABaseGameMode-->CBaseEntity-->CEntityInstance
 
+类继承关系：
     CDOTA_BaseNPC_Creature-->CDOTA_BaseNPC-->CBaseFlex-->CBaseAnimating-->CBaseModelEntity-->CBaseEntity-->CEntityInstance
     CDOTA_BaseNPC_Hero-->CDOTA_BaseNPC-->CBaseFlex-->CBaseAnimating-->CBaseModelEntity-->CBaseEntity-->CEntityInstance
     C_DOTA_BaseNPC-->C_BaseEntity-->CEntityInstance
@@ -27,9 +27,10 @@
     C_DOTA_Modifier_Lua-->C_DOTA_Modifier_Lua-->CDOTA_Buff
     CDOTAPlayerController-->CBaseAnimating-->CBaseModelEntity-->CBaseEntity-->CEntityInstance
     CDOTA_Item_Lua-->CDOTA_Item_Lua-->CDOTA_Item-->CDOTABaseAbility-->CBaseEntity-->CEntityInstance
+    CDOTA_BaseNPC_Building-->CDOTA_BaseNPC-->CBaseFlex-->CBaseAnimating-->CBaseModelEntity-->CBaseEntity-->CEntityInstance
 
     CDotaQuest-->CBaseEntity-->CEntityInstance
-    [创建方法：SpawnEntityFromTableSynchronous( "quest", { name = "KillBoss", title = "#quest_boss_kill" } )]
+    [对象创建方法：SpawnEntityFromTableSynchronous( "quest", { name = "KillBoss", title = "#quest_boss_kill" } )]
 
 动态生成地图的方法：
     DOTA_SpawnMapAtPosition
