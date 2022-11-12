@@ -37,3 +37,7 @@
 
 在lua中执行控制台命令:
     SendToConsole("clear"), 而connect ip[:port]可以连接服务器，那是不是可以利用这种方式跨服务器
+
+自定义技能快捷键：
+    服务器：Convars:RegisterCommand创建一个自定义的控制台命令，该命令用来释放技能
+    UI:使用Game.CreateCustomKeyBind绑定键位对应的控制台命令
