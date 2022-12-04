@@ -1,0 +1,8 @@
+GetHero                         	= handle GetHero(int)
+Get the Nth hero in the Hero List (userdata)
+
+GetAllHeroes                    	= table GetAllHeroes()
+Returns all the heroes in the world (userdata)
+
+GetHeroCount                    	= int GetHeroCount()
+Returns the number of heroes in the world (userdata)
