@@ -99,11 +99,18 @@
 	{
 		"name"		"string"	// player name		
 		"index"		"byte"		// player slot (entity index-1)
-		"userid"	"short"		// user ID on server (unique on server)
+		"userid"	"player_controller"		// user ID on server (unique on server)
 		"networkid" "string" // player network (i.e steam) id
 		"address"	"string"	// ip:port
 	}
 	
+	"player_connect_full"			// player has sent final message in the connection sequence
+	{
+		"userid"	"player_controller"		// user ID on server (unique on server)
+		"index"		"short"
+		"PlayerID"	"short"
+	}
+
 	"modifier_event"
 	{
 		"eventname"	"string"
@@ -155,6 +162,13 @@
 		"teamnumber"	"short"
 		"gold"			"short"
 	}
+	
+	"dota_miniboss_kill"
+	{
+		"shard_recipient_id"	"short"	
+		"teamnumber"	"short"
+		"gold"			"short"
+	}
 
 	"dota_courier_lost"
 	{
@@ -203,6 +217,12 @@
 		"type"			"short"
 		"rune"			"short"
 		"bounty_amount"	"short"
+	}
+
+	"dota_rune_deny"
+	{
+		"userid"		"short"
+		"rune"			"short"
 	}
 
 	"dota_ward_killed"
@@ -336,6 +356,7 @@
 	{
 		"reason"	"byte"
 		"message"	"string"
+		"sequenceNumber" "int"
 	}
 
 	"dota_action_success"
@@ -1014,13 +1035,6 @@
 		"item_entindex"		"int"
 	}
 
-	"dota_courier_transfer_item"
-	{
-		"hero_entindex"		"int"
-		"courier_entindex"	"int"
-		"item_entindex"		"int"
-	}
-
 	"full_ui_unlocked"
 	{
 	}
@@ -1051,12 +1065,7 @@
 	"dota_local_quickbuy_changed"
 	{
 	}
-	"show_center_message"
-	{
-		"message"				"string"
-		"duration"				"float"
-		"clear_message_queue"	"bool"
-	}
+
 	"hud_flip_changed"
 	{
 		"flipped"	"bool"
@@ -1074,11 +1083,6 @@
 
 	"booster_state_updated"
 	{
-	}
-
-	"custom_game_difficulty"
-	{
-		"difficulty"	"byte"
 	}
 
 	"tree_cut"
@@ -1148,11 +1152,6 @@
 	"spec_aegis_reclaim_time"
 	{
 		"reclaim_time"	"float"
-	}
-
-	"account_trophies_changed"
-	{
-		"account_id"	"uint64"
 	}
 	"account_all_hero_challenge_changed"
 	{
@@ -1364,9 +1363,14 @@
 		"player_id"				"int"
 		"player_id2"			"int"
 		"value"					"float"
+		"value1"					"float"
+		"value2"					"float"
+		"value3"					"float"
 		"int_value"				"int"
+		"int_value2"			"int"
 		"ability_name"			"string"
 		"locstring_value"		"string"
+		"locstring_value2"		"string"
 		"string_replace_token"	"string"
 	}
 
@@ -1406,11 +1410,32 @@
 		"killer_player_id"	"int"
 	}
 
+	"dota_watch_tower_captured"
+	{
+		"entindex"			"short"
+		"team_number"		"short"
+		"old_team_number"	"short"
+	}
+
+	"dota_team_kill_credit"
+	{
+		"killer_userid"		"short"
+		"victim_userid"		"short"
+		"teamnumber"		"short"
+		"herokills"			"short"
+	}
+
 //////////////////////////////////////////////////////////////////////
 // Game events
 //////////////////////////////////////////////////////////////////////
 
 	"npc_spawned"
+	{
+		"entindex"		"long"
+		"is_respawn"	"short"
+	}
+
+	"npc_spawn_finished"
 	{
 		"entindex"	"long"
 	}

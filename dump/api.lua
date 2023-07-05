@@ -104,13 +104,13 @@ function CreateHTTPRequestScriptVM( string_1, string_2 ) end
 function CreateHeroForPlayer( string_1, handle_2 ) end
 
 ---[[ CreateIllusions  Create illusions of the passed hero that belong to passed unit using passed modifier data. ( hOwner, hHeroToCopy, hModiiferKeys, nNumIllusions, nPadding, bScramblePosition, bFindClearSpace ) 
-Supported keys: 
-outgoing_damage
-incoming_damage
-bounty_base
-bounty_growth
-outgoing_damage_structure
-outgoing_damage_roshan ]]
+-- Supported keys: 
+-- outgoing_damage
+-- incoming_damage
+-- bounty_base
+-- bounty_growth
+-- outgoing_damage_structure
+-- outgoing_damage_roshan ]]
 -- @return table
 -- @param handle_1 handle
 -- @param handle_2 handle
@@ -3320,8 +3320,7 @@ function CBodyComponent:AddVelocity( Vector_1, Vector_2 ) end
 -- @return void
 function CBodyComponent:DetachFromParent(  ) end
 
----[[ CBodyComponent:GetSequence  Returns the active sequence
- ]]
+---[[ CBodyComponent:GetSequence  Returns the active sequence ]]--
 -- @return <unknown>
 function CBodyComponent:GetSequence(  ) end
 
@@ -3329,8 +3328,7 @@ function CBodyComponent:GetSequence(  ) end
 -- @return bool
 function CBodyComponent:IsAttachedToParent(  ) end
 
----[[ CBodyComponent:LookupSequence  Returns a sequence id given a name
- ]]
+---[[ CBodyComponent:LookupSequence  Returns a sequence id given a name ]]
 -- @return <unknown>
 -- @param string_1 string
 function CBodyComponent:LookupSequence( string_1 ) end
@@ -9503,4 +9501,4 @@ function ProjectileManager:UpdateLinearProjectileDirection( int_1, Vector_2, flo
 
 ---[[ SteamInfo:IsPublicUniverse  Is the script connected to the public Steam universe ]]
 -- @return bool
-function SteamInfo:IsPublicUniverse(  ) end 
+function SteamInfo:IsPublicUniverse(  ) end
