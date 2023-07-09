@@ -1,1 +1,10 @@
 script_help all|global|dump
+
+DeepPrintTable(_G)
+
+cl_panorama_script_help
+cl_panorama_script_help_2
+cl_panorama_typescript_declarations
+dump_panorama_css_properties
+dump_panorama_events
+

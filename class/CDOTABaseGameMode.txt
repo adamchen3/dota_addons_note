@@ -61,6 +61,9 @@ Get whether player names are always shown, regardless of client setting. (userda
 GetAnnouncerDisabled            	= bool GetAnnouncerDisabled()
 Are in-game announcers disabled? (userdata)
 
+GetAnnouncerGameModeAnnounceDisabled	= bool GetAnnouncerGameModeAnnounceDisabled()
+Is the announcer announcing the mode / saying Choose Your Hero on start of custom games disabled? (userdata)
+
 GetCameraDistanceOverride       	= float GetCameraDistanceOverride()
 Set a different camera distance; dota default is 1134. (userdata)
 
@@ -145,7 +148,7 @@ Gets whether tower backdoor protection is enabled or not. (userdata)
 GetUseCustomHeroLevels          	= bool GetUseCustomHeroLevels()
 Are custom-defined XP values for hero level ups in use? (userdata)
 
-GetWaterRuneLastSpawnTime       	= int GetWaterRuneLastSpawnTime()
+GetWaterRuneLastSpawnTime       	= float GetWaterRuneLastSpawnTime()
 Gets the time from game start during which water runes spawn (userdata)
 
 IsAbilityUpgradeWhitelisted     	= bool IsAbilityUpgradeWhitelisted(string pszAbilityName)
@@ -189,6 +192,9 @@ Set whether player names are always shown, regardless of client setting. (userda
 
 SetAnnouncerDisabled            	= void SetAnnouncerDisabled(bool bDisabled)
 Mutes the in-game announcer. (userdata)
+
+SetAnnouncerGameModeAnnounceDisabled	= void SetAnnouncerGameModeAnnounceDisabled(bool bDisabled)
+Disables the announcer announcing the mode / saying Choose Your Hero on start of custom games. (userdata)
 
 SetBotThinkingEnabled           	= void SetBotThinkingEnabled(bool bEnabled)
 Enables/Disables bots in custom games. Note: this will only work with default heroes in the dota map. (userdata)
@@ -273,6 +279,9 @@ Enable or disable the day/night cycle. (userdata)
 
 SetDeathOverlayDisabled         	= void SetDeathOverlayDisabled(bool bDisabled)
 Specify whether the full screen death overlay effect plays when the selected hero dies. (userdata)
+
+SetDeathTipsDisabled            	= void SetDeathTipsDisabled(bool bDisabled)
+Disables chat tips on death. (userdata)
 
 SetDefaultStickyItem            	= void SetDefaultStickyItem(string pItem)
 Sets the default sticky item in the quickbuy (userdata)
@@ -445,12 +454,14 @@ If set to true, use current rune spawn rules.  Either setting respects custom sp
 SetUseTurboCouriers             	= void SetUseTurboCouriers(bool bEnabled)
 Enables or disables turbo couriers. (userdata)
 
-SetWaterRuneLastSpawnTime       	= void SetWaterRuneLastSpawnTime(int nValue)
+SetWaterRuneLastSpawnTime       	= void SetWaterRuneLastSpawnTime(float flValue)
 Sets the time from game start during which water runes spawn (userdata)
 
 SetWeatherEffectsDisabled       	= void SetWeatherEffectsDisabled(bool bDisable)
 Set if weather effects are disabled. (userdata)
 
+SetXPRuneSpawnInterval          	= void SetXPRuneSpawnInterval(float flInterval)
+Set xp rune spawn rate (userdata)
+
 ShouldGiveFreeTPOnDeath         	= bool ShouldGiveFreeTPOnDeath()
 (userdata)
-

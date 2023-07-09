@@ -22,7 +22,7 @@
 类继承关系：
     CDOTA_BaseNPC_Creature-->CDOTA_BaseNPC-->CBaseFlex-->CBaseAnimating-->CBaseModelEntity-->CBaseEntity-->CEntityInstance
     CDOTA_BaseNPC_Hero-->CDOTA_BaseNPC-->CBaseFlex-->CBaseAnimating-->CBaseModelEntity-->CBaseEntity-->CEntityInstance
-    C_DOTA_BaseNPC-->C_BaseEntity-->CEntityInstance
+    CDOTA_BaseNPC-->CBaseEntity-->CEntityInstance
     CDOTA_Ability_Lua-->CDOTA_Ability_Lua-->CDOTABaseAbility-->CBaseEntity-->CEntityInstance
     CDOTA_Modifier_Lua-->CDOTA_Modifier_Lua-->CDOTA_Buff
     CDOTAPlayerController-->CBaseAnimating-->CBaseModelEntity-->CBaseEntity-->CEntityInstance

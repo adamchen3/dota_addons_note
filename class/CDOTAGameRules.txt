@@ -29,9 +29,7 @@ AddMinimapDebugPoint            	= void AddMinimapDebugPoint(int, Vector, int, i
 Add a point on the minimap. (userdata)
 
 AddMinimapDebugPointForTeam     	= void AddMinimapDebugPointForTeam(int, Vector, int, int, int, int, float, int)
-Add a point on the minimap for a specific team. (userdata):
-SetHeroSelectPenaltyTime        	= void SetHeroSelectPenaltyTime(float)
-Sets amount of penalty time before randoming a hero (userdata)
+Add a point on the minimap for a specific team. (userdata)
 
 BeginNightstalkerNight          	= void BeginNightstalkerNight(float)
 Begin night stalker night. (userdata)
@@ -63,7 +61,7 @@ true when we have waited some time after end of the game and not received signou
 EnableCustomGameSetupAutoLaunch 	= void EnableCustomGameSetupAutoLaunch(bool)
 Enabled (true) or disable (false) auto launch for custom game setup. (userdata)
 
-ExecuteTeamPing                 	= void ExecuteTeamPing(int, float, float, handle, int)
+ExecuteTeamPing                 	= void ExecuteTeamPing(int, float, float, handle, unsigned)
 Sends a minimap ping to all players on the team (userdata)
 
 FinishCustomGameSetup           	= void FinishCustomGameSetup()
@@ -123,6 +121,9 @@ Get the time an item will be added to stock (userdata)
 GetMatchSignoutComplete         	= bool GetMatchSignoutComplete()
 Have we received the post match signout message that includes reward information (userdata)
 
+GetNeutralInitialSpawnOffset    	= float GetNeutralInitialSpawnOffset()
+Gets the extra offset to initial neutral creep spawn delay (userdata)
+
 GetNextBountyRuneSpawnTime      	= float GetNextBountyRuneSpawnTime()
 Gets next bounty rune spawn time (userdata)
 
@@ -174,6 +175,12 @@ Query an item in the whitelist (userdata)
 IsNightstalkerNight             	= bool IsNightstalkerNight()
 Is it night stalker night-time? (userdata)
 
+IsSuggestAbilitiesEnabled       	= bool IsSuggestAbilitiesEnabled()
+Returns whether Dota Plus ability suggestions are enabled or disabled (userdata)
+
+IsSuggestItemsEnabled           	= bool IsSuggestItemsEnabled()
+Returns whether Dota Plus item suggestions are enabled or disabled (userdata)
+
 IsTemporaryNight                	= bool IsTemporaryNight()
 Is it temporarily night-time? (userdata)
 
@@ -221,6 +228,9 @@ Restart after killing the ancient, etc. (userdata)
 
 ResetGameTime                   	= void ResetGameTime()
 Restart gametime from 0 (userdata)
+
+ResetPlayer                     	= void ResetPlayer(int)
+Resets the player of a given ID. (userdata)
 
 ResetToCustomGameSetup          	= void ResetToCustomGameSetup()
 Restart at custom game setup. (userdata)
@@ -303,9 +313,6 @@ Sets whether to filter more gold events than normal (userdata)
 SetFirstBloodActive             	= void SetFirstBloodActive(bool)
 Sets whether First Blood has been triggered. (userdata)
 
-SetGameTimeFrozen               	= void SetGameTimeFrozen(bool)
-Freeze the game time. (userdata)
-
 SetGameWinner                   	= void SetGameWinner(int)
 Makes the specified team win (userdata)
 
@@ -324,6 +331,9 @@ SetHeroMinimapIconScale         	= void SetHeroMinimapIconScale(float)
 SetHeroRespawnEnabled           	= void SetHeroRespawnEnabled(bool)
 Control if the normal DOTA hero respawn rules apply. (userdata)
 
+SetHeroSelectPenaltyTime        	= void SetHeroSelectPenaltyTime(float)
+Sets amount of penalty time before randoming a hero (userdata)
+
 SetHeroSelectionTime            	= void SetHeroSelectionTime(float)
 Sets the amount of time players have to pick their hero. (userdata)
 
@@ -339,6 +349,9 @@ Set whether custom and event games should ignore Lobby teams when assigning play
 SetItemStockCount               	= void SetItemStockCount(int, int, string, int)
 Set the stock count of the item (userdata)
 
+SetNeutralInitialSpawnOffset    	= void SetNeutralInitialSpawnOffset(float)
+Sets the extra offset to initial neutral creep spawn delay (userdata)
+
 SetNextBountyRuneSpawnTime      	= void SetNextBountyRuneSpawnTime(float)
 Sets next bounty rune spawn time (userdata)
 
@@ -347,6 +360,15 @@ Sets next rune spawn time (userdata)
 
 SetOverlayHealthBarUnit         	= void SetOverlayHealthBarUnit(handle, int)
 Show this unit's health on the overlay health bar (userdata)
+
+SetPostGameColumns              	= bool SetPostGameColumns(handle)
+Set columns to show in post game (userdata)
+
+SetPostGameLayout               	= void SetPostGameLayout(int)
+Configure post game to be single or double column layout (userdata)
+
+SetPostGameTeamScores           	= bool SetPostGameTeamScores(handle)
+Set score value for each team. First element is for DOTA_TEAM_GOODGUYS. (userdata)
 
 SetPostGameTime                 	= void SetPostGameTime(float)
 Sets the amount of time players have between the game ending and the server disconnecting them. (userdata)
@@ -381,6 +403,12 @@ Set the starting gold amount. (userdata)
 SetStrategyTime                 	= void SetStrategyTime(float)
 Sets the amount of time players have between the hero selection and entering the showcase phase. (userdata)
 
+SetSuggestAbilitiesEnabled      	= void SetSuggestAbilitiesEnabled(bool)
+Sets Dota Plus ability suggestions enabled or disabled (userdata)
+
+SetSuggestItemsEnabled          	= void SetSuggestItemsEnabled(bool)
+Sets Dota Plus ability item enabled or disabled (userdata)
+
 SetTimeOfDay                    	= void SetTimeOfDay(float)
 Set the time of day. (userdata)
 
@@ -413,4 +441,3 @@ Spawn and release the next set of neutral camps. (userdata)
 
 State_Get                       	= int State_Get()
 Get the current Gamerules state (userdata)
-
